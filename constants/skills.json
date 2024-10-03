@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "skill_title": "Full Stack Web Development",
+    "skill_description": "Responsible for both front-end and back-end development, including databases, servers, and clients.",
+    "skill_icon": "DiCode"
+  },
+  {
+    "id": 2,
+    "skill_title": "Backend Development",
+    "skill_description": "Focuses on server-side logic, databases, APIs, and security to power web applications.",
+    "skill_icon": "DiPhp"
+  },
+  {
+    "id": 3,
+    "skill_title": "Frontend Development",
+    "skill_description": "Deals with creating the user interface, ensuring responsiveness, and building a seamless user experience.",
+    "skill_icon": "DiHtml5"
+  },
+  {
+    "id": 4,
+    "skill_title": "Software Development",
+    "skill_description": "Involves creating software applications, algorithms, and problem-solving solutions.",
+    "skill_icon": "DiPython"
+  },
+  {
+    "id": 5,
+    "skill_title": "Database Administration",
+    "skill_description": "Manages databases, ensures data integrity, and optimizes storage systems.",
+    "skill_icon": "DiStreamline"
+  },
+  {
+    "id": 6,
+    "skill_title": "DevOps",
+    "skill_description": "Combines development and operations to automate infrastructure, deployment, and scaling.",
+    "skill_icon": "DiGit"
+  }
+]
