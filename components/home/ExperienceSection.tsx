@@ -49,23 +49,15 @@ const ExperienceSection: React.FC = () => {
                                     <Image 
                                         src={point.image} 
                                         alt={point.label} 
-                                        className="h-18 w-18 rounded-full border-2 border-custom-100 z-10" 
+                                        className="h-16 w-16 md:h-24 md:w-24 rounded-full border-2 border-custom-100 z-10" 
                                         height={100} 
                                         width={100} 
                                     />
 
                                     {/* Speech bubble */}
                                     <div 
-                                        className={`bubble absolute top-0 ${index % 2 === 0 ? 'right-[-325px] md:left-[-340px]' : 'right-[-300px]'} 
-                                        p-4 rounded-lg max-w-xs text-left text-custom-100 bg-custom-600 shadow-lg z-10`}
-                                        style={{
-                                            height: maxHeight ? `${maxHeight}px` : 'auto', // Set height dynamically
-                                            maxHeight: '150px', // Set a maximum height for the bubble
-                                            overflow: 'hidden', // Hide overflow content
-                                            display: '-webkit-box',
-                                            WebkitLineClamp: 5, // Limit the number of lines
-                                            WebkitBoxOrient: 'vertical',
-                                        }}
+                                        className={`bubble absolute top-0 ${index % 2 === 0 ? 'right-[-275px] md:left-[-340px]' : 'right-[-250px] md:right-[-300px]'} 
+                                        p-3 md:p-4 rounded-lg max-w-xs text-left text-custom-100 bg-custom-600 shadow-lg z-10 text-sm md:text-base`}
                                     >
                                         <strong>{point.role}</strong><br />
                                         {point.company_name}<br />
