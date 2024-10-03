@@ -1,0 +1,26 @@
+[
+    { 
+        "id": 2, 
+        "image": "/images/Codeyani.jpg", 
+        "label": "Codeyani", 
+        "role": "Junior Full Stack Software Engineer",
+        "company_name": "Codeyani IT Solutions Inc.",
+        "month_started": "June",
+        "year_started": "2024",
+        "month_ended": null,
+        "year_ended": null,
+        "description": null 
+    },
+    { 
+        "id": 1, 
+        "image": "/images/Erovoutika.jfif", 
+        "label": "Erovoutika", 
+        "role": "Full Stack Web Developer Intern",
+        "company_name": "Erovoutika",
+        "month_started": "March",
+        "year_started": "2024",
+        "month_ended": "May",
+        "year_ended": "2024",
+        "description": null 
+    }
+]
