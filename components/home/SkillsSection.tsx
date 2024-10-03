@@ -37,9 +37,17 @@ const SkillsSection: React.FC = () => {
 
 const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {  
   const IconComponent = skillIcons[skill.skill_icon];  
+
+  // Function to handle card click
+  const handleClick = () => {
+    console.log(skill.id); // Log the skill id to the console
+  };
   
   return (
-    <Card className="max-w-sm w-full bg-custom-700 transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer">
+    <Card 
+     className="max-w-sm w-full bg-custom-700 transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer"
+     onClick={handleClick}
+    >
       <CardHeader>
         <div className="text-white text-7xl flex flex-col items-center justify-center text-center mb-2">
           {IconComponent && <IconComponent />}
