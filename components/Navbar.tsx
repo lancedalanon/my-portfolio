@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(true);
@@ -63,17 +64,17 @@ const Navbar: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="#projects" className="text-custom-100 font-bold">
-              Projects
-            </a>
-          </li>
-          <li>
             <a href="#contact" className="text-custom-100 font-bold">
               Contact
             </a>
           </li>
         </ul>
         <ul className="flex space-x-8">
+          <li>
+            <Link href="/projects" className="text-custom-100 font-bold">
+              Projects
+            </Link>
+          </li>
           <li>
             <a
               href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME"
