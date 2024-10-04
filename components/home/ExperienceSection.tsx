@@ -39,7 +39,7 @@ const ExperienceSection: React.FC = () => {
                 {/* Render based on screen size */}
                 {isSmallScreen ? (
                     // Small Screen Layout
-                    <div className="grid grid-cols-[1.5%_99.5%] place-items-center">
+                    <div className="grid grid-cols-[1.5%_99.5%] place-items-center ml-10">
                         <div className="h-8 w-8 rounded-full bg-custom-300"></div>
                         <div></div>
 
@@ -56,9 +56,9 @@ const ExperienceSection: React.FC = () => {
                             />
                         </div>
                         <div className="text-white text-start ml-14">
-                            <strong className="text-lg">Full Stack Web Developer Intern</strong>
-                            <p className="text-md">Codeyani</p>
-                            <p className="text-md">Mar 2024 - May 2024 · 3 mos</p>
+                            <strong className="text-md">Full Stack Web Developer Intern</strong>
+                            <p className="text-sm">Codeyani</p>
+                            <p className="text-sm">Mar 2024 - May 2024 · 3 mos</p>
                         </div>
 
                         <div className="h-32 w-2 bg-custom-300"></div>
@@ -74,9 +74,9 @@ const ExperienceSection: React.FC = () => {
                             />
                         </div>
                         <div className="text-white text-start ml-14">
-                            <strong className="text-lg">Full Stack Web Developer Intern</strong>
-                            <p className="text-md">Erovoutika</p>
-                            <p className="text-md">Mar 2024 - May 2024 · 3 mos</p>
+                            <strong className="text-md">Full Stack Web Developer Intern</strong>
+                            <p className="text-sm">Erovoutika</p>
+                            <p className="text-sm">Mar 2024 - May 2024 · 3 mos</p>
                         </div>
 
                         <div className="h-32 w-2 bg-custom-300"></div> 
@@ -110,6 +110,10 @@ const ExperienceSection: React.FC = () => {
                                 width={200} 
                             />
                         </div>
+                        <div></div>
+
+                        <div></div>
+                        <div className="h-32 w-2 bg-custom-300"></div>
                         <div></div>
 
                         <div></div>
