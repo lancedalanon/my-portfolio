@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeSection: React.FC = () => {
   return (
-    <section id="home" className="h-screen bg-custom-800 flex flex-col items-center justify-center text-center">
+    <section id="home" className="h-screen flex flex-col items-center justify-center text-center">
       <h1 className="text-5xl font-bold text-custom-100">
         Hi, I'm Lance Dalanon!
       </h1> 

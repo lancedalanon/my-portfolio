@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 const AboutMeSection: React.FC = () => {
   return (
-    <section id="about-me" className="bg-custom-800 flex flex-col items-center justify-center text-center px-20 py-14">
+    <section id="about-me" className="flex flex-col items-center justify-center text-center px-20 py-14">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="text-left px-2">
-          <h2 className="text-5xl font-bold text-custom-100 mb-4">About Me</h2>
+          <h2 className="text-5xl font-bold text-custom-100 mb-4">ABOUT ME</h2>
           <p className="text-xl text-custom-300 mb-4">
             I am a dedicated Full Stack Software Engineer with experience in developing and 
             enhancing web applications using technologies such as JavaScript, Python, Laravel, 

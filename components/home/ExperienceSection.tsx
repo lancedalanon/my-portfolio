@@ -32,9 +32,9 @@ const ExperienceSection: React.FC = () => {
     const isSmallScreen = useIsSmallScreen();
 
     return (
-        <section id="experience" className="bg-custom-800 px-5 py-14">
+        <section id="experience" className="px-5 py-14">
             <h2 className="text-5xl font-bold text-custom-100 text-center my-4">
-                Experience
+                EXPERIENCE
             </h2>
                 {/* Render based on screen size */}
                 {isSmallScreen ? (
