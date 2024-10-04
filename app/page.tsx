@@ -6,6 +6,7 @@ import AboutMeSection from '@/components/home/AboutMeSection';
 import SkillsSection from '@/components/home/SkillsSection';
 import ExperienceSection from '@/components/home/ExperienceSection';
 import ProjectsSection from '@/components/home/ProjectsSection';
+import ContactSection from '@/components/home/ContactSection';
 
 const Home: NextPage = () => {
   return (<>
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
           <SkillsSection />
           <ExperienceSection />
           <ProjectsSection />
+          <ContactSection />
         </article>
       </main>
   </>);

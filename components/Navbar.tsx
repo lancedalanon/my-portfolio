@@ -68,6 +68,11 @@ const Navbar: React.FC = () => {
               Projects
             </a>
           </li>
+          <li>
+            <a href="#contact" className="text-custom-100 font-bold">
+             Contact
+            </a>
+          </li>
         </ul>
         <ul className="flex space-x-8">
           <li>

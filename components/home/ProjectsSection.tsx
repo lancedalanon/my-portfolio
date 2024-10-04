@@ -111,7 +111,6 @@ const ProjectsSection: React.FC = () => {
                 View More
             </Button>
         </div>
-
     </section>
     );
 };
