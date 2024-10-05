@@ -1,8 +1,8 @@
 import { IconType } from 'react-icons';
-import { DiCode, DiGit, DiStreamline, DiHtml5, DiPython, DiPhp } from "react-icons/di";
+import { DiCode, DiGit, DiDatabase, DiHtml5, DiPython, DiPhp } from "react-icons/di";
 
 // Define a string union type for skill_icon keys
-export type SkillIconKey = 'DiCode' | 'DiPhp' | 'DiHtml5' | 'DiPython' | 'DiStreamline' | 'DiGit';
+export type SkillIconKey = 'DiCode' | 'DiPhp' | 'DiHtml5' | 'DiPython' | 'DiDatabase' | 'DiGit';
 
 // Define the Skill interface with skill_icon restricted to SkillIconKey
 export interface Skill {
@@ -18,7 +18,7 @@ export const skillIcons: { [key in SkillIconKey]: IconType } = {
   DiPhp,
   DiHtml5,
   DiPython,
-  DiStreamline,
+  DiDatabase,
   DiGit,
 };
 

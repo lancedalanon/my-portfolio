@@ -27,7 +27,7 @@
     "id": 5,
     "skill_title": "Database Administration",
     "skill_description": "Manages databases, ensures data integrity, and optimizes storage systems.",
-    "skill_icon": "DiStreamline"
+    "skill_icon": "DiDatabase"
   },
   {
     "id": 6,

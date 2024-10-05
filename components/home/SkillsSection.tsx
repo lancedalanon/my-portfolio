@@ -1,7 +1,7 @@
 import React from 'react';
 import skills from '@/constants/skills.json';
 import { Card, CardHeader, CardBody } from '@/components/Card';
-import { DiCode, DiGit, DiStreamline, DiHtml5, DiPython, DiPhp } from "react-icons/di";
+import { DiCode, DiGit, DiDatabase, DiHtml5, DiPython, DiPhp } from "react-icons/di";
 import { Skill, SkillIconKey } from '@/types/skillTypes';
 
 // Define a string union type for skill_icon keys
@@ -10,7 +10,7 @@ const skillIcons = {
   DiPhp: DiPhp,
   DiHtml5: DiHtml5,
   DiPython: DiPython,
-  DiStreamline: DiStreamline,
+  DiDatabase: DiDatabase,
   DiGit: DiGit
 };
 
