@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import experienceData from '@/constants/experience.json';
+import Link from 'next/link';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 // Custom hook to determine if the screen size is small
 const useIsSmallScreen = () => {
@@ -60,7 +62,7 @@ const ExperienceSection: React.FC = () => {
     return (
         <section id="experience" className="px-5 py-14 bg-custom-700">
             <h2 className="text-5xl font-bold text-custom-100 text-center mb-10">
-                CAREER HIGHLIGHTS
+                MY CAREER HIGHLIGHTS
             </h2>
             {/* Render the appropriate component based on screen size */}
             {isSmallScreen ? <SmallScreenExperience experience={experienceData} /> : <LargeScreenExperience experience={experienceData} />}
@@ -95,6 +97,15 @@ const SmallScreenExperience: React.FC<{ experience: typeof experienceData }> = (
                         <p className="text-sm">
                             {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} • {calculateExperience(item.month_started, item.year_started, item.month_ended, item.year_ended)}
                         </p>
+                        {/* More Details Link */}
+                        <Link 
+                            href={`/experience/${item.id}`} 
+                            target="_blank"
+                            className="flex items-center mt-2 text-accent hover:underline"
+                        >
+                            <FaExternalLinkAlt className="mr-1" />
+                            <span className="text-md md:text-lg">More Details</span>
+                        </Link>
                     </div>
 
                     <div className="h-32 w-2 bg-custom-300"></div>
@@ -131,6 +142,17 @@ const LargeScreenExperience: React.FC<{ experience: typeof experienceData }> = (
                                 <p className="text-md md:text-lg">
                                     {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} • {calculateExperience(item.month_started, item.year_started, item.month_ended, item.year_ended)}
                                 </p>
+                                {/* More Details Link */}
+                                <div className="flex items-end justify-end">
+                                    <Link 
+                                        href={`/experience/${item.id}`} 
+                                        target="_blank"
+                                        className="flex items-center mt-2 text-accent hover:underline"
+                                    >
+                                        <FaExternalLinkAlt className="mr-1" />
+                                        <span className="text-md md:text-lg">More Details</span>
+                                    </Link>
+                                </div>
                             </div>
                             <div className="relative h-32 w-32">
                                 <Image
@@ -162,6 +184,15 @@ const LargeScreenExperience: React.FC<{ experience: typeof experienceData }> = (
                                 <p className="text-md md:text-lg">
                                     {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} • {calculateExperience(item.month_started, item.year_started, item.month_ended, item.year_ended)}
                                 </p>
+                                {/* More Details Link */}
+                                <Link 
+                                    href={`/experience/${item.id}`} 
+                                    target="_blank"
+                                    className="flex items-center mt-2 text-accent hover:underline"
+                                >
+                                    <FaExternalLinkAlt className="mr-1" />
+                                    <span className="text-md md:text-lg">More Details</span>
+                                </Link>
                             </div>
                         </>
                     )}

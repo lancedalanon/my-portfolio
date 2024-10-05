@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Icons for mobile menu
+import { FaBars, FaTimes, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaSheetPlastic } from "react-icons/fa6";
 
 const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(true); // Navbar visibility on scroll
@@ -107,10 +108,10 @@ const Navbar: React.FC = () => {
           <li>
             <a
               href="/documents/LanceOrvilleRDalanonResume.pdf"
-              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+              className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
               download
             >
-              RESUME
+              <FaSheetPlastic className="mr-1" /> RESUME
             </a>
           </li>
           <li>
@@ -118,10 +119,10 @@ const Navbar: React.FC = () => {
               href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+              className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
               aria-label="LinkedIn"
             >
-              LINKEDIN
+              <FaLinkedin className="mr-1" /> LINKEDIN
             </a>
           </li>
           <li>
@@ -129,10 +130,10 @@ const Navbar: React.FC = () => {
               href="https://github.com/lancedalanon"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+              className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
               aria-label="GitHub"
             >
-              GITHUB
+              <FaGithub className="mr-1" /> GITHUB
             </a>
           </li>
         </ul>
@@ -209,7 +210,7 @@ const Navbar: React.FC = () => {
                 className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
                 download
               >
-                RESUME
+                <FaSheetPlastic className="mr-1" /> RESUME
               </a>
             </li>
             <li>
@@ -217,10 +218,10 @@ const Navbar: React.FC = () => {
                 href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+                className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
                 aria-label="LinkedIn"
               >
-                LINKEDIN
+                <FaLinkedin className="mr-1" /> LINKEDIN
               </a>
             </li>
             <li>
@@ -228,10 +229,10 @@ const Navbar: React.FC = () => {
                 href="https://github.com/lancedalanon"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+                className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
                 aria-label="GitHub"
               >
-                GITHUB
+                <FaGithub className="mr-1" /> GITHUB
               </a>
             </li>
           </ul>

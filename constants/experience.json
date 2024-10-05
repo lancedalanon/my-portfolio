@@ -1,6 +1,6 @@
 [
     { 
-        "id": 2, 
+        "id": 3, 
         "image": "/images/Codeyani.jpg", 
         "label": "Codeyani", 
         "role": "Junior Full Stack Software Engineer",
@@ -10,6 +10,18 @@
         "year_started": "2024",
         "month_ended": null,
         "year_ended": null
+    },
+    { 
+        "id": 2, 
+        "image": "/images/Event-Edge-Co.png", 
+        "label": "Event-Edge-Co", 
+        "role": "Freelance Full Stack Web Developer",
+        "company_name": "Event Edge Co.",
+        "description" : null,
+        "month_started": "May",
+        "year_started": "2024",
+        "month_ended": "June",
+        "year_ended": "2024"
     },
     { 
         "id": 1, 

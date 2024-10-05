@@ -1,9 +1,19 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa'; // Import icons
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaSheetPlastic } from 'react-icons/fa6';
+import Link from 'next/link';
 
 // SocialLinks component for reusability
 const SocialLinks: React.FC = () => (
     <div className="flex space-x-4">
+        <a
+            className="flex items-center space-x-2 hover:text-custom-200 transition-transform transform hover:scale-110 duration-300"
+            href="/documents/LanceOrvilleRDalanonResume.pdf"
+            download
+        >
+            <FaSheetPlastic size={24} />
+            <span>Resume</span>
+        </a>
         <a href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
             className="flex items-center space-x-2 hover:text-custom-200 transition-transform transform hover:scale-110 duration-300"
             aria-label="LinkedIn"
@@ -27,27 +37,46 @@ const SocialLinks: React.FC = () => (
 
 // QuickLinks component for reusable quick access links
 const QuickLinks: React.FC = () => (
-    <ul className="space-y-2">
-        <li>
-            <a href="#about-me" className="hover:text-custom-200 transition-colors duration-300">
-                About Me
-            </a>
-        </li>
-        <li>
-            <a href="#skills" className="hover:text-custom-200 transition-colors duration-300">
-                Skills
-            </a>
-        </li>
-        <li>
-            <a href="#experience" className="hover:text-custom-200 transition-colors duration-300">
-                Experience
-            </a>
-        </li>
-        <li>
-            <a href="#featured-projects" className="hover:text-custom-200 transition-colors duration-300">
-                Featured Projects
-            </a>
-        </li>
+    <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-2">
+        <div className="space-y-2">
+            <li>
+                <a href="#about-me" className="hover:text-custom-200 transition-colors duration-300">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a href="#skills" className="hover:text-custom-200 transition-colors duration-300">
+                    Skills
+                </a>
+            </li>
+            <li>
+                <a href="#experience" className="hover:text-custom-200 transition-colors duration-300">
+                    Experience
+                </a>
+            </li>
+            <li>
+                <a href="#featured-projects" className="hover:text-custom-200 transition-colors duration-300">
+                    Featured Projects
+                </a>
+            </li>
+        </div>
+        <div className="space-y-2">
+            <li>
+                <Link href="/experience" className="text-custom-100 hover:text-custom-200 transition-colors duration-300">
+                    Experience
+                </Link>
+            </li>
+            <li>
+                <Link href="/projects" className="text-custom-100 hover:text-custom-200 transition-colors duration-300">
+                    Projects
+                </Link>
+            </li>
+            <li>
+                <Link href="/blog" className="text-custom-100 hover:text-custom-200 transition-colors duration-300">
+                    Blog
+                </Link>
+            </li>
+        </div>
     </ul>
 );
 
