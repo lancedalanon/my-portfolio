@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "project_name": "iLaya",
+        "short_description": "A web-based system for Barangay Aplaya that automates document issuance and manages blotter records, improving administrative efficiency. iLaya automates the issuance of official documents and manages blotter records, streamlining administrative processes within the local government unit.",
+        "month_start": "August",
+        "year_start": "2023",
+        "month_end": "February",
+        "year_end": "2024"
+    },
+    {
+        "id": 2,
+        "project_name": "Events Tabulation System",
+        "short_description": "The Events Tabulation System is designed by an Agile team of Project Managers, Analysts, and Developers to elevate event management. It features live scoring for tournaments with a bracketing system and showcases overall scores for school organizations. Experience a powerful and intuitive scoring solution that goes beyond the ordinary!",
+        "month_start": "May",
+        "year_start": "2023",
+        "month_end": "September",
+        "year_end": "2023"
+    },
+    {
+        "id": 3,
+        "project_name": "Tourist Management System",
+        "short_description": "The Tourist Management System showcases efficient website operations for managing tourism activities, featuring Intramuros as a highlighted destination. This project was developed to streamline visitor experiences and enhance engagement with local attractions. Experience seamless navigation and essential services tailored for travelers!",
+        "month_start": "October",
+        "year_start": "2022",
+        "month_end": "February",
+        "year_end": "2023"
+    },
+    {
+        "id": 4,
+        "project_name": "Pixel RPS",
+        "short_description": "Pixel RPS is a unique twist on the classic rock-paper-scissors game, incorporating RPG elements. Players engage in strategic battles, utilizing characters with special abilities. Experience a fun and interactive gameplay that redefines a beloved classic!",
+        "month_start": "October",
+        "year_start": "2021",
+        "month_end": "March",
+        "year_end": "2022"
+    }
+]
