@@ -40,22 +40,27 @@ const QuickLinks: React.FC = () => (
     <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-2">
         <div className="space-y-2">
             <li>
-                <a href="#about-me" className="hover:text-custom-200 transition-colors duration-300">
+                <a href="/#home" className="hover:text-custom-200 transition-colors duration-300">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="/#about-me" className="hover:text-custom-200 transition-colors duration-300">
                     About Me
                 </a>
             </li>
             <li>
-                <a href="#skills" className="hover:text-custom-200 transition-colors duration-300">
+                <a href="/#skills" className="hover:text-custom-200 transition-colors duration-300">
                     Skills
                 </a>
             </li>
             <li>
-                <a href="#experience" className="hover:text-custom-200 transition-colors duration-300">
+                <a href="/#experience" className="hover:text-custom-200 transition-colors duration-300">
                     Experience
                 </a>
             </li>
             <li>
-                <a href="#featured-projects" className="hover:text-custom-200 transition-colors duration-300">
+                <a href="/#featured-projects" className="hover:text-custom-200 transition-colors duration-300">
                     Featured Projects
                 </a>
             </li>
@@ -64,11 +69,6 @@ const QuickLinks: React.FC = () => (
             <li>
                 <Link href="/projects" className="text-custom-100 hover:text-custom-200 transition-colors duration-300">
                     Projects
-                </Link>
-            </li>
-            <li>
-                <Link href="/blog" className="text-custom-100 hover:text-custom-200 transition-colors duration-300">
-                    Blog
                 </Link>
             </li>
         </div>

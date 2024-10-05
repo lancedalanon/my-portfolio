@@ -2,6 +2,78 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaLinkedin, FaGithub } from "react-icons/fa";
 import { FaSheetPlastic } from "react-icons/fa6";
+import { useRouter, usePathname } from 'next/navigation';
+
+// Component for QuickLinks (Home, About Me, Skills, etc.)
+const QuickLinks: React.FC<{ handleSmoothScroll: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => void }> = ({ handleSmoothScroll }) => {
+  const pathname = usePathname(); // Get the current path in Next.js App Router
+  const router = useRouter();
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, section: string) => {
+    // Check if we're already on the homepage
+    if (pathname === '/') {
+      // If we're on the homepage, use smooth scroll
+      handleSmoothScroll(e, section);
+    } else {
+      // Otherwise, navigate to the homepage and then scroll
+      e.preventDefault();
+      router.push(`/#${section}`);
+    }
+  };
+
+  return (
+    <ul className="space-x-8 md:flex hidden">
+      {["home", "about-me", "skills", "experience", "featured-projects"].map((section) => (
+        <li key={section}>
+          <a
+            href={`/#${section}`}
+            onClick={(e) => handleClick(e, section)}
+            className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+          >
+            {section.replace("-", " ").toUpperCase()}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+// Component for SocialLinks (Resume, LinkedIn, GitHub, etc.)
+const SocialLinks: React.FC = () => (
+  <ul className="space-x-8 md:flex hidden">
+    <li>
+      <a
+        href="/documents/LanceOrvilleRDalanonResume.pdf"
+        className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
+        download
+      >
+        <FaSheetPlastic className="mr-1" /> RESUME
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
+        aria-label="LinkedIn"
+      >
+        <FaLinkedin className="mr-1" /> LINKEDIN
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://github.com/lancedalanon"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
+        aria-label="GitHub"
+      >
+        <FaGithub className="mr-1" /> GITHUB
+      </a>
+    </li>
+  </ul>
+);
 
 const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(true); // Navbar visibility on scroll
@@ -54,89 +126,11 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto py-6 flex justify-between items-center">
-        {/* Desktop Links */}
-        <ul className="hidden md:flex space-x-8">
-          <li>
-            <a
-              href="#home"
-              onClick={(e) => handleSmoothScroll(e, "home")}
-              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-            >
-              HOME
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about-me"
-              onClick={(e) => handleSmoothScroll(e, "about-me")}
-              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-            >
-              ABOUT ME
-            </a>
-          </li>
-          <li>
-            <a
-              href="#skills"
-              onClick={(e) => handleSmoothScroll(e, "skills")}
-              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-            >
-              SKILLS
-            </a>
-          </li>
-          <li>
-            <a
-              href="#experience"
-              onClick={(e) => handleSmoothScroll(e, "experience")}
-              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-            >
-              EXPERIENCE
-            </a>
-          </li>
-          <li>
-            <a
-              href="#featured-projects"
-              onClick={(e) => handleSmoothScroll(e, "featured-projects")}
-              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-            >
-              FEATURED PROJECTS
-            </a>
-          </li>
-        </ul>
+        {/* Desktop QuickLinks */}
+        <QuickLinks handleSmoothScroll={handleSmoothScroll} />
 
-        {/* External Links for Desktop */}
-        <ul className="hidden md:flex space-x-8">
-          <li>
-            <a
-              href="/documents/LanceOrvilleRDalanonResume.pdf"
-              className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
-              download
-            >
-              <FaSheetPlastic className="mr-1" /> RESUME
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin className="mr-1" /> LINKEDIN
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/lancedalanon"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
-              aria-label="GitHub"
-            >
-              <FaGithub className="mr-1" /> GITHUB
-            </a>
-          </li>
-        </ul>
+        {/* Desktop SocialLinks */}
+        <SocialLinks />
 
         {/* Mobile Menu Icon */}
         <div className="md:hidden flex items-center">
@@ -155,51 +149,17 @@ const Navbar: React.FC = () => {
         <div className="md:hidden bg-custom-900 py-4">
           {/* In-Page Links */}
           <ul className="space-y-8 text-center">
-            <li>
-              <a
-                href="#home"
-                onClick={(e) => handleSmoothScroll(e, "home")}
-                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-              >
-                HOME
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about-me"
-                onClick={(e) => handleSmoothScroll(e, "about-me")}
-                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-              >
-                ABOUT ME
-              </a>
-            </li>
-            <li>
-              <a
-                href="#skills"
-                onClick={(e) => handleSmoothScroll(e, "skills")}
-                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-              >
-                SKILLS
-              </a>
-            </li>
-            <li>
-              <a
-                href="#experience"
-                onClick={(e) => handleSmoothScroll(e, "experience")}
-                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-              >
-                EXPERIENCE
-              </a>
-            </li>
-            <li>
-              <a
-                href="#featured-projects"
-                onClick={(e) => handleSmoothScroll(e, "featured-projects")}
-                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-              >
-                FEATURED PROJECTS
-              </a>
-            </li>
+            {["home", "about-me", "skills", "experience", "featured-projects"].map((section) => (
+              <li key={section}>
+                <a
+                  href={`/#${section}`}
+                  onClick={(e) => handleSmoothScroll(e, section)}
+                  className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+                >
+                  {section.replace("-", " ").toUpperCase()}
+                </a>
+              </li>
+            ))}
           </ul>
 
           {/* External Links (Mobile) */}
