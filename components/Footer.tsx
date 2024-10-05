@@ -72,10 +72,10 @@ const Footer: React.FC = () => {
                     <h3 className="text-xl font-semibold">Contact</h3>
                     <div className="flex items-center space-x-2">
                         <FaEnvelope size={20} />
-                        <a href="mailto:lanceorville5@example.com"
+                        <a href="mailto:lanceorville5@gmail.com"
                            className="hover:text-custom-200 transition-colors duration-300"
                            aria-label="Email">
-                            lanceorville5@example.com
+                            lanceorville5@gmail.com
                         </a>
                     </div>
                     <div className="flex items-center space-x-2">
