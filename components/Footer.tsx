@@ -62,11 +62,6 @@ const QuickLinks: React.FC = () => (
         </div>
         <div className="space-y-2">
             <li>
-                <Link href="/experience" className="text-custom-100 hover:text-custom-200 transition-colors duration-300">
-                    Experience
-                </Link>
-            </li>
-            <li>
                 <Link href="/projects" className="text-custom-100 hover:text-custom-200 transition-colors duration-300">
                     Projects
                 </Link>
