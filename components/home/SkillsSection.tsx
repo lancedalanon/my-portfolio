@@ -17,7 +17,7 @@ const skillIcons = {
 const SkillsSection: React.FC = () => {
   return (
     <section id="skills" className="flex flex-col items-center justify-center text-center px-5 py-14 bg-custom-800 ">
-     <h2 className="text-5xl font-bold text-custom-100 my-4">
+     <h2 className="text-5xl font-bold text-custom-100 mb-10">
       WHAT I BRING TO THE TABLE
      </h2>
      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

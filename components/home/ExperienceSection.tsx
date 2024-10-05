@@ -1,151 +1,149 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import experience from '@/constants/experience.json';
+import experienceData from '@/constants/experience.json';
 
+// Custom hook to determine if the screen size is small
 const useIsSmallScreen = () => {
-    // Initialize isSmall with false, as we don't have window information on the server
     const [isSmall, setIsSmall] = useState(false);
 
     useEffect(() => {
-        // Check if window is defined (i.e., we are in the browser)
         const updateIsSmall = () => {
             if (typeof window !== 'undefined') {
                 setIsSmall(window.innerWidth < 640); // Tailwind's sm breakpoint
             }
         };
 
-        // Set initial value
-        updateIsSmall();
+        updateIsSmall(); // Set initial value
+        window.addEventListener('resize', updateIsSmall); // Add resize event listener
 
-        // Add event listener for resize
-        window.addEventListener('resize', updateIsSmall);
-
-        // Clean up the event listener on component unmount
-        return () => window.removeEventListener('resize', updateIsSmall);
+        return () => window.removeEventListener('resize', updateIsSmall); // Clean up listener
     }, []);
 
     return isSmall;
 };
 
+// Main component for Experience section
 const ExperienceSection: React.FC = () => {
     const isSmallScreen = useIsSmallScreen();
 
     return (
         <section id="experience" className="px-5 py-14 bg-custom-700">
-            <h2 className="text-5xl font-bold text-custom-100 text-center my-4">
+            <h2 className="text-5xl font-bold text-custom-100 text-center mb-10">
                 EXPERIENCE
             </h2>
-                {/* Render based on screen size */}
-                {isSmallScreen ? (
-                    // Small Screen Layout
-                    <div className="grid grid-cols-[1.5%_99.5%] place-items-center ml-10">
-                        <div className="h-8 w-8 rounded-full bg-custom-300"></div>
-                        <div></div>
-
-                        <div className="h-32 w-2 bg-custom-300"></div>
-                        <div></div>
-
-                        <div className="h-20 w-20">
-                            <Image 
-                                src={`/images/Codeyani.jpg`} 
-                                alt={`Codeyani`} 
-                                className="rounded-full border-2 border-custom-100"
-                                height={100} 
-                                width={100} 
-                            />
-                        </div>
-                        <div className="text-white text-start ml-14">
-                            <strong className="text-md">Junior Full Stack Software Engineer</strong>
-                            <p className="text-sm">Codeyani</p>
-                            <p className="text-sm">Jun 2024 - Present · 5 mos</p>
-                        </div>
-
-                        <div className="h-32 w-2 bg-custom-300"></div>
-                        <div></div>
-
-                        <div className="h-20 w-20">
-                            <Image 
-                                src={`/images/Erovoutika.jfif`} 
-                                alt={`Erovoutika`} 
-                                className="rounded-full border-2 border-custom-100"
-                                height={100} 
-                                width={100} 
-                            />
-                        </div>
-                        <div className="text-white text-start ml-14">
-                            <strong className="text-md">Full Stack Web Developer Intern</strong>
-                            <p className="text-sm">Erovoutika</p>
-                            <p className="text-sm">Mar 2024 - May 2024 · 3 mos</p>
-                        </div>
-
-                        <div className="h-32 w-2 bg-custom-300"></div> 
-                        <div></div>
-
-                        <div className="h-8 w-8 rounded-full bg-custom-300"></div>
-                        <div></div>
-                    </div>
-                ) : (
-                    // Default Layout
-                    <div className="grid grid-cols-[48.5%_1%_48.5%] place-items-center">
-                        <div></div>
-                        <div className="h-8 w-8 rounded-full bg-custom-300"></div>
-                        <div></div>
-
-                        <div></div>
-                        <div className="h-32 w-2 bg-custom-300"></div>
-                        <div></div>
-
-                        <div className="text-white text-end mr-20">
-                            <strong className="text-lg md:text-2xl">Junior Full Stack Software Engineer</strong>
-                            <p className="text-md md:text-lg">Codeyani IT Solutions</p>
-                            <p className="text-md md:text-lg">Jun 2024 - Present · 5 mos</p>
-                        </div>
-                        <div className="relative h-32 w-32">
-                            <Image 
-                                src={`/images/Codeyani.jpg`} 
-                                alt={`Codeyani`} 
-                                className="rounded-full border-2 border-custom-100"
-                                height={200} 
-                                width={200} 
-                            />
-                        </div>
-                        <div></div>
-
-                        <div></div>
-                        <div className="h-32 w-2 bg-custom-300"></div>
-                        <div></div>
-
-                        <div></div>
-                        <div className="h-32 w-2 bg-custom-300"></div>
-                        <div></div>
-
-                        <div></div>
-                        <div className="h-32 w-32">
-                            <Image 
-                                src={`/images/Erovoutika.jfif`} 
-                                alt={`Erovoutika`} 
-                                className="rounded-full border-2 border-custom-100"
-                                height={200} 
-                                width={200} 
-                            />
-                        </div>
-                        <div className="text-white text-start ml-20">
-                            <strong className="text-lg md:text-2xl">Full Stack Web Developer Intern</strong>
-                            <p className="text-md md:text-lg">Erovoutika</p>
-                            <p className="text-md md:text-lg">Mar 2024 - May 2024 · 3 mos</p>
-                        </div>
-
-                        <div></div>
-                        <div className="h-32 w-2 bg-custom-300"></div>
-                        <div></div>
-
-                        <div></div>
-                        <div className="h-8 w-8 rounded-full bg-custom-300"></div>
-                        <div></div>
-                    </div>
-                )}
+            {/* Render the appropriate component based on screen size */}
+            {isSmallScreen ? <SmallScreenExperience experience={experienceData} /> : <LargeScreenExperience experience={experienceData} />}
         </section>
+    );
+};
+
+// Component for small screen experience layout
+const SmallScreenExperience: React.FC<{ experience: typeof experienceData }> = ({ experience }) => {
+    return (
+        <div className="grid grid-cols-[1.5%_99.5%] place-items-center ml-10">
+            <div className="h-8 w-8 rounded-full bg-custom-300"></div>
+            <div></div>
+
+            {experience.map((item) => (
+                <React.Fragment key={item.id}>
+                    <div className="h-32 w-2 bg-custom-300"></div>
+                    <div></div>
+
+                    <div className="h-20 w-20">
+                        <Image
+                            src={item.image}
+                            alt={item.label}
+                            className="rounded-full border-2 border-custom-100"
+                            height={100}
+                            width={100}
+                        />
+                    </div>
+                    <div className="text-white text-start ml-14">
+                        <strong className="text-md">{item.role}</strong>
+                        <p className="text-sm">{item.company_name}</p>
+                        <p className="text-sm">
+                            {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} 
+                        </p>
+                    </div>
+
+                    <div className="h-32 w-2 bg-custom-300"></div>
+                    <div></div>
+                </React.Fragment>
+            ))}
+            
+            <div className="h-8 w-8 rounded-full bg-custom-300"></div>
+            <div></div>
+        </div>
+    );
+};
+
+// Component for large screen experience layout
+const LargeScreenExperience: React.FC<{ experience: typeof experienceData }> = ({ experience }) => {
+    return (
+        <div className="grid grid-cols-[48.5%_1%_48.5%] place-items-center">
+            <div></div>
+                <div className="h-8 w-8 rounded-full bg-custom-300"></div>
+            <div></div>
+            {experience.map((item, index) => (
+                <React.Fragment key={item.id}>
+                    <div></div>
+                    <div className="h-32 w-2 bg-custom-300"></div>
+                    <div></div>
+
+                    {/* Conditional rendering to alternate text position */}
+                    {index % 2 === 0 ? (
+                        // Left aligned for even index
+                        <>
+                            <div className="text-white text-end mr-20">
+                                <strong className="text-lg md:text-2xl">{item.role}</strong>
+                                <p className="text-md md:text-lg">{item.company_name}</p>
+                                <p className="text-md md:text-lg">
+                                    {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} 
+                                </p>
+                            </div>
+                            <div className="relative h-32 w-32">
+                                <Image
+                                    src={item.image}
+                                    alt={item.label}
+                                    className="rounded-full border-2 border-custom-100"
+                                    height={200}
+                                    width={200}
+                                />
+                            </div>
+                            <div></div>
+                        </>
+                    ) : (
+                        // Right aligned for odd index
+                        <>
+                            <div></div>
+                            <div className="relative h-32 w-32">
+                                <Image
+                                    src={item.image}
+                                    alt={item.label}
+                                    className="rounded-full border-2 border-custom-100"
+                                    height={200}
+                                    width={200}
+                                />
+                            </div>
+                            <div className="text-white text-start mr-20">
+                                <strong className="text-lg md:text-2xl">{item.role}</strong>
+                                <p className="text-md md:text-lg">{item.company_name}</p>
+                                <p className="text-md md:text-lg">
+                                    {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} 
+                                </p>
+                            </div>
+                        </>
+                    )}
+                    <div></div>
+                    <div className="h-32 w-2 bg-custom-300"></div>
+                    <div></div>
+                </React.Fragment>
+            ))}
+            <div></div>
+            <div className="h-8 w-8 rounded-full bg-custom-300"></div>
+            <div></div>
+        </div>
     );
 };
 
