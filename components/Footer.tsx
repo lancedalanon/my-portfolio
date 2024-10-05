@@ -4,15 +4,21 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa'; // I
 // SocialLinks component for reusability
 const SocialLinks: React.FC = () => (
     <div className="flex space-x-4">
-        <a href="https://linkedin.com/in/yourprofile"
+        <a href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
             className="flex items-center space-x-2 hover:text-custom-200 transition-transform transform hover:scale-110 duration-300"
-            aria-label="LinkedIn">
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             <FaLinkedin size={24} />
             <span>LinkedIn</span>
         </a>
-        <a href="https://github.com/yourprofile"
+        <a href="https://github.com/lancedalanon"
             className="flex items-center space-x-2 hover:text-custom-200 transition-transform transform hover:scale-110 duration-300"
-            aria-label="GitHub">
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             <FaGithub size={24} />
             <span>GitHub</span>
         </a>

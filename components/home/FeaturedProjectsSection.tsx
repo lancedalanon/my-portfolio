@@ -5,7 +5,7 @@ import Button from '@/components/Button';
 
 const FeaturedProjectsSection: React.FC = () => {
     return (
-    <section id="featured-projects" className="px-5 py-14">
+    <section id="featured-projects" className="bg-custom-800 px-5 py-14">
         <h2 className="text-5xl font-bold text-custom-100 text-center my-4">
             PROJECTS I’VE WORKED ON
         </h2>

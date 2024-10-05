@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const AboutMeSection: React.FC = () => {
   return (
-    <section id="about-me" className="flex flex-col items-center justify-center text-center px-20 py-14">
+    <section id="about-me" className="flex flex-col items-center justify-center text-center px-20 py-14 bg-custom-700 ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="text-left px-2">
           <h2 className="text-5xl font-bold text-custom-100 mb-4">ABOUT ME</h2>

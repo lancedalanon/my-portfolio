@@ -32,7 +32,7 @@ const ExperienceSection: React.FC = () => {
     const isSmallScreen = useIsSmallScreen();
 
     return (
-        <section id="experience" className="px-5 py-14">
+        <section id="experience" className="px-5 py-14 bg-custom-700">
             <h2 className="text-5xl font-bold text-custom-100 text-center my-4">
                 EXPERIENCE
             </h2>
@@ -56,9 +56,9 @@ const ExperienceSection: React.FC = () => {
                             />
                         </div>
                         <div className="text-white text-start ml-14">
-                            <strong className="text-md">Full Stack Web Developer Intern</strong>
+                            <strong className="text-md">Junior Full Stack Software Engineer</strong>
                             <p className="text-sm">Codeyani</p>
-                            <p className="text-sm">Mar 2024 - May 2024 · 3 mos</p>
+                            <p className="text-sm">Jun 2024 - Present · 5 mos</p>
                         </div>
 
                         <div className="h-32 w-2 bg-custom-300"></div>

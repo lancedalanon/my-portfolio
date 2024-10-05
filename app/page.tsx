@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (<>
       <Navbar />
       <main>
-        <article className="bg-custom-700">
+        <article>
           <HomeSection />
           <AboutMeSection />
           <SkillsSection />

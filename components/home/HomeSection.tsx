@@ -1,16 +1,30 @@
 import React from 'react';
+import Image from 'next/image';
 
 const HomeSection: React.FC = () => {
   return (
-    <section id="home" className="h-screen flex flex-col items-center justify-center text-center">
-      <h1 className="text-5xl font-bold text-custom-100">
-        Hi, I'm Lance Dalanon!
+    <section id="home" className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image 
+          src={`/images/programming-background.jpg`} 
+          alt="Background Image" 
+          layout="fill"
+          objectFit="cover" 
+          className="z-0" 
+        />
+        {/* Transparent Overlay */}
+        <div className="absolute inset-0 bg-black opacity-90"></div> {/* Adjust opacity as needed */}
+      </div>
+
+      <h1 className="text-7xl font-bold text-custom-100 relative z-10">
+        Hi, I’m Lance Dalanon!
       </h1> 
-      <p className="text-xl text-custom-300 mt-4 max-w-2xl">
+      <p className="text-xl text-custom-200 mt-4 max-w-2xl relative z-10">
         A dedicated and passionate full-stack software engineer committed 
         to delivering innovative technical solutions tailored to meet your business needs.
       </p>
-      <a className="mt-6 bg-white text-custom-800 font-semibold py-3 px-6 text-lg rounded-xl shadow hover:bg-gray-200 transition-all duration-200" href="#about-me">
+      <a className="mt-6 text-lg md:text-2xl bg-white text-custom-800 font-semibold px-5 py-3 md:px-10 md:py-5 text-lg rounded-full shadow hover:bg-gray-200 transition-all duration-200 relative z-10" href="#about-me">
         Learn More
       </a>
     </section>

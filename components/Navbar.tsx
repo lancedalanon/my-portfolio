@@ -1,39 +1,49 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from 'next/link';
+import { FaBars, FaTimes } from "react-icons/fa"; // Icons for mobile menu
 
 const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
-      // Get the current scroll position
       const currentScrollY = window.scrollY;
 
-      // Check if the user is scrolling down or up
       if (currentScrollY > lastScrollY) {
-        // User is scrolling down, hide the navbar
         setVisible(false);
       } else {
-        // User is scrolling up, show the navbar
         setVisible(true);
       }
 
-      // Update last scroll position
       setLastScrollY(currentScrollY);
     }
   };
 
+  // Debounce the scroll event for better performance
   useEffect(() => {
-    // Add scroll event listener
-    window.addEventListener("scroll", controlNavbar);
+    const handleScroll = () => {
+      setTimeout(controlNavbar, 100); // Delay of 100ms to debounce
+    };
+    window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener("scroll", controlNavbar);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+
+  // Smooth scrolling effect for in-page navigation
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 80, // Adjust for navbar height
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <nav
@@ -41,41 +51,65 @@ const Navbar: React.FC = () => {
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-7xl mx-auto py-6 flex justify-between">
-        <ul className="flex space-x-8">
+      <div className="max-w-7xl mx-auto py-6 flex justify-between items-center">
+        {/* Desktop Links */}
+        <ul className="hidden md:flex space-x-8">
           <li>
-            <a href="#home" className="text-custom-100 font-bold">
+            <a
+              href="#home"
+              onClick={(e) => handleSmoothScroll(e, "home")}
+              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+            >
               HOME
             </a>
           </li>
           <li>
-            <a href="#about-me" className="text-custom-100 font-bold">
+            <a
+              href="#about-me"
+              onClick={(e) => handleSmoothScroll(e, "about-me")}
+              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+            >
               ABOUT ME
             </a>
           </li>
           <li>
-            <a href="#skills" className="text-custom-100 font-bold">
+            <a
+              href="#skills"
+              onClick={(e) => handleSmoothScroll(e, "skills")}
+              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+            >
               SKILLS
             </a>
           </li>
           <li>
-            <a href="#experience" className="text-custom-100 font-bold">
+            <a
+              href="#experience"
+              onClick={(e) => handleSmoothScroll(e, "experience")}
+              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+            >
               EXPERIENCE
             </a>
           </li>
           <li>
-            <a href="#featured-projects" className="text-custom-100 font-bold">
+            <a
+              href="#featured-projects"
+              onClick={(e) => handleSmoothScroll(e, "featured-projects")}
+              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+            >
               FEATURED PROJECTS
             </a>
           </li>
         </ul>
-        <ul className="flex space-x-8">
+
+        {/* External Links */}
+        <ul className="hidden md:flex space-x-8">
           <li>
             <a
               href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-custom-100 font-bold"
+              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+              aria-label="LinkedIn"
             >
               LINKEDIN
             </a>
@@ -85,13 +119,104 @@ const Navbar: React.FC = () => {
               href="https://github.com/YOUR_GITHUB_USERNAME"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-custom-100 font-bold"
+              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+              aria-label="GitHub"
             >
               GITHUB
             </a>
           </li>
         </ul>
+
+        {/* Mobile Menu Icon */}
+        <div className="md:hidden flex items-center">
+          <button
+            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-custom-100 focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-custom-900 py-4">
+          <ul className="space-y-4 text-center">
+            <li>
+              <a
+                href="#home"
+                onClick={(e) => handleSmoothScroll(e, "home")}
+                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+              >
+                HOME
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about-me"
+                onClick={(e) => handleSmoothScroll(e, "about-me")}
+                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+              >
+                ABOUT ME
+              </a>
+            </li>
+            <li>
+              <a
+                href="#skills"
+                onClick={(e) => handleSmoothScroll(e, "skills")}
+                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+              >
+                SKILLS
+              </a>
+            </li>
+            <li>
+              <a
+                href="#experience"
+                onClick={(e) => handleSmoothScroll(e, "experience")}
+                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+              >
+                EXPERIENCE
+              </a>
+            </li>
+            <li>
+              <a
+                href="#featured-projects"
+                onClick={(e) => handleSmoothScroll(e, "featured-projects")}
+                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+              >
+                FEATURED PROJECTS
+              </a>
+            </li>
+          </ul>
+
+          {/* External Links (Mobile) */}
+          <ul className="space-y-4 text-center mt-4">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+                aria-label="LinkedIn"
+              >
+                LINKEDIN
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/lancedalanon"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+                aria-label="GitHub"
+              >
+                GITHUB
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };
