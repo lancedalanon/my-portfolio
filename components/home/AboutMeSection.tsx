@@ -28,9 +28,9 @@ const AboutMeSection: React.FC = () => {
               lives.
             </p>
           </div>
-          <div className="flex justify-start">
+          <div className="flex justify-center md:justify-start">
             <a 
-              className="flex items-center text-ms md:text-lg bg-white text-custom-800 border border-custom-800 font-semibold px-3 py-2 md:px-6 md:py-4 rounded-full shadow hover:bg-gray-200 transition-all duration-200"
+              className="flex items-center text-lg bg-white text-custom-800 border border-custom-800 font-semibold px-6 py-4 rounded-full shadow hover:bg-gray-200 transition-all duration-200"
               href="/documents/LanceOrvilleRDalanonResume.pdf"
               download 
             >
@@ -45,7 +45,7 @@ const AboutMeSection: React.FC = () => {
             alt={`Lance Dalanon`} 
             width={480} 
             height={480} 
-            className="rounded-xl shadow-lg" 
+            className="rounded-xl shadow-2xl" 
           />
         </div>
       </div>

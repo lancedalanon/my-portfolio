@@ -3,18 +3,19 @@ import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for mobile menu
 
 const Navbar: React.FC = () => {
-  const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [visible, setVisible] = useState(true); // Navbar visibility on scroll
+  const [lastScrollY, setLastScrollY] = useState(0); // Last scroll position
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false); // Mobile menu toggle state
 
+  // Function to control Navbar visibility based on scroll direction
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY) {
-        setVisible(false);
+        setVisible(false); // Hide navbar on scroll down
       } else {
-        setVisible(true);
+        setVisible(true); // Show navbar on scroll up
       }
 
       setLastScrollY(currentScrollY);
@@ -24,7 +25,7 @@ const Navbar: React.FC = () => {
   // Debounce the scroll event for better performance
   useEffect(() => {
     const handleScroll = () => {
-      setTimeout(controlNavbar, 100); // Delay of 100ms to debounce
+      setTimeout(controlNavbar, 100); // Delay to debounce
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -47,7 +48,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`bg-custom-900 fixed w-full z-50 shadow-lg transition-transform duration-300 ease-in-out ${
+      className={`bg-custom-900 fixed w-full z-50 shadow-lg transition-transform duration-300 ease-in-out px-8 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -101,11 +102,20 @@ const Navbar: React.FC = () => {
           </li>
         </ul>
 
-        {/* External Links */}
+        {/* External Links for Desktop */}
         <ul className="hidden md:flex space-x-8">
           <li>
             <a
-              href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+              href="/documents/LanceOrvilleRDalanonResume.pdf"
+              className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+              download
+            >
+              RESUME
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
@@ -116,7 +126,7 @@ const Navbar: React.FC = () => {
           </li>
           <li>
             <a
-              href="https://github.com/YOUR_GITHUB_USERNAME"
+              href="https://github.com/lancedalanon"
               target="_blank"
               rel="noopener noreferrer"
               className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
@@ -142,6 +152,7 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-custom-900 py-4">
+          {/* In-Page Links */}
           <ul className="space-y-4 text-center">
             <li>
               <a
@@ -192,6 +203,15 @@ const Navbar: React.FC = () => {
 
           {/* External Links (Mobile) */}
           <ul className="space-y-4 text-center mt-4">
+            <li>
+              <a
+                href="/documents/LanceOrvilleRDalanonResume.pdf"
+                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+                download
+              >
+                RESUME
+              </a>
+            </li>
             <li>
               <a
                 href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"

@@ -24,7 +24,7 @@ const HomeSection: React.FC = () => {
         A dedicated and passionate full-stack software engineer committed 
         to delivering innovative technical solutions tailored to meet your business needs.
       </p>
-      <a className="mt-6 text-lg md:text-2xl bg-white text-custom-800 font-semibold px-5 py-3 md:px-10 md:py-5 text-lg rounded-full shadow hover:bg-gray-200 transition-all duration-200 relative z-10" href="#about-me">
+      <a className="mt-6 text-lg bg-white text-custom-800 font-bold px-8 py-4 rounded-full shadow hover:bg-gray-200 transition-all duration-200 relative z-10" href="#about-me">
         Learn More
       </a>
     </section>
