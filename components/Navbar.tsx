@@ -154,7 +154,7 @@ const Navbar: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-custom-900 py-4">
           {/* In-Page Links */}
-          <ul className="space-y-4 text-center">
+          <ul className="space-y-8 text-center">
             <li>
               <a
                 href="#home"
@@ -203,14 +203,14 @@ const Navbar: React.FC = () => {
           </ul>
 
           {/* External Links (Mobile) */}
-          <ul className="space-y-4 text-center mt-4">
+          <ul className="space-y-8 text-center mt-8">
             <li>
               <a
                 href="/documents/LanceOrvilleRDalanonResume.pdf"
                 className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
                 download
               >
-                <FaSheetPlastic className="mr-1" /> RESUME
+                RESUME
               </a>
             </li>
             <li>
@@ -218,10 +218,10 @@ const Navbar: React.FC = () => {
                 href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
+                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
                 aria-label="LinkedIn"
               >
-                <FaLinkedin className="mr-1" /> LINKEDIN
+                LINKEDIN
               </a>
             </li>
             <li>
@@ -229,10 +229,10 @@ const Navbar: React.FC = () => {
                 href="https://github.com/lancedalanon"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
+                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
                 aria-label="GitHub"
               >
-                <FaGithub className="mr-1" /> GITHUB
+                GITHUB
               </a>
             </li>
           </ul>
