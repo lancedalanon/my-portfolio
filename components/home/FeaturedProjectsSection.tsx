@@ -1,7 +1,8 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import Button from '@/components/Button';
+import Link from 'next/link';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const FeaturedProjectsSection: React.FC = () => {
     return (
@@ -105,11 +106,14 @@ const FeaturedProjectsSection: React.FC = () => {
             </div>
         </div>
         <div className="flex justify-center items-center">
-            <Button 
-                className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold mt-6"
+            <Link 
+             href="/projects" 
+             passHref
+             className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold mt-6 flex items-center"
             >
+                <FaExternalLinkAlt className="mr-2" />
                 View More
-            </Button>
+            </Link>
         </div>
     </section>
     );
