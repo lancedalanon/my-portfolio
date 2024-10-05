@@ -3,9 +3,9 @@ import React from 'react';
 import Image from 'next/image';
 import Button from '@/components/Button';
 
-const ProjectsSection: React.FC = () => {
+const FeaturedProjectsSection: React.FC = () => {
     return (
-    <section id="projects" className="px-5 py-14">
+    <section id="featured-projects" className="px-5 py-14">
         <h2 className="text-5xl font-bold text-custom-100 text-center my-4">
             PROJECTS I’VE WORKED ON
         </h2>
@@ -115,4 +115,4 @@ const ProjectsSection: React.FC = () => {
     );
 };
 
-export default ProjectsSection;
+export default FeaturedProjectsSection;

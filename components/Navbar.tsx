@@ -37,40 +37,35 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`bg-custom-800 fixed w-full z-10 shadow-lg transition-transform duration-300 ease-in-out ${
+      className={`bg-custom-900 fixed w-full z-10 shadow-lg transition-transform duration-300 ease-in-out ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between">
+      <div className="max-w-7xl mx-auto py-6 flex justify-between">
         <ul className="flex space-x-8">
           <li>
             <a href="#home" className="text-custom-100 font-bold">
-              Home
+              HOME
             </a>
           </li>
           <li>
             <a href="#about-me" className="text-custom-100 font-bold">
-              About Me
+              ABOUT ME
             </a>
           </li>
           <li>
             <a href="#skills" className="text-custom-100 font-bold">
-              Skills
+              SKILLS
             </a>
           </li>
           <li>
             <a href="#experience" className="text-custom-100 font-bold">
-              Experience
+              EXPERIENCE
             </a>
           </li>
           <li>
-            <a href="#projects" className="text-custom-100 font-bold">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="text-custom-100 font-bold">
-             Contact
+            <a href="#featured-projects" className="text-custom-100 font-bold">
+              FEATURED PROJECTS
             </a>
           </li>
         </ul>
@@ -82,7 +77,7 @@ const Navbar: React.FC = () => {
               rel="noopener noreferrer"
               className="text-custom-100 font-bold"
             >
-              LinkedIn
+              LINKEDIN
             </a>
           </li>
           <li>
@@ -92,7 +87,7 @@ const Navbar: React.FC = () => {
               rel="noopener noreferrer"
               className="text-custom-100 font-bold"
             >
-              GitHub
+              GITHUB
             </a>
           </li>
         </ul>
