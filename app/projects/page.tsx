@@ -1,9 +1,8 @@
 "use client"
 import React from "react";
-import Link from 'next/link';
 import Image from 'next/image';
 import type { NextPage } from 'next';
-import { FaMagnifyingGlass } from 'react-icons/fa6';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import projects from '@/constants/projects.json';
 
 const Projects: NextPage = () => {
@@ -11,7 +10,7 @@ const Projects: NextPage = () => {
         <main>
             <article>
                 <section id="projects" className="flex flex-col items-center justify-start overflow-hidden bg-custom-700">
-                    <h2 className="text-4xl font-bold text-custom-100 mb-10 my-32">
+                    <h2 className="text-3xl md:text-5xl text-center font-bold text-custom-100 mb-10 my-32 mx-6">
                         MASTERPIECES IN DIGITAL DEVELOPMENT
                     </h2>
                     <div className="grid grid-cols-1 mx-8 gap-y-8 md:grid-cols-2 md:gap-x-8 mb-16">
@@ -36,16 +35,36 @@ const Projects: NextPage = () => {
                                             <p>{project.short_description}</p>
                                         </span>
                                         {/* Button */}
-                                        <span className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out mt-6 flex justify-end w-full">
-                                            <Link 
+                                        <span className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out mt-6 flex justify-between w-full mb-6">
+                                            {/* Featured Language/Framework Icons */}
+                                            <div className="flex flex-wrap bg-white rounded-full">
+                                                {project.language_framework_libraries 
+                                                    .filter((item) => item.is_featured === 1) 
+                                                    .map((item) => (
+                                                        <div
+                                                            key={item.id}
+                                                            className="flex items-center justify-center w-16 h-16"
+                                                            title={item.name}
+                                                        >
+                                                            <Image 
+                                                                alt={item.name} 
+                                                                src={item.image || '/path/to/default/icon.png'}
+                                                                width={40}
+                                                                height={40}
+                                                                className="pt-2"
+                                                            />
+                                                        </div>
+                                                    ))}
+                                            </div>
+                                            <a 
                                                 href={`/projects/${project.id}`} 
-                                                target="_blank"
-                                                passHref
-                                                className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold flex items-center"
+                                                target="_blank" 
+                                                rel="noopener noreferrer" // Security best practice for external links
+                                                className="text-white text-lg md:text-2xl rounded-3x px-5 py-3 md:px-10 md:py-5 font-bold flex items-center hover:underline"
                                             >
-                                                <FaMagnifyingGlass className="mr-2" />
-                                                More Details
-                                            </Link>
+                                                <FaExternalLinkAlt className="mr-2" /> {/* External link icon */}
+                                                Explore
+                                            </a>
                                         </span>
                                     </div>
                                 </div>
