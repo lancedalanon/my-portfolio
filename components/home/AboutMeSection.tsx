@@ -1,37 +1,50 @@
 import React from 'react';
 import Image from 'next/image';
+import { FaDownload } from 'react-icons/fa';
 
 const AboutMeSection: React.FC = () => {
   return (
-    <section id="about-me" className="flex flex-col items-center justify-center text-center px-20 py-14 bg-custom-700 ">
+    <section id="about-me" className="flex flex-col items-center justify-center text-center px-20 py-14 bg-custom-700">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="text-left px-2">
-          <h2 className="text-5xl font-bold text-custom-100 mb-4">ABOUT ME</h2>
-          <p className="text-xl text-custom-300 mb-4">
-            I am a dedicated Full Stack Software Engineer with experience in developing and 
-            enhancing web applications using technologies such as JavaScript, Python, Laravel, 
-            Vue.js, React.js, Next.js, and the TALL stack (Tailwind CSS, Alpine.js, Livewire). 
-            I prioritize code quality and security by implementing best practices, including rigorous 
-            code reviews and adhering to OWASP standards. My collaborative approach in Agile environments 
-            fosters effective communication with cross-functional teams to achieve project goals. 
-            With a solid foundation in both front-end and back-end development, I am eager to tackle 
-            complex challenges and drive innovative solutions. I am ready to contribute my skills and 
-            enthusiasm to a dynamic team focused on delivering exceptional user experiences.
-          </p>
-          <p className="text-xl text-custom-300">
-            Beyond my technical skills, I am genuinely passionate about using technology to solve real-world problems. 
-            I thrive on learning new tools and methodologies that enhance my capabilities, and I believe in the 
-            importance of continuous improvement. Whether it's mentoring junior developers or exploring new frameworks, 
-            I am committed to growing not just as a developer but also as a collaborator and leader in the tech community. 
-            I am excited to be part of projects that not only challenge me but also have a meaningful impact on users’ lives.
-          </p>
+        <div className="text-left px-2 flex flex-col justify-between">
+          <div>
+            <h2 className="text-4xl font-bold text-custom-100 mb-4">  
+              MEET YOUR NEXT SOFTWARE ENGINEER: MY JOURNEY
+            </h2>
+            <p className="text-xl text-custom-200 mb-4">
+              Hi there! I’m a Full Stack Software Engineer who loves building and enhancing web and software applications. 
+              I work with a range of technologies, including <strong>JavaScript</strong>, <strong>Python</strong>, <strong>Laravel</strong>, <strong>Vue.js</strong>, <strong>React.js</strong>, <strong>Next.js</strong>, 
+              and the <strong>TALL stack</strong> (<strong>Tailwind CSS</strong>, <strong>Alpine.js</strong>, <strong>Livewire</strong>). 
+              I’m all about <strong>writing clean, secure code</strong>, and I make it a point to follow best practices, 
+              like thorough <strong>code reviews</strong> and <strong>OWASP</strong> standards. 
+              I thrive in <strong>Agile</strong> environments, where <strong>teamwork</strong> and <strong>communication</strong> are key to reaching our goals. 
+              With a solid foundation in both <strong>front-end and back-end development</strong>, I’m excited to take on challenges and come up with innovative solutions.
+            </p>
+            <p className="text-xl text-custom-200 mb-4">
+              Beyond my technical skills, I’m genuinely passionate about using technology 
+              to tackle real-world problems. I love learning new tools and methods that help me grow as a developer.
+              Whether I’m mentoring junior developers or diving into new frameworks, I’m committed to continuous improvement.
+              I’m eager to be part of projects that not only challenge me but also make a meaningful difference in people’s 
+              lives.
+            </p>
+          </div>
+          <div className="flex justify-start">
+            <a 
+              className="flex items-center text-ms md:text-lg bg-white text-custom-800 border border-custom-800 font-semibold px-3 py-2 md:px-6 md:py-4 rounded-full shadow hover:bg-gray-200 transition-all duration-200"
+              href="/documents/LanceOrvilleRDalanonResume.pdf"
+              download 
+            >
+              <FaDownload className="mr-2" />
+              Download CV
+            </a>
+          </div>
         </div>
         <div className="flex items-center justify-center">
           <Image 
             src={`/images/lance_dalanon.JPG`} 
             alt={`Lance Dalanon`} 
-            width="480" 
-            height="480" 
+            width={480} 
+            height={480} 
             className="rounded-xl shadow-lg" 
           />
         </div>

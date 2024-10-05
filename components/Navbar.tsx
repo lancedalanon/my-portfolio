@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`bg-custom-900 fixed w-full z-10 shadow-lg transition-transform duration-300 ease-in-out ${
+      className={`bg-custom-900 fixed w-full z-50 shadow-lg transition-transform duration-300 ease-in-out ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
