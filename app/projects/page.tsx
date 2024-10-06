@@ -16,7 +16,7 @@ const Projects: NextPage = () => {
                     <h2 className="text-3xl md:text-5xl text-center font-bold text-custom-100 mt-32 mx-6">
                         MASTERPIECES IN DIGITAL DEVELOPMENT
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 my-16 mx-16 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 my-16 mx-8 md:mx-16 gap-6">
                         {/* Iterate over the featured projects */}
                         {projects.map((project) => (
                             <React.Fragment key={project.id}>
@@ -27,7 +27,7 @@ const Projects: NextPage = () => {
                                             alt={project.project_name}
                                             height={1000}
                                             width={1000}
-                                            className="rounded-xl h-72 w-full"
+                                            className="rounded-xl h-48 md:h-72 w-full"
                                         />
                                     </CardHeader>
                                     
@@ -43,24 +43,26 @@ const Projects: NextPage = () => {
                                                 .filter((item) => item.is_featured === 1) 
                                                 .map((item) => ( 
                                                     <Badge
-                                                        className="py-2 px-3 bg-custom-500 rounded-full"
+                                                        className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-500 rounded-full"
                                                         key={item.id}
                                                         title={item.name}
                                                     >
-                                                        <Image
-                                                            src={item.image || '/path/to/default/icon.png'}
-                                                            alt={item.name}
-                                                            width={25}
-                                                            height={25}
-                                                            className="mr-2 bg-white rounded-lg"
-                                                        />
+                                                        <div className="bg-white rounded-full p-1 mr-2">
+                                                            <Image
+                                                                src={item.image || '/path/to/default/icon.png'}
+                                                                alt={item.name}
+                                                                width={20}
+                                                                height={20}
+                                                                className="rounded-lg"
+                                                            />
+                                                        </div>
                                                         <span className="text-lg">
                                                             {item.name}
                                                         </span>
                                                     </Badge>
                                             ))}
                                         </div>
-                                        <div>
+                                        <div className="hidden md:block">
                                             <p className="text-lg">
                                                 {project.short_description}
                                             </p>
@@ -75,7 +77,7 @@ const Projects: NextPage = () => {
                                             href={`/projects/${project.id}`} 
                                             target="_blank"
                                             passHref
-                                            className="bg-accent text-white text-lg md:text-xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-6 py-4 font-bold flex items-center"
+                                            className="bg-accent text-white text-lg md:text-xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-4 py-3 md:px-6 md:py-4 font-bold flex items-center"
                                         >
                                             <FaExternalLinkAlt className="mr-2" />
                                             Explore Project

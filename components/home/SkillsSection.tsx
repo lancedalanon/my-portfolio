@@ -45,7 +45,7 @@ const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
   
   return (
     <Card 
-     className="max-w-sm w-full bg-custom-600 transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer"
+     className="rounded-lg max-w-sm w-full bg-custom-600 transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer"
      onClick={handleSkillCardClick}
     >
       <CardHeader>
