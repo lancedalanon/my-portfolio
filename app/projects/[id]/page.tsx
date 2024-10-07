@@ -60,9 +60,9 @@ const Project: NextPage = () => {
                         <div className="grid grid-cols-1 md:grid-cols-[10%_80%_10%] my-28 mx-6">
                             <div></div>
                                 <div>
-                                    <Link href="/projects" passHref className="flex items-center my-8">
-                                        <FaArrowLeftLong className="mr-2 text-white text-lg" />
-                                        <span className="text-white text-lg hover:underline">
+                                    <Link href="/projects" passHref className="flex items-center my-8 text-2xl">
+                                        <FaArrowLeftLong className="mr-2 text-white" />
+                                        <span className="text-white hover:underline">
                                             Back to Projects page
                                         </span>
                                     </Link>
