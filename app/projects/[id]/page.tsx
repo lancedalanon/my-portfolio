@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useParams } from "next/navigation";  // Import useParams hook from next/navigation
+import { useParams } from "next/navigation";
 import type { NextPage } from "next";
 import projects from "@/constants/projects.json";
 import Image from "next/image";
