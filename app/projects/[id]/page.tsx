@@ -7,6 +7,7 @@ import Image from "next/image";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Link from "next/link";
 import Badge from '@/components/Badge';
+import DOMPurify from 'dompurify';
 
 const Project: NextPage = () => {
     // Get the params from the URL, including the 'id'
@@ -56,7 +57,7 @@ const Project: NextPage = () => {
                 <article>
                     <section className="h-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-custom-700">
                         {/* Centered Content */}
-                        <div className="grid grid-cols-1 md:grid-cols-[10%_80%_10%] my-28">
+                        <div className="grid grid-cols-1 md:grid-cols-[10%_80%_10%] my-28 mx-6">
                             <div></div>
                                 <div>
                                     <Link href="/projects" passHref className="flex items-center my-8">
@@ -67,7 +68,7 @@ const Project: NextPage = () => {
                                     </Link>
 
                                     {/* Centered Title */}
-                                    <h2 className="text-3xl md:text-5xl my-8 font-bold text-custom-100">
+                                    <h2 className="text-3xl md:text-6xl my-8 font-bold text-custom-100">
                                         {project.project_headline}
                                     </h2>
 
@@ -138,6 +139,22 @@ const Project: NextPage = () => {
                                     {/* Contents */}
                                     <div className="text-lg text-white">
                                         <em>{project.short_description}</em>
+
+                                        <div>
+                                            {/* Iterating over the sections */}
+                                            {project.sections && project.sections.map((section) => (
+                                                <div key={section.id} className="mb-4"> 
+                                                    {/* Subheading */}
+                                                    <div className="font-bold text-5xl mt-16 mb-8">{section.subheading}</div>
+                                                    
+                                                    {/* Content - sanitized using DOMPurify */}
+                                                    <div 
+                                                        className="text-2xl my-8 leading-relaxed" // Adjusted here
+                                                        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(section.content) }} 
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             <div></div>

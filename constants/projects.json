@@ -40,6 +40,38 @@
             { "id": 8, "name": "Full Stack Web Development" },
             { "id": 9, "name": "Database Administration" },
             { "id": 10, "name": "Code Review" }
+        ],
+        "sections": [
+            {
+                "id": 1,
+                "subheading": "Introduction",
+                "content": "The iLaya project represents a significant collaboration between myself and a talented team of developers, aimed at revolutionizing the administrative processes within Barangay Aplaya. This web-based system effectively automates the management of government documentation and blotter records, enhancing both efficiency and transparency in local governance."
+            },
+            {
+                "id": 2,
+                "subheading": "Objectives",
+                "content": "Our primary objective was to modernize the administrative operations of Barangay Aplaya, particularly in document issuance and blotter management. By automating traditionally manual and error-prone processes, iLaya provides a seamless, user-friendly solution that ensures accessibility for both government employees and residents while maintaining robust data security."
+            },
+            {
+                "id": 3,
+                "subheading": "Technologies Used",
+                "content": "iLaya leverages cutting-edge web technologies to deliver a responsive and efficient system. The frontend is built with <strong class='text-accent'>HTML5</strong>, <strong class='text-accent'>CSS3</strong>, <strong class='text-accent'>JavaScript</strong>, and <strong class='text-accent'>jQuery</strong>, ensuring a smooth user experience across devices. The backend utilizes <strong class='text-accent'>PHP</strong> and <strong class='text-accent'>Laravel</strong> for secure document management and user authentication, with <strong class='text-accent'>MySQL</strong> as the database solution. Tools like <strong class='text-accent'>XAMPP</strong> and <strong class='text-accent'>MySQL Workbench</strong> were vital during development and testing. We employed the <strong class='text-accent'>Gitflow</strong> branching model for version control, utilizing <strong class='text-accent'>GitHub</strong> for collaboration and code management, all within an <strong class='text-accent'>Agile</strong> workflow using <strong class='text-accent'>Jira</strong> for task management."
+            },
+            {
+                "id": 4,
+                "subheading": "Skills Learned and Demonstrated",
+                "content": "Contributing to iLaya honed my skills as a <strong class='text-accent'>Full Stack Developer</strong>. I prioritized <strong class='text-accent'>Responsive Web Design</strong> for device accessibility and implemented <strong class='text-accent'>Role-Based Access Control (RBAC)</strong> to secure sensitive features. <strong class='text-accent'>Collaborating with Quality Assurance Analysts, Business Analysts, UI/UX and Front-end Developer and Project Manager</strong> allowed me to ensure high-quality deliverables. My experience in Agile methodologies strengthened my abilities in task management and <strong class='text-accent'>REST API integration</strong>, showcasing my technical proficiency and commitment to user-centric solutions."
+            },
+            {
+                "id": 5,
+                "subheading": "Awards",
+                "content": "iLaya garnered recognition in several prestigious competitions. We achieved <strong class='text-accent'>Best in Capstone Project</strong> for our innovative approach to community challenges and secured <strong class='text-accent'>1st Place</strong> at the <strong class='text-accent'>Hackathon Cyber Constellations: Mapping the Future of Technology</strong>, reflecting our collaborative spirit and innovative solutions. Additionally, we were honored as <strong class='text-accent'>Champions</strong> in the <strong class='text-accent'>2nd Leon C. Arcillas Collegiate Research Colloquium</strong> (Poster Presentation), underscoring our project's relevance to modernizing government services."
+            },
+            {
+                "id": 6,
+                "subheading": "Conclusion",
+                "content": "My experience with iLaya was profoundly rewarding, providing an opportunity to address real-world issues in local governance. By automating document issuance and managing blotter records, we significantly enhanced the efficiency of administrative processes. I take pride in our team’s accomplishments, and the recognition received validates the dedication and effort invested in the project. I am eager to apply these skills in future endeavors, continuing to create impactful solutions that drive meaningful change."
+            }
         ]
     },
     {
