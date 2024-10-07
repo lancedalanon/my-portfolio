@@ -77,7 +77,7 @@
     {
         "id": 2,
         "project_name": "Events Tabulation System",
-        "project_headline": null,
+        "project_headline": "From Scores to Schedules: The All-in-One Event Tabulation System for Modern Tournaments!",
         "project_image": "/images/Events-Tabulation-System.png",
         "short_description": "Features live scoring for tournaments with a bracketing system and showcases overall scores for school organizations. Experience a powerful and intuitive scoring solution that goes beyond the ordinary!",
         "month_start": "May",
@@ -103,7 +103,6 @@
             { "id": 7, "name": "MySQL Workbench", "image": "/images/MySQL-Workbench.png" },
             { "id": 8, "name": "Gitflow", "image": "/images/Gitflow.png" },
             { "id": 9, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png" }
-
         ],
         "skills": [
             { "id": 1, "name": "Scrum" },
@@ -116,6 +115,43 @@
             { "id": 8, "name": "Full Stack Web Development" },
             { "id": 9, "name": "Database Administration" },
             { "id": 10, "name": "Code Review" }
+        ],
+        "sections": [
+            {
+                "id": 1,
+                "subheading": "Introduction",
+                "content": "This project was developed as part of our Applications Development and Emerging Technologies course, where we took on the challenge of handling development and presentations the way it's done in the industry. It was the first time we built a software solution that had us managing client requests in real-time. From starting with very little knowledge, we spent several months immersed in an <strong class='text-accent'>Agile environment</strong>, learning everything from the ground up until we had gained industry-level knowledge. This experience bridged the gap between theory and real-world practice, helping us navigate the complexities of software development while sharpening our ability to tackle challenges with more confidence."
+            },
+            {
+                "id": 2,
+                "subheading": "Objectives",
+                "content": "The main objective of this project was to create a fully functional software solution that fulfilled client requests under a tight schedule, as the system would be used in a competition event. In addition, we aimed to expand our understanding of the <strong class='text-accent'>Software Development Life Cycle (SDLC)</strong> and immerse ourselves in an <strong class='text-accent'>Agile environment</strong>. This project pushed us to apply and further develop our existing knowledge of software development, while also providing valuable experience in collaborating and performing in a fast-paced, IT-centric team setting. It was a hands-on opportunity to experience what it’s like to work in a real-world software development firm."
+            },
+            {
+                "id": 3,
+                "subheading": "Challenges in Software Development",
+                "content": "At the start of this project, we had only the basics of <strong class='text-accent'>HTML5</strong>, <strong class='text-accent'>CSS3</strong>, <strong class='text-accent'>JavaScript</strong>, <strong class='text-accent'>PHP</strong>, <strong class='text-accent'>SQL</strong>, and <strong class='text-accent'>Bootstrap</strong> under our belts. As the assistant lead developer, I had to take on the dual role of both learning and mentoring my team members while ensuring the project moved forward smoothly. One of the biggest challenges was learning to adapt quickly to a fast-paced environment while resolving issues that popped up during development. We also had to ensure that we maintained a high standard of collaboration, all while meeting the ever-present deadlines and addressing any bugs or roadblocks that came our way."
+            },
+            {
+                "id": 4,
+                "subheading": "Overcoming the Challenges",
+                "content": "The way we overcame these challenges was by adopting a continuous learning mindset, which allowed us to push through and improve consistently. A key element in this was maintaining clear and open communication within the team. By ensuring everyone understood the software requirements before diving into development, we were able to work much more efficiently and reduce time spent on unnecessary revisions. Tackling problems one step at a time, while utilizing the <strong class='text-accent'>Agile methodology</strong>, helped us make progress steadily. This approach, combined with collaboration and proper planning, allowed us to deliver a working product on time."
+            },
+            {
+                "id": 5,
+                "subheading": "Technologies Used",
+                "content": "Our project leveraged a range of modern technologies to create a robust event tabulation system: We used <strong class='text-accent'>HTML5</strong>, <strong class='text-accent'>CSS3</strong>, <strong class='text-accent'>Bootstrap</strong>, <strong class='text-accent'>JavaScript</strong>, <strong class='text-accent'>jQuery</strong>, <strong class='text-accent'>PHP</strong>, and <strong class='text-accent'>SQL</strong> as the core languages and libraries. For tools and platforms, we relied on <strong class='text-accent'>Jira</strong> for project management and sprint planning in an <strong class='text-accent'>Agile setting</strong>, <strong class='text-accent'>XAMPP</strong> for our local development environment, and <strong class='text-accent'>GitHub</strong> and <strong class='text-accent'>Git</strong> for version control. We used <strong class='text-accent'>Hostinger</strong> for deployment, <strong class='text-accent'>MySQL Workbench</strong> for managing our database, and <strong class='text-accent'>Gitflow</strong> to manage our workflow. Development was done in <strong class='text-accent'>Visual Studio Code</strong>, which allowed for efficient coding and debugging throughout the project."
+            },
+            {
+                "id": 6,
+                "subheading": "Skills Learned and Demonstrated",
+                "content": "Over the course of this project, we developed and honed a wide range of skills that are essential in modern software development. We became proficient in <strong class='text-accent'>Scrum</strong> and <strong class='text-accent'>Agile methodologies</strong>, which allowed us to effectively manage and deliver work in an iterative process. Implementing <strong class='text-accent'>Role-Based Access Control (RBAC)</strong> and ensuring <strong class='text-accent'>Database Normalization</strong> were key milestones in the project. We also gained experience in working with <strong class='text-accent'>REST APIs</strong>, making sure the system could communicate seamlessly between the front-end and back-end. In addition, we strengthened our ability to design <strong class='text-accent'>Responsive Web Interfaces</strong> that could adapt to any device, learned the ins and outs of the <strong class='text-accent'>Software Development Life Cycle (SDLC)</strong>, and built a solid foundation in <strong class='text-accent'>Full Stack Web Development</strong>. Furthermore, we sharpened our skills in <strong class='text-accent'>Database Administration</strong> and performed multiple <strong class='text-accent'>Code Reviews</strong> to ensure the quality of the codebase."
+            },
+            {
+                "id": 7,
+                "subheading": "Conclusion",
+                "content": "Through this project, we achieved the goal of creating a fully functional event tabulation system and gained invaluable experience in the process. We left with a clearer understanding of what it takes to deliver a successful project in a real-world environment, while also refining our teamwork, communication, and technical skills. We became better equipped to handle future projects and more confident in our ability to manage complex software development tasks."
+            }
         ]
     },
     {
