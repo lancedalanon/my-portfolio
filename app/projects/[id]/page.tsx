@@ -7,7 +7,8 @@ import Image from "next/image";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Link from "next/link";
 import Badge from '@/components/Badge';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Project: NextPage = () => {
     // Get the params from the URL, including the 'id'
@@ -22,7 +23,7 @@ const Project: NextPage = () => {
         return (
             <main>
                 <article>
-                    <section className="h-full min-h-screen flex flex-col items-center justify-center bg-custom-700">
+                    <section className="h-full min-h-screen flex flex-col items-center justify-center bg-custom-800">
                         <div className="text-center">
                             {/* Center the 404 message */}
                             <h2 className="text-7xl font-bold text-custom-100 mb-6">
@@ -55,7 +56,7 @@ const Project: NextPage = () => {
         <>
             <main>
                 <article>
-                    <section className="h-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-custom-700">
+                    <section className="h-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-custom-800">
                         {/* Centered Content */}
                         <div className="grid grid-cols-1 md:grid-cols-[10%_80%_10%] my-28 mx-6">
                             <div></div>
@@ -74,11 +75,11 @@ const Project: NextPage = () => {
 
                                     <em className="text-white text-xl">
                                         {/* Render the project start date */}
-                                        Started {project.month_start}, {project.year_start}
+                                        Started {project.month_start} {project.year_start}
                                         
                                         {/* Conditionally render the end date if both `month_end` and `year_end` are not null */}
                                         {project.month_end && project.year_end ? (
-                                            <> - Ended {project.month_end}, {project.year_end}</>
+                                            <> - Ended {project.month_end} {project.year_end}</>
                                         ) : null}
                                     </em>
 
@@ -86,7 +87,7 @@ const Project: NextPage = () => {
                                         {project.language_framework_libraries && project.language_framework_libraries
                                             .map((item) => ( 
                                                 <Badge
-                                                    className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-600 rounded-full"
+                                                    className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-700 rounded-full"
                                                     key={item.id}
                                                     title={item.name}
                                                 >
@@ -107,7 +108,7 @@ const Project: NextPage = () => {
                                         {project.technologies && project.technologies
                                             .map((item) => ( 
                                                 <Badge
-                                                    className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-600 rounded-full"
+                                                    className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-700 rounded-full"
                                                     key={item.id}
                                                     title={item.name}
                                                 >
@@ -127,32 +128,78 @@ const Project: NextPage = () => {
                                         ))}
                                     </div>
                                     
-                                    {/* Centered Image */}
-                                    <Image 
-                                        src={project.project_image}
-                                        alt={project.project_name}
-                                        width={800}
-                                        height={800}
-                                        className="my-8 rounded-xl w-full"
-                                    />
+                                    {/* Centered Image with Caption */}
+                                    <figure className="text-center">
+                                        <Image 
+                                            src={project.project_image}
+                                            alt={project.project_name}
+                                            width={800}
+                                            height={800}
+                                            className="rounded-xl w-full"
+                                        />
+                                        <figcaption className="text-lg text-white mt-4">
+                                            <em>{project.short_description}</em>
+                                        </figcaption>
+                                    </figure>`
 
                                     {/* Contents */}
-                                    <div className="text-lg text-white">
-                                        <em>{project.short_description}</em>
-
+                                    <div className="text-xl text-white">
                                         <div>
                                             {/* Iterating over the sections */}
                                             {project.sections && project.sections.map((section) => (
-                                                <div key={section.id} className="mb-4"> 
+                                                <div key={section.id}> 
                                                     {/* Subheading */}
                                                     <div className="font-bold text-5xl mt-16 mb-8">{section.subheading}</div>
                                                     
                                                     {/* Content - sanitized using DOMPurify */}
                                                     <div 
                                                         className="text-2xl my-8 leading-relaxed" // Adjusted here
-                                                        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(section.content) }} 
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: DOMPurify.sanitize(section.content),
+                                                        }}
                                                     />
                                                 </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="border-t-2 border-custom-600 pt-16 text-white">
+                                        <div className="text-5xl mb-8">
+                                            <strong>
+                                                More Projects
+                                            </strong>
+                                        </div>
+                                        <div className="grid grid-cols-1 mx-2 mt-8 gap-y-8 md:grid-cols-2 md:gap-x-8">
+                                            {/* Iterate over the featured projects */}
+                                            {projects.filter(project => project.id !== projectId).map((project) => (
+                                                <React.Fragment key={project.id}>
+                                                    <div className="relative group">
+                                                        <Image
+                                                            alt={project.project_name}
+                                                            src={project.project_image}
+                                                            width={1000}
+                                                            height={1000}
+                                                            className="rounded-3xl h-full w-full"
+                                                        />
+                                                        <div className="absolute inset-0 bg-custom-600 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
+                                                            {/* Title */}
+                                                            <span className="text-white text-2xl md:text-4xl font-bold opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out md:mt-6">
+                                                                <p>{project.project_name}</p>
+                                                            </span>
+                                                            {/* Button */}
+                                                            <span className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out mt-6 flex justify-end w-full">
+                                                                <Link 
+                                                                    href={`/projects/${project.id}`} 
+                                                                    passHref
+                                                                    className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold flex items-center"
+                                                                >
+                                                                    <FaExternalLinkAlt className="mr-2" />
+                                                                    Explore Project
+                                                                </Link>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </React.Fragment>
                                             ))}
                                         </div>
                                     </div>

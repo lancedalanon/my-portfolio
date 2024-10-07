@@ -12,7 +12,7 @@ const Projects: NextPage = () => {
     return (<>
         <main>
             <article>
-                <section id="projects" className="flex flex-col items-center justify-start overflow-hidden bg-custom-700">
+                <section id="projects" className="flex flex-col items-center justify-start overflow-hidden bg-custom-800">
                     <h2 className="text-3xl md:text-5xl text-center font-bold text-custom-100 mt-32 mx-6">
                         MASTERPIECES IN DIGITAL DEVELOPMENT
                     </h2>
@@ -20,7 +20,7 @@ const Projects: NextPage = () => {
                         {/* Iterate over the featured projects */}
                         {projects.map((project) => (
                             <React.Fragment key={project.id}>
-                                <Card className="flex flex-col h-full rounded-3xl bg-custom-600">
+                                <Card className="flex flex-col h-full rounded-3xl bg-custom-700">
                                     <CardHeader>
                                         <Image 
                                             src={project.project_image}
@@ -43,7 +43,7 @@ const Projects: NextPage = () => {
                                                 .filter((item) => item.is_featured === 1) 
                                                 .map((item) => ( 
                                                     <Badge
-                                                        className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-500 rounded-full"
+                                                        className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-600 rounded-full"
                                                         key={item.id}
                                                         title={item.name}
                                                     >
