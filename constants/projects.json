@@ -13,22 +13,21 @@
         "language_framework_libraries": [
             { "id": 1, "name": "HTML5", "image": "/images/HTML5.png", "is_featured": 1 },
             { "id": 2, "name": "CSS3", "image": "/images/CSS3.png", "is_featured": 1 },
-            { "id": 3, "name": "JavaScript", "image": null, "is_featured": 0 },
+            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png", "is_featured": 0 },
             { "id": 4, "name": "jQuery", "image": "/images/jQuery.png", "is_featured": 1 },
-            { "id": 5, "name": "PHP", "image": null, "is_featured": 0 },
+            { "id": 5, "name": "PHP", "image": "/images/PHP.png", "is_featured": 0 },
             { "id": 6, "name": "SQL", "image": "/images/MySQL.png", "is_featured": 1 },
             { "id": 7, "name": "Laravel", "image": "/images/Laravel.png", "is_featured": 1 }
         ],
         "technologies": [ 
-            { "id": 1, "name": "Jira", "image": null },
-            { "id": 2, "name": "XAMPP", "image": null },
-            { "id": 3, "name": "GitHub", "image": null },
-            { "id": 4, "name": "Git", "image": null },
-            { "id": 5, "name": "Hostinger", "image": null },
-            { "id": 6, "name": "MySQL", "image": null }, 
-            { "id": 7, "name": "MySQL Workbench", "image": null },
-            { "id": 8, "name": "Gitflow", "image": null },
-            { "id": 9, "name": "Visual Studio Code", "image": null }
+            { "id": 1, "name": "Jira", "image": "/images/Jira.png" },
+            { "id": 2, "name": "XAMPP", "image": "/images/XAMPP.png" },
+            { "id": 3, "name": "GitHub", "image": "/images/GitHub.png" },
+            { "id": 4, "name": "Git", "image": "/images/Git.png" },
+            { "id": 5, "name": "Hostinger", "image": "/images/Hostinger.png" },
+            { "id": 7, "name": "MySQL Workbench", "image": "/images/MySQL-Workbench.png" },
+            { "id": 8, "name": "Gitflow", "image": "/images/Gitflow.png" },
+            { "id": 9, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png" }
         ],
         "skills": [
             { "id": 1, "name": "Scrum" },
@@ -58,21 +57,20 @@
             { "id": 1, "name": "HTML5", "image": "/images/HTML5.png", "is_featured": 1 },
             { "id": 2, "name": "CSS3", "image": "/images/CSS3.png", "is_featured": 1 },
             { "id": 3, "name": "Bootstrap", "image": "/images/Bootstrap.png", "is_featured": 1 },
-            { "id": 3, "name": "JavaScript", "image": null, "is_featured": 0 },
+            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png", "is_featured": 0 },
             { "id": 4, "name": "jQuery", "image": "/images/jQuery.png", "is_featured": 1 },
-            { "id": 5, "name": "PHP", "image": null, "is_featured": 0 },
+            { "id": 5, "name": "PHP", "image": "/images/PHP.png", "is_featured": 0 },
             { "id": 6, "name": "SQL", "image": "/images/MySQL.png", "is_featured": 1 }
         ],
         "technologies": [ 
-            { "id": 1, "name": "Jira", "image": null },
-            { "id": 2, "name": "XAMPP", "image": null },
-            { "id": 3, "name": "GitHub", "image": null },
-            { "id": 4, "name": "Git", "image": null },
-            { "id": 5, "name": "Hostinger", "image": null },
-            { "id": 6, "name": "MySQL", "image": null }, 
-            { "id": 7, "name": "MySQL Workbench", "image": null },
-            { "id": 8, "name": "Gitflow", "image": null },
-            { "id": 9, "name": "Visual Studio Code", "image": null }
+            { "id": 1, "name": "Jira", "image": "/images/Jira.png" },
+            { "id": 2, "name": "XAMPP", "image": "/images/XAMPP.png" },
+            { "id": 3, "name": "GitHub", "image": "/images/GitHub.png" },
+            { "id": 4, "name": "Git", "image": "/images/Git.png" },
+            { "id": 5, "name": "Hostinger", "image": "/images/Hostinger.png" },
+            { "id": 7, "name": "MySQL Workbench", "image": "/images/MySQL-Workbench.png" },
+            { "id": 8, "name": "Gitflow", "image": "/images/Gitflow.png" },
+            { "id": 9, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png" }
 
         ],
         "skills": [
@@ -101,20 +99,19 @@
         "is_featured": 1,
         "language_framework_libraries": [
             { "id": 1, "name": "HTML5", "image": "/images/HTML5.png", "is_featured": 1 },
-            { "id": 2, "name": "CSS3", "image": null, "is_featured": 0 },
+            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png", "is_featured": 0 },
             { "id": 3, "name": "Bootstrap", "image": "/images/Bootstrap.png", "is_featured": 1 },
-            { "id": 4, "name": "JavaScript", "image": null, "is_featured": 0 },
+            { "id": 4, "name": "JavaScript", "image": "/images/JavaScript.png", "is_featured": 0 },
             { "id": 5, "name": "jQuery", "image": "/images/jQuery.png", "is_featured": 1 },
             { "id": 6, "name": "PHP", "image": "/images/PHP.png", "is_featured": 1 },
             { "id": 7, "name": "SQL", "image": "/images/MySQL.png", "is_featured": 1 }
         ],
         "technologies": [ 
-            { "id": 1, "name": "Jira", "image": null },
-            { "id": 2, "name": "XAMPP", "image": null },
-            { "id": 3, "name": "Git", "image": null },
-            { "id": 4, "name": "Hostinger", "image": null },
-            { "id": 5, "name": "MySQL", "image": null },
-            { "id": 6, "name": "Visual Studio Code", "image": null }
+            { "id": 1, "name": "Jira", "image": "/images/Jira.png" },
+            { "id": 2, "name": "XAMPP", "image": "/images/XAMPP.png" },
+            { "id": 3, "name": "Git", "image": "/images/Git.png" },
+            { "id": 4, "name": "Hostinger", "image": "/images/Hostinger.png" },
+            { "id": 6, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png" }
         ],
         "skills": [
             { "id": 1, "name": "Role-Based Access Control" },
@@ -142,7 +139,7 @@
             { "id": 2, "name": "Pygame", "image": "/images/Pygame.png", "is_featured": 1 }
         ],
         "technologies": [ 
-            { "id": 1, "name": "Pycharm", "image": null }
+            { "id": 1, "name": "Pycharm", "image": "/images/Pycharm.png" }
         ],
         "skills": [
             { "id": 1, "name": "Software Development" },

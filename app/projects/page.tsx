@@ -75,7 +75,6 @@ const Projects: NextPage = () => {
                                     >
                                         <Link 
                                             href={`/projects/${project.id}`} 
-                                            target="_blank"
                                             passHref
                                             className="bg-accent text-white text-lg md:text-xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-4 py-3 md:px-6 md:py-4 font-bold flex items-center"
                                         >

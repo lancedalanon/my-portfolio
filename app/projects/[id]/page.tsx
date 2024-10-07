@@ -6,6 +6,7 @@ import projects from "@/constants/projects.json";
 import Image from "next/image";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Link from "next/link";
+import Badge from '@/components/Badge';
 
 const Project: NextPage = () => {
     // Get the params from the URL, including the 'id'
@@ -57,7 +58,7 @@ const Project: NextPage = () => {
                         {/* Centered Content */}
                         <div className="grid grid-cols-1 md:grid-cols-[10%_80%_10%] my-28">
                             <div></div>
-                                <div className="mx-auto">
+                                <div>
                                     <Link href="/projects" passHref className="flex items-center my-8">
                                         <FaArrowLeftLong className="mr-2 text-white text-lg" />
                                         <span className="text-white text-lg hover:underline">
@@ -66,9 +67,64 @@ const Project: NextPage = () => {
                                     </Link>
 
                                     {/* Centered Title */}
-                                    <h2 className="text-3xl md:text-5xl my-8 uppercase font-bold text-custom-100">
+                                    <h2 className="text-3xl md:text-5xl my-8 font-bold text-custom-100">
                                         {project.project_headline}
                                     </h2>
+
+                                    <em className="text-white text-xl">
+                                        {/* Render the project start date */}
+                                        Started {project.month_start}, {project.year_start}
+                                        
+                                        {/* Conditionally render the end date if both `month_end` and `year_end` are not null */}
+                                        {project.month_end && project.year_end ? (
+                                            <> - Ended {project.month_end}, {project.year_end}</>
+                                        ) : null}
+                                    </em>
+
+                                    <div className="flex flex-wrap my-8 gap-2 text-white">
+                                        {project.language_framework_libraries && project.language_framework_libraries
+                                            .map((item) => ( 
+                                                <Badge
+                                                    className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-600 rounded-full"
+                                                    key={item.id}
+                                                    title={item.name}
+                                                >
+                                                    <div className="bg-white rounded-full p-1 mr-2">
+                                                        <Image
+                                                            src={item.image || '/path/to/default/icon.png'}
+                                                            alt={item.name}
+                                                            width={20}
+                                                            height={20}
+                                                            className="rounded-lg"
+                                                        />
+                                                    </div>
+                                                    <span className="text-lg">
+                                                        {item.name}
+                                                    </span>
+                                                </Badge>
+                                        ))}
+                                        {project.technologies && project.technologies
+                                            .map((item) => ( 
+                                                <Badge
+                                                    className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-600 rounded-full"
+                                                    key={item.id}
+                                                    title={item.name}
+                                                >
+                                                    <div className="bg-white rounded-full p-1 mr-2">
+                                                        <Image
+                                                            src={item.image || '/path/to/default/icon.png'}
+                                                            alt={item.name}
+                                                            width={20}
+                                                            height={20}
+                                                            className="rounded-lg"
+                                                        />
+                                                    </div>
+                                                    <span className="text-lg">
+                                                        {item.name}
+                                                    </span>
+                                                </Badge>
+                                        ))}
+                                    </div>
                                     
                                     {/* Centered Image */}
                                     <Image 
@@ -76,11 +132,11 @@ const Project: NextPage = () => {
                                         alt={project.project_name}
                                         width={800}
                                         height={800}
-                                        className="my-8 rounded-xl w-full max-w-[1000px] mx-auto"
+                                        className="my-8 rounded-xl w-full"
                                     />
 
                                     {/* Contents */}
-                                    <div className="text-lg text-white p-4">
+                                    <div className="text-lg text-white">
                                         <em>{project.short_description}</em>
                                     </div>
                                 </div>
