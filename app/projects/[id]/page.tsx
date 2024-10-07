@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import type { NextPage } from "next";
 import projects from "@/constants/projects.json";
@@ -9,6 +9,12 @@ import Link from "next/link";
 import Badge from '@/components/Badge';
 import DOMPurify from 'isomorphic-dompurify';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import Project from '@/types/projectTypes';
+
+interface ProjectGridProps {
+    projects: Project[];
+    projectId: number; 
+}
 
 const Project: NextPage = () => {
     // Get the params from the URL, including the 'id'
@@ -169,39 +175,7 @@ const Project: NextPage = () => {
                                                 More Projects
                                             </strong>
                                         </div>
-                                        <div className="grid grid-cols-1 mx-2 mt-8 gap-y-8 md:grid-cols-2 md:gap-x-8">
-                                            {/* Iterate over the featured projects */}
-                                            {projects && projects.filter(project => project.id !== projectId).map((project) => (
-                                                <React.Fragment key={project.id}>
-                                                    <div className="relative group">
-                                                        <Image
-                                                            alt={project.project_name}
-                                                            src={project.project_image}
-                                                            width={1000}
-                                                            height={1000}
-                                                            className="rounded-3xl h-full w-full"
-                                                        />
-                                                        <div className="absolute inset-0 bg-custom-600 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
-                                                            {/* Title */}
-                                                            <span className="text-white text-2xl md:text-4xl font-bold opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out md:mt-6">
-                                                                <p>{project.project_name}</p>
-                                                            </span>
-                                                            {/* Button */}
-                                                            <span className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out mt-6 flex justify-end w-full">
-                                                                <Link 
-                                                                    href={`/projects/${project.id}`} 
-                                                                    passHref
-                                                                    className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold flex items-center"
-                                                                >
-                                                                    <FaExternalLinkAlt className="mr-2" />
-                                                                    Explore Project
-                                                                </Link>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </React.Fragment>
-                                            ))}
-                                        </div>
+                                        <ProjectGrid projects={projects} projectId={projectId} />
                                     </div>
                                 </div>
                             <div></div>
@@ -210,6 +184,55 @@ const Project: NextPage = () => {
                 </article>
             </main>
         </>
+    );
+};
+
+const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, projectId }) => {
+    const [shuffledProjects, setShuffledProjects] = useState<Project[]>([]); 
+
+    useEffect(() => {
+        // Only shuffle projects on the client-side
+        const shuffled = [...projects]
+            .sort(() => 0.5 - Math.random())  // Shuffle the projects
+            .filter(project => project.id !== projectId)  // Exclude the current project
+            .slice(0, 4);  // Limit to 4 projects
+
+        setShuffledProjects(shuffled);  // Set the shuffled projects in state
+    }, [projects, projectId]);  // Run effect when projects or projectId changes
+
+    return (
+        <div className="grid grid-cols-1 mx-2 mt-8 gap-y-8 md:grid-cols-2 md:gap-x-8">
+            {shuffledProjects.map((project) => (
+                <React.Fragment key={project.id}>
+                    <div className="relative group">
+                    <Image
+                        alt={project.project_name}
+                        src={project.project_image}
+                        width={1000}
+                        height={1000}
+                        className="rounded-3xl h-64 w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-custom-600 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
+                        {/* Title */}
+                        <span className="text-white text-2xl md:text-4xl font-bold opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out md:mt-6">
+                            <p>{project.project_name}</p>
+                        </span>
+                        {/* Button */}
+                        <span className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out mt-6 flex justify-end w-full">
+                            <Link 
+                                href={`/projects/${project.id}`} 
+                                passHref
+                                className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold flex items-center"
+                            >
+                                <FaExternalLinkAlt className="mr-2" />
+                                Explore Project
+                            </Link>
+                        </span>
+                    </div>
+                </div>
+</React.Fragment>
+            ))}
+        </div>
     );
 };
 

@@ -157,7 +157,7 @@
     {
         "id": 3,
         "project_name": "Tourist Management System",
-        "project_headline": null,
+        "project_headline": "Streamlining Tourist Experiences with an Efficient Management System",
         "project_image": "/images/Tourist-Management-System.png",
         "short_description": "The Tourist Management System showcases efficient website operations for managing tourism activities, featuring Intramuros as a highlighted destination. This project was developed to streamline visitor experiences and enhance engagement with local attractions. Experience seamless navigation and essential services tailored for travelers!",
         "month_start": "October",
@@ -189,12 +189,39 @@
             { "id": 5, "name": "Software Development Life Cycle"},
             { "id": 6, "name": "Full Stack Web Development" },
             { "id": 7, "name": "Database Administration" }
+        ],
+        "sections": [
+            {
+                "id": 1,
+                "subheading": "Introduction",
+                "content": "The <strong class='text-accent'>Tourist Management System</strong> was the first website I built alongside a small team, and it played a significant role in shaping my foundation as a web developer. We focused on creating a user-friendly platform that made it easier to manage tourism activities, with <strong class='text-accent'>Intramuros</strong> being the highlight. I took on the role of team leader, which taught me how to guide a project from start to finish, ensuring everything stayed on track. This project introduced me to key concepts and technologies like <strong class='text-accent'>HTML5</strong>, <strong class='text-accent'>CSS3</strong>, <strong class='text-accent'>JavaScript</strong>, <strong class='text-accent'>PHP</strong>, <strong class='text-accent'>SQL</strong>, and <strong class='text-accent'>Bootstrap</strong>, which we used to make the development process smoother and more efficient."
+            },
+            {
+                "id": 2,
+                "subheading": "Objectives",
+                "content": "The goal of the project was to develop a platform that would help improve how tourists engage with <strong class='text-accent'>Intramuros</strong> and other attractions. We wanted to make it easy for visitors to find the information they needed, explore the site smoothly, and make bookings or inquiries when necessary. A core feature of the system was implementing <strong class='text-accent'>Role-Based Access Control</strong>, allowing us to handle different types of users securely. On the backend, we also prioritized the use of a <strong class='text-accent'>database</strong> to store and manage data effectively. Overall, the system aimed to improve the tourism experience with clear information and simple navigation."
+            },
+            {
+                "id": 3,
+                "subheading": "Technologies Used",
+                "content": "To bring this project to life, we worked with a variety of tools and technologies. <strong class='text-accent'>HTML5</strong> allowed us to structure the content in a clean, semantic way, while <strong class='text-accent'>CSS3</strong> helped style the pages to ensure the design was responsive and visually appealing. We used <strong class='text-accent'>Bootstrap</strong> to speed up development by utilizing pre-built components, which made the site more consistent across devices. <strong class='text-accent'>JavaScript</strong> and <strong class='text-accent'>jQuery</strong> were crucial for adding interactivity, and <strong class='text-accent'>PHP</strong> handled server-side logic. On the data side, we worked with <strong class='text-accent'>SQL</strong> using <strong class='text-accent'>MySQL</strong> to manage the database. We tested everything on <strong class='text-accent'>XAMPP</strong>, tracked progress with <strong class='text-accent'>Jira</strong>, and used <strong class='text-accent'>Git</strong> for version control. Once it was ready, we hosted it on <strong class='text-accent'>Hostinger</strong>."
+            },
+            {
+                "id": 4,
+                "subheading": "Skills Learned and Demonstrated",
+                "content": "This project was packed with learning opportunities. One of the biggest lessons was understanding <strong class='text-accent'>Role-Based Access Control (RBAC)</strong>, which we used to manage user permissions and enhance security. I also learned the importance of <strong class='text-accent'>Database Normalization</strong> to keep data organized and reduce redundancy, making it easier to maintain and scale the system. We integrated <strong class='text-accent'>REST APIs</strong>, which improved the communication between the frontend and backend. Through this project, I also improved my skills in <strong class='text-accent'>Responsive Web Design</strong>, ensuring the site worked well on any device. Additionally, it gave me a solid understanding of the <strong class='text-accent'>Software Development Life Cycle</strong> and honed my abilities as a <strong class='text-accent'>Full Stack Developer</strong>. Managing the <strong class='text-accent'>database</strong> for this project also strengthened my skills in <strong class='text-accent'>Database Administration</strong>."
+            },
+            {
+                "id": 5,
+                "subheading": "Conclusion",
+                "content": "The <strong class='text-accent'>Tourist Management System</strong> was more than just a project; it was a formative experience that helped me solidify the fundamentals of web development. It was my first time using technologies like <strong class='text-accent'>HTML5</strong>, <strong class='text-accent'>CSS3</strong>, <strong class='text-accent'>JavaScript</strong>, <strong class='text-accent'>PHP</strong>, and <strong class='text-accent'>SQL</strong> in a real-world application. It also gave me the opportunity to lead a team, manage a project from start to finish, and ensure that our solution was both functional and user-friendly. The skills I gained, like database management and role-based access, have been incredibly valuable in my career, and this project continues to be a cornerstone of my development journey."
+            }
         ]
     },
     {
         "id": 4,
         "project_name": "Pixel RPS",
-        "project_headline": null,
+        "project_headline": "Unleash Your Strategy: A Retro RPG Adventure in Pixel RPS",
         "project_image": "/images/Pixel-RPS.png",
         "short_description": "Pixel RPS is a unique twist on the classic rock-paper-scissors game, incorporating RPG elements. Players engage in strategic battles, utilizing characters with special abilities. Experience a fun and interactive gameplay that redefines a beloved classic!",
         "month_start": "October",
@@ -212,6 +239,114 @@
         "skills": [
             { "id": 1, "name": "Software Development" },
             { "id": 2, "name": "Software Development Life Cycle" }
+        ],
+        "sections": [
+            {
+                "id": 1,
+                "subheading": "Introduction",
+                "content": "<strong class='text-accent'>Pixel RPS</strong> is a creative twist on the traditional rock-paper-scissors game, blending it with RPG mechanics for a strategic, character-driven experience. This project marked a significant milestone for me, as it was my first dedicated software application developed using <strong class='text-accent'>Python</strong>. Additionally, it was the first time I took on the responsibility of managing a small team to bring the project to life, making it an incredibly valuable learning experience in both technical and leadership skills."
+            },
+            {
+                "id": 2,
+                "subheading": "Objectives",
+                "content": "The primary objective of <strong class='text-accent'>Pixel RPS</strong> was to enhance the classic rock-paper-scissors game by introducing RPG elements, where each player’s choice impacts more than a single round. As a team leader, I aimed to guide my team through creating a seamless, strategic game that would offer replayable content while maintaining simplicity for all players. A secondary goal was to use this project to solidify our understanding of game development workflows and ensure smooth, intuitive gameplay."
+            },
+            {
+                "id": 3,
+                "subheading": "Technologies Used",
+                "content": "To build <strong class='text-accent'>Pixel RPS</strong>, we used <strong class='text-accent'>Python</strong> for core development and <strong class='text-accent'>Pygame</strong> to handle graphics, user interactions, and sound. <strong class='text-accent'>Pygame</strong> provided a flexible framework for managing the game loop, animations, and inputs, which was crucial for the game's dynamic nature. We developed the game in <strong class='text-accent'>Pycharm</strong>, utilizing its robust debugging tools and features to ensure our code was clean, efficient, and easy to manage."
+            },
+            {
+                "id": 4,
+                "subheading": "Skills Learned and Demonstrated",
+                "content": "Working on <strong class='text-accent'>Pixel RPS</strong> not only improved my technical skills in <strong class='text-accent'>Python</strong> and <strong class='text-accent'>Pygame</strong>, but it also gave me my first hands-on experience in leading a software development team. I gained valuable insight into managing the <strong class='text-accent'>Software Development Life Cycle</strong>, from planning and implementation to testing and release. Additionally, I learned the importance of teamwork, effective communication, and balancing leadership responsibilities with technical contributions."
+            },
+            {
+                "id": 5,
+                "subheading": "Conclusion",
+                "content": "<strong class='text-accent'>Pixel RPS</strong> was a rewarding and formative project, marking my first step into both software development and team leadership. By building this game, I strengthened my understanding of game development fundamentals, team management, and how to bring a creative vision to life through code. This experience allowed me to balance creative problem-solving with technical execution, and it continues to be a highlight in my development journey."
+            }
         ]
-    }
+    },
+    {
+        "id": 5,
+        "project_name": "Events Management System",
+        "project_headline": "Revamping the Events Tabulation System for a Local Beauty Pageant",
+        "project_image": "/images/Events-Management-System.png",
+        "short_description": "A refined version of the Events Tabulation System, enhanced for better performance and code quality, developed within a tight deadline.",
+        "month_start": "May",
+        "year_start": "2024",
+        "month_end": "June",
+        "year_end": "2024",
+        "is_featured": 0,
+        "language_framework_libraries": [
+            { "id": 1, "name": "HTML5", "image": "/images/HTML5.png", "is_featured": 0 },
+            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png", "is_featured": 0 },
+            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png", "is_featured": 0 },
+            { "id": 4, "name": "Tailwind CSS", "image": "/images/Tailwind-CSS.png", "is_featured": 1 },
+            { "id": 5, "name": "Alpine.js", "image": "/images/Alpine.js.png", "is_featured": 1 },
+            { "id": 6, "name": "Laravel", "image": "/images/Laravel.png", "is_featured": 1 },
+            { "id": 7, "name": "Livewire", "image": "/images/Livewire.png", "is_featured": 1 },
+            { "id": 8, "name": "PHP", "image": "/images/PHP.png", "is_featured": 0 },
+            { "id": 9, "name": "SQL", "image": "/images/MySQL.png", "is_featured": 1 }
+        ],
+        "technologies": [
+            { "id": 1, "name": "Jira", "image": "/images/Jira.png" },
+            { "id": 2, "name": "Laragon", "image": "/images/Laragon.png" },
+            { "id": 3, "name": "GitHub", "image": "/images/GitHub.png" },
+            { "id": 4, "name": "Git", "image": "/images/Git.png" },
+            { "id": 5, "name": "Hostinger", "image": "/images/Hostinger.png" },
+            { "id": 6, "name": "Gitflow", "image": "/images/Gitflow.png" },
+            { "id": 7, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png" }
+        ],
+        "skills": [
+            { "id": 1, "name": "Scrum" },
+            { "id": 2, "name": "Agile" },
+            { "id": 3, "name": "Role-Based Access Control" },
+            { "id": 4, "name": "Database Normalization" },
+            { "id": 5, "name": "REST APIs" },
+            { "id": 6, "name": "Responsive Web Design" },
+            { "id": 7, "name": "Software Development Life Cycle" },
+            { "id": 8, "name": "Full Stack Web Development" },
+            { "id": 9, "name": "Database Administration" },
+            { "id": 10, "name": "Code Review" }
+        ],
+        "sections": [
+            {
+                "id": 1,
+                "subheading": "Introduction",
+                "content": "The <strong class='text-accent'>Events Management System</strong> was born out of the need to improve the <strong class='text-accent'>scoring process</strong> for a local beauty pageant. Our previous project, the <strong class='text-accent'>Events Tabulation System</strong>, needed a fresh perspective and upgraded features to meet our client's requirements. With a <strong class='text-accent'>two-week deadline</strong>, our Agile team set out to transform this vision into reality."
+            },
+            {
+                "id": 2,
+                "subheading": "Objectives",
+                "content": "Our primary goal was to enhance the <strong class='text-accent'>functionality</strong> and <strong class='text-accent'>performance</strong> of the existing system. We aimed to create a user-friendly interface that could handle <strong class='text-accent'>complex calculations</strong> and ensure <strong class='text-accent'>accurate results</strong> in real-time, making the scoring process not just efficient but also enjoyable for the users."
+            },
+            {
+                "id": 3,
+                "subheading": "Challenges",
+                "content": "Working within a <strong class='text-accent'>tight timeframe</strong> posed significant challenges. We had to ensure that our development efforts were swift yet meticulous. Additionally, adapting to the <strong class='text-accent'>TALL stack</strong> and maintaining effective communication among team members during the <strong class='text-accent'>scrum meetings</strong> added another layer of complexity to the project."
+            },
+            {
+                "id": 4,
+                "subheading": "Overcoming Challenges",
+                "content": "We tackled these challenges by fostering a <strong class='text-accent'>collaborative environment</strong>. Regular <strong class='text-accent'>scrum meetings</strong> allowed us to address issues promptly, brainstorm solutions, and keep the project on track. The transition to the <strong class='text-accent'>TALL stack</strong> streamlined our workflow, and the robust <strong class='text-accent'>security features</strong> of Laravel provided us with the confidence to push forward."
+            },
+            {
+                "id": 5,
+                "subheading": "Technology Used",
+                "content": "This project leveraged the <strong class='text-accent'>TALL stack</strong>—Tailwind CSS, Alpine.js, Laravel, and Livewire—enabling us to create a <strong class='text-accent'>responsive</strong> and <strong class='text-accent'>intuitive application</strong>. These technologies not only improved our development speed but also allowed for seamless integration of functionalities."
+            },
+            {
+                "id": 6,
+                "subheading": "Skills Learned and Demonstrated",
+                "content": "Throughout this project, I honed my skills in <strong class='text-accent'>Agile project management</strong>, <strong class='text-accent'>code review</strong>, and <strong class='text-accent'>full-stack web development</strong>. I also gained invaluable experience in working with the <strong class='text-accent'>TALL stack</strong>, which reinforced my understanding of modern web development practices and methodologies."
+            },
+            {
+                "id": 7,
+                "subheading": "Conclusion",
+                "content": "The <strong class='text-accent'>Events Management System</strong> was a resounding success. Our client was thrilled with the software we delivered, which significantly enhanced their <strong class='text-accent'>scoring process</strong>. It enabled them to conduct the event with greater efficiency, speed, and accuracy, allowing everyone involved to focus on what truly matters: celebrating the participants."
+            }
+        ]
+    }    
 ]

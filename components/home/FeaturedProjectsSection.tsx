@@ -21,7 +21,7 @@ const FeaturedProjectsSection: React.FC = () => {
                                 alt={project.project_name}
                                 src={project.project_image}
                                 width={1000}
-                                height={1000}
+                                height={800}
                                 className="rounded-3xl h-full w-full"
                             />
                             <div className="absolute inset-0 bg-custom-600 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
