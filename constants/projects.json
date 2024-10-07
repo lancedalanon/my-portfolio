@@ -297,7 +297,8 @@
             { "id": 4, "name": "Git", "image": "/images/Git.png" },
             { "id": 5, "name": "Hostinger", "image": "/images/Hostinger.png" },
             { "id": 6, "name": "Gitflow", "image": "/images/Gitflow.png" },
-            { "id": 7, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png" }
+            { "id": 7, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png" },
+            { "id": 8, "name": "Laragon", "image": "/images/Laragon.png" }
         ],
         "skills": [
             { "id": 1, "name": "Scrum" },
