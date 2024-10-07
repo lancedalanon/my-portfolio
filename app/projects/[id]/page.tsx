@@ -54,33 +54,37 @@ const Project: NextPage = () => {
             <main>
                 <article>
                     <section className="h-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-custom-700">
-                        <div className="mx-6 mb-32">
-                            {/* Back Link aligned to the left */}
-                            <div className="w-full flex self-start justify-start md:mt-32">
-                                <Link href="/projects" passHref className="flex items-center">
-                                    <FaArrowLeftLong className="mr-2 text-white text-lg" />
-                                    <span className="text-white text-lg hover:underline">
-                                        Back to Projects page
-                                    </span>
-                                </Link>
-                            </div>
+                        {/* Centered Content */}
+                        <div className="grid grid-cols-1 md:grid-cols-[10%_80%_10%] my-28">
+                            <div></div>
+                                <div className="mx-auto">
+                                    <Link href="/projects" passHref className="flex items-center my-8">
+                                        <FaArrowLeftLong className="mr-2 text-white text-lg" />
+                                        <span className="text-white text-lg hover:underline">
+                                            Back to Projects page
+                                        </span>
+                                    </Link>
 
-                            {/* Centered Content */}
-                            <div className="w-full flex flex-col items-center">
-                                {/* Centered Title */}
-                                <h2 className="text-5xl text-center font-bold text-custom-100 my-5">
-                                    {project.project_name}
-                                </h2>
+                                    {/* Centered Title */}
+                                    <h2 className="text-3xl md:text-5xl my-8 uppercase font-bold text-custom-100">
+                                        {project.project_headline}
+                                    </h2>
+                                    
+                                    {/* Centered Image */}
+                                    <Image 
+                                        src={project.project_image}
+                                        alt={project.project_name}
+                                        width={800}
+                                        height={800}
+                                        className="my-8 rounded-xl w-full max-w-[1000px] mx-auto"
+                                    />
 
-                                {/* Centered Image */}
-                                <Image 
-                                    src={project.project_image}
-                                    alt={project.project_name}
-                                    width={1000}
-                                    height={800}
-                                    className="my-5 rounded-xl"
-                                />
-                            </div>
+                                    {/* Contents */}
+                                    <div className="text-lg text-white p-4">
+                                        <em>{project.short_description}</em>
+                                    </div>
+                                </div>
+                            <div></div>
                         </div>
                     </section>
                 </article>

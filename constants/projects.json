@@ -2,6 +2,7 @@
     {
         "id": 1,
         "project_name": "iLaya",
+        "project_headline": "iLaya: Where Academic Achievement Meets Administrative Innovation—A Winning Solution for Barangay Aplaya",
         "project_image": "/images/iLaya.png",
         "short_description": "A web-based system for Barangay Aplaya that automates document issuance and manages blotter records, improving administrative efficiency. iLaya automates the issuance of official documents and manages blotter records, streamlining administrative processes within the local government unit.",
         "month_start": "August",
@@ -45,6 +46,7 @@
     {
         "id": 2,
         "project_name": "Events Tabulation System",
+        "project_headline": null,
         "project_image": "/images/Events-Tabulation-System.png",
         "short_description": "Features live scoring for tournaments with a bracketing system and showcases overall scores for school organizations. Experience a powerful and intuitive scoring solution that goes beyond the ordinary!",
         "month_start": "May",
@@ -89,6 +91,7 @@
     {
         "id": 3,
         "project_name": "Tourist Management System",
+        "project_headline": null,
         "project_image": "/images/Tourist-Management-System.png",
         "short_description": "The Tourist Management System showcases efficient website operations for managing tourism activities, featuring Intramuros as a highlighted destination. This project was developed to streamline visitor experiences and enhance engagement with local attractions. Experience seamless navigation and essential services tailored for travelers!",
         "month_start": "October",
@@ -126,6 +129,7 @@
     {
         "id": 4,
         "project_name": "Pixel RPS",
+        "project_headline": null,
         "project_image": "/images/Pixel-RPS.png",
         "short_description": "Pixel RPS is a unique twist on the classic rock-paper-scissors game, incorporating RPG elements. Players engage in strategic battles, utilizing characters with special abilities. Experience a fun and interactive gameplay that redefines a beloved classic!",
         "month_start": "October",
