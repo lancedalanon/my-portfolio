@@ -171,7 +171,7 @@ const Project: NextPage = () => {
                                         </div>
                                         <div className="grid grid-cols-1 mx-2 mt-8 gap-y-8 md:grid-cols-2 md:gap-x-8">
                                             {/* Iterate over the featured projects */}
-                                            {projects.filter(project => project.id !== projectId).map((project) => (
+                                            {projects && projects.filter(project => project.id !== projectId).map((project) => (
                                                 <React.Fragment key={project.id}>
                                                     <div className="relative group">
                                                         <Image
