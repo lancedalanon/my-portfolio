@@ -36,7 +36,7 @@ const FeaturedProjectsSection: React.FC = () => {
                                         className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold flex items-center"
                                     >
                                         <FaMagnifyingGlass className="mr-2" />
-                                        Explore Project
+                                        View Project
                                     </Link>
                                 </span>
                             </div>
@@ -51,7 +51,7 @@ const FeaturedProjectsSection: React.FC = () => {
                  className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold mt-6 flex items-center"
                 >
                     <FaExternalLinkAlt className="mr-2" />
-                    View More
+                    More Projects
                 </Link>
             </div>
         </section>

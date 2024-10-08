@@ -2,8 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import experienceData from '@/constants/experience.json';
-import Link from 'next/link';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import Modal from '@/components/Modal';
+import Experience from '@/types/experienceTypes';
 
 // Custom hook to determine if the screen size is small
 const useIsSmallScreen = () => {
@@ -58,6 +59,16 @@ const calculateExperience = (startMonth: string, startYear: string, endMonth: st
 // Main component for Experience section
 const ExperienceSection: React.FC = () => {
     const isSmallScreen = useIsSmallScreen();
+    const [selectedExperienceId, setSelectedExperienceId] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleExperienceClick = (id) => {
+        setSelectedExperienceId(id);
+        setIsModalOpen(true);
+        console.log("Selected Experience ID:", id);
+    };
+
+    const closeModal = () => setIsModalOpen(false);
 
     return (
         <section id="experience" className="px-5 py-14 bg-custom-700">
@@ -65,13 +76,34 @@ const ExperienceSection: React.FC = () => {
                 MY CAREER HIGHLIGHTS
             </h2>
             {/* Render the appropriate component based on screen size */}
-            {isSmallScreen ? <SmallScreenExperience experience={experienceData} /> : <LargeScreenExperience experience={experienceData} />}
+            {isSmallScreen ? 
+                <SmallScreenExperience 
+                    experience={experienceData} 
+                    onExperienceClick={handleExperienceClick} 
+                /> : 
+                <LargeScreenExperience 
+                    experience={experienceData} 
+                    onExperienceClick={handleExperienceClick} 
+                />
+            }
+
+            <Modal 
+                isOpen={isModalOpen} 
+                onClose={closeModal} 
+                className="w-3/4 h-5/6 text-white bg-custom-700"
+            >
+                
+            </Modal>
         </section>
     );
 };
 
-// Component for small screen experience layout
-const SmallScreenExperience: React.FC<{ experience: typeof experienceData }> = ({ experience }) => {
+interface SmallScreenExperienceProps {
+    experience: Experience[];
+    onExperienceClick: (id: number) => void;
+}
+
+const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experience, onExperienceClick }) => {
     return (
         <div className="grid grid-cols-[1.5%_99.5%] place-items-center ml-10">
             <div className="h-8 w-8 rounded-full bg-custom-300"></div>
@@ -98,14 +130,13 @@ const SmallScreenExperience: React.FC<{ experience: typeof experienceData }> = (
                             {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} • {calculateExperience(item.month_started, item.year_started, item.month_ended, item.year_ended)}
                         </p>
                         {/* More Details Link */}
-                        <Link 
-                            href={`/experience/${item.id}`} 
-                            target="_blank"
-                            className="flex items-center mt-2 text-accent hover:underline"
+                        <div
+                            className="flex items-center mt-2 text-accent hover:underline hover:cursor-pointer"
+                            onClick={() => onExperienceClick(item.id)}
                         >
                             <FaExternalLinkAlt className="mr-1" />
                             <span className="text-md md:text-lg">More Details</span>
-                        </Link>
+                        </div>
                     </div>
 
                     <div className="h-32 w-2 bg-custom-300"></div>
@@ -119,8 +150,12 @@ const SmallScreenExperience: React.FC<{ experience: typeof experienceData }> = (
     );
 };
 
-// Component for large screen experience layout
-const LargeScreenExperience: React.FC<{ experience: typeof experienceData }> = ({ experience }) => {
+interface LargeScreenExperienceProps {
+    experience: Experience[];
+    onExperienceClick: (id: number) => void;
+}
+
+const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experience, onExperienceClick }) => {
     return (
         <div className="grid grid-cols-[48.5%_1%_48.5%] place-items-center">
             <div></div>
@@ -144,14 +179,13 @@ const LargeScreenExperience: React.FC<{ experience: typeof experienceData }> = (
                                 </p>
                                 {/* More Details Link */}
                                 <div className="flex items-end justify-end">
-                                    <Link 
-                                        href={`/experience/${item.id}`} 
-                                        target="_blank"
-                                        className="flex items-center mt-2 text-accent hover:underline"
+                                    <div 
+                                        className="flex items-center mt-2 text-accent hover:underline hover:cursor-pointer"
+                                        onClick={() => onExperienceClick(item.id)}
                                     >
                                         <FaExternalLinkAlt className="mr-1" />
                                         <span className="text-md md:text-lg">More Details</span>
-                                    </Link>
+                                    </div>
                                 </div>
                             </div>
                             <div className="relative h-32 w-32">
@@ -185,14 +219,13 @@ const LargeScreenExperience: React.FC<{ experience: typeof experienceData }> = (
                                     {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} • {calculateExperience(item.month_started, item.year_started, item.month_ended, item.year_ended)}
                                 </p>
                                 {/* More Details Link */}
-                                <Link 
-                                    href={`/experience/${item.id}`} 
-                                    target="_blank"
-                                    className="flex items-center mt-2 text-accent hover:underline"
+                                <div 
+                                    className="flex items-center mt-2 text-accent hover:underline hover:cursor-pointer"
+                                    onClick={() => onExperienceClick(item.id)}
                                 >
                                     <FaExternalLinkAlt className="mr-1" />
                                     <span className="text-md md:text-lg">More Details</span>
-                                </Link>
+                                </div>
                             </div>
                         </>
                     )}
