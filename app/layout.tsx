@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingActionButton from "@/components/FloatingActionButton";
 
 // Load local fonts using next/font
 const geistSans = localFont({
@@ -106,6 +107,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
         {children}
+        <FloatingActionButton />
         <Footer />
         <script
           type="application/ld+json"
