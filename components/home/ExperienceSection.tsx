@@ -29,17 +29,30 @@ const useIsSmallScreen = () => {
 // Utility function to calculate experience in years and months
 const calculateExperience = (startMonth: string, startYear: string, endMonth: string | null, endYear: string | null) => {
     const startDate = new Date(`${startMonth} 1, ${startYear}`);
-    const endDate = endMonth && endYear
-        ? new Date(`${endMonth} 1, ${endYear}`)
-        : new Date(); // If 'Present', use the current date
-
-    const totalMonths = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth());
+    
+    // Treat the start date as the 1st of the month and the end date as the last day of the month
+    let endDate;
+    if (endMonth && endYear) {
+        // Set endDate to the last day of the end month
+        endDate = new Date(Number(endYear), Number(new Date(`${endMonth} 1, ${endYear}`).getMonth()) + 1, 0); 
+    } else {
+        // If 'Present', use the current date (set to the last day of the current month)
+        const today = new Date();
+        endDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+    }
+    // Calculate the difference in total months
+    const totalMonths = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth() + 1); 
     const years = Math.floor(totalMonths / 12);
     const months = totalMonths % 12;
 
-    return years > 0 ? 
-        (months > 0 ? `${years} years and ${months} months` : `${years} years`) : 
-        `${months} months`;
+    // Handle cases where year is 0 or month is 0
+    if (years === 0) {
+        return `${months} months`;
+    } else if (months === 0) {
+        return `${years} years`;
+    } else {
+        return `${years} years and ${months} months`;
+    }
 };
 
 // Main component for Experience section
