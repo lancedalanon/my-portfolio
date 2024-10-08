@@ -9,7 +9,7 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 const Card: React.FC<CardProps> = ({ children, className, ...props }) => {
   return (
     <div 
-      className={`p-2 shadow-md overflow-hidden ${className}`}
+      className={`shadow-md overflow-hidden ${className}`}
       {...props}
     >
       {children}
@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ children, className, ...props }) => {
 
 const CardHeader: React.FC<CardProps> = ({ children, className }) => {
   return (
-    <div className={`p-2 ${className}`}>
+    <div className={`${className}`}>
      {children}
     </div>
   );
@@ -27,7 +27,7 @@ const CardHeader: React.FC<CardProps> = ({ children, className }) => {
 
 const CardBody: React.FC<CardProps> = ({ children, className }) => {
   return (
-    <div className={`p-2 ${className}`}>
+    <div className={`${className}`}>
      {children}
     </div>
     );
@@ -35,7 +35,7 @@ const CardBody: React.FC<CardProps> = ({ children, className }) => {
 
 const CardFooter: React.FC<CardProps> = ({ children, className }) => {
   return (
-    <div className={`p-2 ${className}`}>
+    <div className={`${className}`}>
      {children}
     </div>
   );

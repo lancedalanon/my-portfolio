@@ -21,7 +21,7 @@ const SkillsSection: React.FC = () => {
       WHAT I BRING TO THE TABLE
      </h2>
      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-     {skills.map((skill) => (
+      {skills.map((skill) => (
         <SkillCard
           key={skill.id}
           skill={{
@@ -45,10 +45,12 @@ const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
   
   return (
     <Card 
-     className="rounded-lg max-w-sm w-full bg-custom-600 transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer"
+     className="p-4 rounded-lg max-w-sm w-full bg-custom-600 transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer"
      onClick={handleSkillCardClick}
     >
-      <CardHeader>
+      <CardHeader
+        className="p-2"
+      >
         <div className="text-white text-7xl flex flex-col items-center justify-center text-center mb-2">
           {IconComponent && <IconComponent />}
         </div>
@@ -56,7 +58,9 @@ const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
           {skill.skill_title}
         </p>
       </CardHeader>
-      <CardBody>
+      <CardBody
+        className="p-2"
+      >
         <p className="text-white text-md">
           {skill.skill_description}
         </p>

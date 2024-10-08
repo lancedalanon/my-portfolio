@@ -45,7 +45,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, className }) =
       <div className="flex items-center justify-end">
         {/* Close Button */}
         <Button 
-          className="text-5xl text-white p-4 mx-3 rounded-full select-none" 
+          className="text-5xl text-white p-4 mx-3 rounded-full select-none focus:outline-none" 
           onClick={onClose} 
         >
           &times; {/* Close icon */}

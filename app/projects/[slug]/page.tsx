@@ -54,7 +54,7 @@ const Project: NextPage = () => {
             <main>
                 <article>
                     <section className="h-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-custom-800">
-                        <div className="grid grid-cols-1 md:grid-cols-[10%_80%_10%] my-28 mx-6">
+                        <div className="grid grid-cols-1 md:grid-cols-[15%_auto_15%] my-28 mx-6">
                             <div></div>
                                 <div>
                                     <Link href="/projects" passHref className="flex items-center my-8 text-xl md:text-2xl">
@@ -126,23 +126,21 @@ const Project: NextPage = () => {
                                     </figure>
 
                                     <div className="text-white">
-                                        <div>
-                                            {project.sections && project.sections.map((section) => (
-                                                <div key={section.id}> 
-                                                    <div className="font-bold text-3xl md:text-5xl mt-8 mb-4 md:mt-16 md:mb-8">{section.subheading}</div>
-                                                    <div 
-                                                        className="text-lg md:text-2xl my-4 md:my-8 leading-loose md:leading-relaxed"
-                                                        dangerouslySetInnerHTML={{
-                                                            __html: DOMPurify.sanitize(section.content),
-                                                        }}
-                                                    />
-                                                </div>
-                                            ))}
-                                        </div>
+                                        {project.sections && project.sections.map((section) => (
+                                            <div key={section.id}> 
+                                                <div className="font-bold text-3xl md:text-4xl mt-8 mb-4 md:mt-14 md:mb-6">{section.subheading}</div>
+                                                <div 
+                                                    className="text-lg md:text-xl my-4 md:my-8 leading-loose md:leading-relaxed"
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: DOMPurify.sanitize(section.content),
+                                                    }}
+                                                />
+                                            </div>
+                                        ))}
                                     </div>
 
-                                    <div className="border-t-2 border-custom-600 pt-16 text-white">
-                                        <div className="text-3xl md:text-5xl mb-8">
+                                    <div className="border-t-2 border-custom-600 text-white">
+                                        <div className="text-3xl md:text-4xl mt-8 mb-4 md:mt-14 md:mb-6">
                                             <strong>More Projects</strong>
                                         </div>
                                         <ProjectGrid projects={projects} projectId={project.id} />

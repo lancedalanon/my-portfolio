@@ -27,12 +27,12 @@ const Projects: NextPage = () => {
                                             alt={project.project_name}
                                             height={1000}
                                             width={1000}
-                                            className="rounded-xl h-48 md:h-72 w-full"
+                                            className="h-48 md:h-96 w-full"
                                         />
                                     </CardHeader>
                                     
                                     {/* CardBody should grow to fill available space */}
-                                    <CardBody className="text-white my-4 flex-grow">
+                                    <CardBody className="px-4 text-white my-4 flex-grow">
                                         <div>
                                             <strong className="text-2xl md:text-3xl">
                                                 {project.project_name}
@@ -71,7 +71,7 @@ const Projects: NextPage = () => {
                                     
                                     {/* CardFooter stays at the bottom */}
                                     <CardFooter 
-                                        className="flex justify-end"
+                                        className="flex justify-end p-4"
                                     >
                                         <Link 
                                             href={`/projects/${project.slug}`} 
