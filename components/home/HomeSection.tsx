@@ -14,7 +14,7 @@ const HomeSection: React.FC = () => {
           className="z-0" 
         />
         {/* Transparent Overlay */}
-        <div className="absolute inset-0 bg-black opacity-80"></div> {/* Adjust opacity as needed */}
+        <div className="absolute inset-0 bg-black opacity-90"></div> {/* Adjust opacity as needed */}
       </div>
 
       <h1 className="text-5xl md:text-7xl font-bold text-custom-100 relative z-10 mx-4">
