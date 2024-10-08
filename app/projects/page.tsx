@@ -34,7 +34,7 @@ const Projects: NextPage = () => {
                                     {/* CardBody should grow to fill available space */}
                                     <CardBody className="text-white my-4 flex-grow">
                                         <div>
-                                            <strong className="text-3xl">
+                                            <strong className="text-2xl md:text-3xl">
                                                 {project.project_name}
                                             </strong>
                                         </div>
@@ -56,7 +56,7 @@ const Projects: NextPage = () => {
                                                                 className="rounded-lg"
                                                             />
                                                         </div>
-                                                        <span className="text-lg">
+                                                        <span className="text-sm md:text-lg">
                                                             {item.name}
                                                         </span>
                                                     </Badge>
@@ -76,7 +76,7 @@ const Projects: NextPage = () => {
                                         <Link 
                                             href={`/projects/${project.id}`} 
                                             passHref
-                                            className="bg-accent text-white text-lg md:text-xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-4 py-3 md:px-6 md:py-4 font-bold flex items-center"
+                                            className="bg-accent text-white text-md md:text-xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-4 py-3 md:px-6 md:py-4 font-bold flex items-center"
                                         >
                                             <FaExternalLinkAlt className="mr-2" />
                                             Explore Project

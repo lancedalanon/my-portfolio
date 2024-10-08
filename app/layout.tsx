@@ -65,6 +65,35 @@ export const metadata: Metadata = {
     "google-site-verification": "9JUS56I51coFXwz3ddxkj5RMK80MpE9kY4GM05b8j3Q",
     canonical: "https://lance-dalanon.netlify.app/",
   },
+  openGraph: {
+    title: "Lance Orville Dalanon - Full Stack Developer",
+    description:
+      "Full Stack Software Engineer with expertise in JavaScript, Python, Laravel, Vue.js, React.js, and more. Passionate about clean code, best practices, and solving real-world problems with technology.",
+    url: "https://lance-dalanon.netlify.app/",
+    siteName: "Lance Orville Dalanon",
+    images: [
+      {
+        url: "https://lance-dalanon.netlify.app/lance_dalanon.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lance Orville Dalanon",
+      },
+    ],
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lance Orville Dalanon - Full Stack Developer",
+    description:
+      "Full Stack Software Engineer with expertise in JavaScript, Python, Laravel, Vue.js, React.js, and more.",
+    images: [
+      {
+        url: "https://lance-dalanon.netlify.app/lance_dalanon.jpg",
+        alt: "Lance Orville Dalanon",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

@@ -146,10 +146,10 @@ const Project: NextPage = () => {
                                         <figcaption className="text-md md:text-lg text-white mt-4">
                                             <em>{project.short_description}</em>
                                         </figcaption>
-                                    </figure>`
+                                    </figure>
 
                                     {/* Contents */}
-                                    <div className="text-xl text-white">
+                                    <div className="text-white">
                                         <div>
                                             {/* Iterating over the sections */}
                                             {project.sections && project.sections.map((section) => (
@@ -159,7 +159,7 @@ const Project: NextPage = () => {
                                                     
                                                     {/* Content - sanitized using DOMPurify */}
                                                     <div 
-                                                        className="text-lg md:text-2xl my-4 md:my-8 leading-loose"
+                                                        className="text-lg md:text-2xl my-4 md:my-8 leading-loose md:leading-relaxed"
                                                         dangerouslySetInnerHTML={{
                                                             __html: DOMPurify.sanitize(section.content),
                                                         }}
@@ -205,32 +205,32 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, projectId }) => {
             {shuffledProjects.map((project) => (
                 <React.Fragment key={project.id}>
                     <div className="relative group">
-                    <Image
-                        alt={project.project_name}
-                        src={project.project_image}
-                        width={1000}
-                        height={1000}
-                        className="rounded-3xl h-64 w-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-custom-600 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
-                        {/* Title */}
-                        <span className="text-white text-3xl md:text-4xl font-bold opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out md:mt-6">
-                            <p>{project.project_name}</p>
-                        </span>
-                        {/* Button */}
-                        <span className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out mt-6 flex justify-end w-full">
-                            <Link 
-                                href={`/projects/${project.id}`} 
-                                passHref
-                                className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold flex items-center"
-                            >
-                                <FaExternalLinkAlt className="mr-2" />
-                                Explore Project
-                            </Link>
-                        </span>
+                        <Image
+                            alt={project.project_name}
+                            src={project.project_image}
+                            width={1000}
+                            height={1000}
+                            className="rounded-3xl h-64 w-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-custom-600 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
+                            {/* Title */}
+                            <span className="text-white text-3xl md:text-4xl font-bold opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out md:mt-6">
+                                <p>{project.project_name}</p>
+                            </span>
+                            {/* Button */}
+                            <span className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out mt-6 flex justify-end w-full">
+                                <Link 
+                                    href={`/projects/${project.id}`} 
+                                    passHref
+                                    className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold flex items-center"
+                                >
+                                    <FaExternalLinkAlt className="mr-2" />
+                                    Explore Project
+                                </Link>
+                            </span>
+                        </div>
                     </div>
-                </div>
-</React.Fragment>
+                </React.Fragment>
             ))}
         </div>
     );
