@@ -20,26 +20,26 @@
             { "id": 8, "experience": "Communicated effectively with Project Managers, Senior Developers, Quality Assurance teams, and fellow developers to align on project goals, gather requirements, and resolve issues throughout the development process." }
         ],
         "language_framework_libraries": [
-            { "id": 1, "name": "HTML5", "image": "/images/HTML5.png" },
-            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png" },
-            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png" },
-            { "id": 4, "name": "PHP", "image": "/images/PHP.png" },
-            { "id": 5, "name": "Laravel", "image": "/image/Laravel.png" },
-            { "id": 6, "name": "Vue.js", "image": "/images/Vue.js.png" },
-            { "id": 7, "name": "React.js", "image": "/images/React.js.png" },
-            { "id": 8, "name": "Next.js", "image": "/images/Next.js.png" },
-            { "id": 9, "name": "SQL", "image": "/images/SQL.png" },
-            { "id": 10, "name": "Tailwind CSS", "image": "/images/Tailwind-CSS.png" },
-            { "id": 10, "name": "TypeScript", "image": "/images/TypeScript.png" }
+            { "id": 1, "name": "HTML5", "image": "/images/HTML5.png", "is_featured": 0 },
+            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png", "is_featured": 0 },
+            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png", "is_featured": 0 },
+            { "id": 4, "name": "PHP", "image": "/images/PHP.png", "is_featured": 0 },
+            { "id": 5, "name": "Laravel", "image": "/image/Laravel.png", "is_featured": 0 },
+            { "id": 6, "name": "Vue.js", "image": "/images/Vue.js.png", "is_featured": 0 },
+            { "id": 7, "name": "React.js", "image": "/images/React.js.png", "is_featured": 0 },
+            { "id": 8, "name": "Next.js", "image": "/images/Next.js.png", "is_featured" :0 },
+            { "id": 9, "name": "SQL", "image": "/images/SQL.png", "is_featured": 0 },
+            { "id": 10, "name": "Tailwind CSS", "image": "/images/Tailwind-CSS.png", "is_featured": 0 },
+            { "id": 10, "name": "TypeScript", "image": "/images/TypeScript.png", "is_featured": 0 }
         ],
         "technologies": [
-            { "id": 1, "name": "Postman", "image": "/images/Postman.png" },
-            { "id": 2, "name": "GitHub", "image": "/images/GitHub.png" },
-            { "id": 3, "name": "AWS", "image": "/images/AWS.png" },
-            { "id": 4, "name": "Git", "image": "/images/Git.png" },
-            { "id": 5, "name": "AWS EC2", "image": "/image/AWS-EC2.png" },
-            { "id": 6, "name": "AWS S3 Buckets", "image": "/images/AWS-S3-Buckets.png" },
-            { "id": 7, "name": "AWS CloudFront", "image": "/images/AWS-CloudFront.png" }
+            { "id": 1, "name": "Postman", "image": "/images/Postman.png", "is_featured": 0 },
+            { "id": 2, "name": "GitHub", "image": "/images/GitHub.png", "is_featured": 0 },
+            { "id": 3, "name": "AWS", "image": "/images/AWS.png", "is_featured": 0 },
+            { "id": 4, "name": "Git", "image": "/images/Git.png", "is_featured": 0 },
+            { "id": 5, "name": "AWS EC2", "image": "/image/AWS-EC2.png", "is_featured": 0 },
+            { "id": 6, "name": "AWS S3 Buckets", "image": "/images/AWS-S3-Buckets.png", "is_featured": 0 },
+            { "id": 7, "name": "AWS CloudFront", "image": "/images/AWS-CloudFront.png", "is_featured": 0 }
         ],
         "skills": [
             { "id": 1, "name": "Agile" },
@@ -72,20 +72,20 @@
             { "id": 6, "experience": "Utilized Laravel and Livewire to simplify complex data interactions, enabling real-time updates and seamless user experiences." }
         ],
         "language_framework_libraries": [
-            { "id": 1, "name": "HTML5", "image": "/images/HTML5.png" },
-            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png" },
-            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png" },
-            { "id": 4, "name": "PHP", "image": "/images/PHP.png" },
-            { "id": 5, "name": "Laravel", "image": "/image/Laravel.png" },
-            { "id": 6, "name": "Alpine.js", "image": "/images/Alpine.js.png" },
-            { "id": 7, "name": "Livewire", "image": "/images/Livewire.png" },
-            { "id": 8, "name": "SQL", "image": "/images/SQL.png" },
-            { "id": 9, "name": "Tailwind CSS", "image": "/images/Tailwind-CSS.png" }
+            { "id": 1, "name": "HTML5", "image": "/images/HTML5.png", "is_featured": 0 },
+            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png", "is_featured": 0 },
+            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png", "is_featured": 0 },
+            { "id": 4, "name": "PHP", "image": "/images/PHP.png", "is_featured": 0 },
+            { "id": 5, "name": "Laravel", "image": "/image/Laravel.png", "is_featured": 0 },
+            { "id": 6, "name": "Alpine.js", "image": "/images/Alpine.js.png", "is_featured": 0 },
+            { "id": 7, "name": "Livewire", "image": "/images/Livewire.png", "is_featured": 0 },
+            { "id": 8, "name": "SQL", "image": "/images/SQL.png", "is_featured": 0 },
+            { "id": 9, "name": "Tailwind CSS", "image": "/images/Tailwind-CSS.png", "is_featured": 0 }
         ],
         "technologies": [
-            { "id": 1, "name": "GitHub", "image": "/images/GitHub.png" },
-            { "id": 2, "name": "Git", "image": "/images/Git.png" },
-            { "id": 3, "name": "Jira", "image": "/images/Jira.png" }
+            { "id": 1, "name": "GitHub", "image": "/images/GitHub.png", "is_featured": 0 },
+            { "id": 2, "name": "Git", "image": "/images/Git.png", "is_featured": 0 },
+            { "id": 3, "name": "Jira", "image": "/images/Jira.png", "is_featured": 0 }
         ],
         "skills": [
             { "id": 1, "name": "Agile" },
@@ -116,22 +116,22 @@
             { "id": 5, "experience": "Programmed a simple Arduino Uno project and taught Arduino basics to a client." }
         ],
         "language_framework_libraries": [
-            { "id": 1, "name": "HTML5", "image": "/images/HTML5.png" },
-            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png" },
-            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png" },
-            { "id": 4, "name": "PHP", "image": "/images/PHP.png" },
-            { "id": 5, "name": "SQL", "image": "/images/SQL.png" },
-            { "id": 6, "name": "jQuery", "image": "/images/jQuery.png" },
-            { "id": 7, "name": "React.js", "image": "/images/React.js.png" },
-            { "id": 8, "name": "Next.js", "image": "/images/Next.js.png" },
-            { "id": 9, "name": "TypeScript", "image": "/images/TypeScript.png" },
-            { "id": 10, "name": "Arduino", "image": "/images/Arduino.png" }
+            { "id": 1, "name": "HTML5", "image": "/images/HTML5.png", "is_featured": 0 },
+            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png", "is_featured": 0 },
+            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png", "is_featured": 0 },
+            { "id": 4, "name": "PHP", "image": "/images/PHP.png", "is_featured": 0 },
+            { "id": 5, "name": "SQL", "image": "/images/SQL.png", "is_featured": 0 },
+            { "id": 6, "name": "jQuery", "image": "/images/jQuery.png", "is_featured": 0 },
+            { "id": 7, "name": "React.js", "image": "/images/React.js.png", "is_featured": 0 },
+            { "id": 8, "name": "Next.js", "image": "/images/Next.js.png", "is_featured": 0 },
+            { "id": 9, "name": "TypeScript", "image": "/images/TypeScript.png", "is_featured": 0 },
+            { "id": 10, "name": "Arduino", "image": "/images/Arduino.png", "is_featured": 0 }
         ],
         "technologies": [
-            { "id": 1, "name": "GitHub", "image": "/images/GitHub.png" },
-            { "id": 2, "name": "Git", "image": "/images/Git.png" },
-            { "id": 3, "name": "Blockchain", "image": "/images/Blockchain.png" },
-            { "id": 4, "name": "Web3", "image": "/images/Web3.png" }
+            { "id": 1, "name": "GitHub", "image": "/images/GitHub.png", "is_featured": 0 },
+            { "id": 2, "name": "Git", "image": "/images/Git.png", "is_featured": 0 },
+            { "id": 3, "name": "Blockchain", "image": "/images/Blockchain.png", "is_featured": 0 },
+            { "id": 4, "name": "Web3", "image": "/images/Web3.png", "is_featured": 0 }
         ],
         "skills": [
             { "id": 1, "name": "Agile" },

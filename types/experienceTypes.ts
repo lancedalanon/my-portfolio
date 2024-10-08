@@ -6,13 +6,15 @@ export default interface Experience {
     label: string;                   
     role: string;                    
     company_name: string;           
-    description: string | null;      
     month_started: string;           
     year_started: string;            
     month_ended: string | null;      
     year_ended: string | null;
-    experiences: string[] | null;     
+    experiences: {
+        id: number;
+        experience: string;
+    }[];
     language_framework_libraries: LanguageFrameworkLibrary[];
     technologies: Technology[];
-    skills: Skill[]; 
+    skills: Skill[];
 }

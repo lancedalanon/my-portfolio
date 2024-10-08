@@ -109,7 +109,6 @@ const ExperienceSection: React.FC = () => {
                     <div>
                         <h3 className="text-lg font-bold">{filteredExperience.role}</h3>
                         <p>{filteredExperience.company_name}</p>
-                        <p>{filteredExperience.description}</p>
                     </div>
                 </>)}
             </Modal>
