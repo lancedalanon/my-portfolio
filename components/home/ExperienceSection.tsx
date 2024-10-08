@@ -61,7 +61,7 @@ const ExperienceSection: React.FC = () => {
 
     return (
         <section id="experience" className="px-5 py-14 bg-custom-700">
-            <h2 className="text-5xl font-bold text-custom-100 text-center mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
                 MY CAREER HIGHLIGHTS
             </h2>
             {/* Render the appropriate component based on screen size */}

@@ -67,7 +67,7 @@ const Project: NextPage = () => {
                         <div className="grid grid-cols-1 md:grid-cols-[10%_80%_10%] my-28 mx-6">
                             <div></div>
                                 <div>
-                                    <Link href="/projects" passHref className="flex items-center my-8 text-2xl">
+                                    <Link href="/projects" passHref className="flex items-center my-8 text-xl md:text-2xl">
                                         <FaArrowLeftLong className="mr-2 text-white" />
                                         <span className="text-white hover:underline">
                                             Back to Projects page
@@ -79,7 +79,7 @@ const Project: NextPage = () => {
                                         {project.project_headline}
                                     </h2>
 
-                                    <em className="text-white text-xl">
+                                    <em className="text-white text-lg md:text-xl">
                                         {/* Render the project start date */}
                                         Started {project.month_start} {project.year_start}
                                         
@@ -106,7 +106,7 @@ const Project: NextPage = () => {
                                                             className="rounded-lg"
                                                         />
                                                     </div>
-                                                    <span className="text-lg">
+                                                    <span className="text-sm md:text-lg">
                                                         {item.name}
                                                     </span>
                                                 </Badge>
@@ -127,7 +127,7 @@ const Project: NextPage = () => {
                                                             className="rounded-lg"
                                                         />
                                                     </div>
-                                                    <span className="text-lg">
+                                                    <span className="text-sm md:text-lg">
                                                         {item.name}
                                                     </span>
                                                 </Badge>
@@ -143,7 +143,7 @@ const Project: NextPage = () => {
                                             height={800}
                                             className="rounded-xl w-full"
                                         />
-                                        <figcaption className="text-lg text-white mt-4">
+                                        <figcaption className="text-md md:text-lg text-white mt-4">
                                             <em>{project.short_description}</em>
                                         </figcaption>
                                     </figure>`
@@ -155,11 +155,11 @@ const Project: NextPage = () => {
                                             {project.sections && project.sections.map((section) => (
                                                 <div key={section.id}> 
                                                     {/* Subheading */}
-                                                    <div className="font-bold text-5xl mt-16 mb-8">{section.subheading}</div>
+                                                    <div className="font-bold text-3xl md:text-5xl mt-8 mb-4 md:mt-16 md:mb-8">{section.subheading}</div>
                                                     
                                                     {/* Content - sanitized using DOMPurify */}
                                                     <div 
-                                                        className="text-2xl my-8 leading-relaxed" // Adjusted here
+                                                        className="text-lg md:text-2xl my-4 md:my-8 leading-loose"
                                                         dangerouslySetInnerHTML={{
                                                             __html: DOMPurify.sanitize(section.content),
                                                         }}
@@ -170,7 +170,7 @@ const Project: NextPage = () => {
                                     </div>
 
                                     <div className="border-t-2 border-custom-600 pt-16 text-white">
-                                        <div className="text-5xl mb-8">
+                                        <div className="text-3xl md:text-5xl mb-8">
                                             <strong>
                                                 More Projects
                                             </strong>
@@ -214,7 +214,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, projectId }) => {
                     />
                     <div className="absolute inset-0 bg-custom-600 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
                         {/* Title */}
-                        <span className="text-white text-2xl md:text-4xl font-bold opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out md:mt-6">
+                        <span className="text-white text-3xl md:text-4xl font-bold opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out md:mt-6">
                             <p>{project.project_name}</p>
                         </span>
                         {/* Button */}

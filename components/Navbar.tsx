@@ -144,22 +144,36 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
+
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-custom-900 py-4">
-          {/* In-Page Links */}
           <ul className="space-y-8 text-center">
-            {["home", "about-me", "skills", "experience", "featured-projects"].map((section) => (
-              <li key={section}>
-                <a
-                  href={`/#${section}`}
-                  onClick={(e) => handleSmoothScroll(e, section)}
-                  className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-                >
-                  {section.replace("-", " ").toUpperCase()}
+            <li>
+                <a href="/#home" className="text-custom-100 font-bold hover:text-custom-200 transition-colors">
+                    HOME
                 </a>
-              </li>
-            ))}
+            </li>
+            <li>
+                <a href="/#about-me" className="text-custom-100 font-bold hover:text-custom-200 transition-colors">
+                    ABOUT Me
+                </a>
+            </li>
+            <li>
+                <a href="/#skills" className="text-custom-100 font-bold hover:text-custom-200 transition-colors">
+                    SKILLS
+                </a>
+            </li>
+            <li>
+                <a href="/#experience" className="text-custom-100 font-bold hover:text-custom-200 transition-colors">
+                    EXPERIENCE
+                </a>
+            </li>
+            <li>
+                <a href="/#featured-projects" className="text-custom-100 font-bold hover:text-custom-200 transition-colors">
+                    FEATURED PROJECTS
+                </a>
+            </li>
           </ul>
 
           {/* External Links (Mobile) */}
