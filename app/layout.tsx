@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="keywords" content="Full Stack Developer, JavaScript, Python, Laravel, Vue.js, React.js, Next.js, TALL stack" />
-        <link rel="canonical" href="https://yourwebsite.com" />
+        <link rel="canonical" href="https://lance-dalanon.netlify.app/" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -35,8 +35,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "name": "Lance Dalanon",
             "jobTitle": "Full Stack Software Engineer",
             "description": "I’m a Full Stack Software Engineer who loves building and enhancing web and software applications. I work with a range of technologies, including JavaScript, Python, Laravel, Vue.js, React.js, Next.js, and the TALL stack (Tailwind CSS, Alpine.js, Livewire).",
-            "url": "https://yourwebsite.com",
-            "image": "https://yourwebsite.com/images/lance-dalanon.jpg",
+            "url": "https://lance-dalanon.netlify.app",
+            "image": "https://lance-dalanon.netlify.app/images/lance_dalanon.jpg",
             "sameAs": [
               "https://www.linkedin.com/in/lance-orville-dalanon-453109166/",
               "https://github.com/lancedalanon"
