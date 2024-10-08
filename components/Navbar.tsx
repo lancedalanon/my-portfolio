@@ -158,32 +158,8 @@ const Navbar: React.FC = () => {
                 >
                   {section.replace("-", " ").toUpperCase()}
                 </a>
-<<<<<<< HEAD
               </li>
             ))}
-=======
-            </li>
-            <li>
-                <a href="/#about-me" className="text-custom-100 font-bold hover:text-custom-200 transition-colors">
-                    ABOUT ME
-                </a>
-            </li>
-            <li>
-                <a href="/#skills" className="text-custom-100 font-bold hover:text-custom-200 transition-colors">
-                    SKILLS
-                </a>
-            </li>
-            <li>
-                <a href="/#experience" className="text-custom-100 font-bold hover:text-custom-200 transition-colors">
-                    EXPERIENCE
-                </a>
-            </li>
-            <li>
-                <a href="/#featured-projects" className="text-custom-100 font-bold hover:text-custom-200 transition-colors">
-                    FEATURED PROJECTS
-                </a>
-            </li>
->>>>>>> 68f1c9c10f2be30b7a456e28274e4c631b3c6327
           </ul>
 
           {/* External Links (Mobile) */}
