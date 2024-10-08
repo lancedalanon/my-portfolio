@@ -27,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="keywords" content="Full Stack Developer, JavaScript, Python, Laravel, Vue.js, React.js, Next.js, TALL stack" />
+        <meta name="google-site-verification" content="9JUS56I51coFXwz3ddxkj5RMK80MpE9kY4GM05b8j3Q" />
         <link rel="canonical" href="https://lance-dalanon.netlify.app/" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
