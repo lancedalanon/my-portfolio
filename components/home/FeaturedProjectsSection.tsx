@@ -12,37 +12,31 @@ const FeaturedProjectsSection: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
                 PROJECTS I’VE WORKED ON
             </h2>
-            <div className="grid grid-cols-1 mx-2 gap-y-8 md:grid-cols-2 md:gap-x-8">
-                {/* Iterate over the featured projects */}
-                {projects.filter(project => project.is_featured === 1).map((project) => (
+            <div className="grid grid-cols-1 mx-2 mt-8 gap-y-8 md:grid-cols-2 md:gap-x-8">
+                {projects
+                    .filter(project => project.is_featured === 1)
+                    .map((project) => (
                     <React.Fragment key={project.id}>
                         <div className="relative group">
                             <Image
                                 alt={project.project_name}
                                 src={project.project_image}
                                 width={1000}
-                                height={800}
-                                className="rounded-3xl h-full w-full"
+                                height={1000}
+                                className="rounded-3xl h-64 w-full object-cover"
                             />
                             <div className="absolute inset-0 bg-custom-600 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
-                                {/* Title */}
-                                <span className="text-white text-xl md:text-4xl font-bold opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out md:mt-6">
+                                <span className="text-white text-3xl md:text-4xl font-bold opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out md:mt-6">
                                     <p>{project.project_name}</p>
                                 </span>
-                                {/* Description */}
-                                <span className="text-white md:text-lg hidden md:block opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out mt-6">
-                                    <p>{project.short_description}</p>
-                                </span>
-                                {/* Button */}
                                 <span className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out mt-6 flex justify-end w-full">
                                     <Link 
-                                        href={`/projects/${project.id}`} 
-                                        target="_blank"
+                                        href={`/projects/${project.slug}`}  // Use slug instead of id
                                         passHref
-                                        className="bg-accent text-white text-md md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-2 md:px-10 md:py-5 font-bold flex items-center"
+                                        className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold flex items-center"
                                     >
                                         <FaMagnifyingGlass className="mr-2" />
-                                        More Details
+                                        Explore Project
                                     </Link>
                                 </span>
                             </div>
