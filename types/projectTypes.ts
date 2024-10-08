@@ -29,9 +29,9 @@ export interface Project {
     project_image: string;
     short_description: string;
     month_start: string;
-    year_start: number;
+    year_start: string;
     month_end: string;
-    year_end: number;
+    year_end: string;
     is_featured: number;
     language_framework_libraries: LanguageFrameworkLibrary[];
     technologies: Technology[];

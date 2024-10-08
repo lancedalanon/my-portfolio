@@ -9,7 +9,7 @@ import Link from "next/link";
 import Badge from '@/components/Badge';
 import DOMPurify from 'isomorphic-dompurify';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import Project from '@/types/projectTypes';
+import type { Project } from '@/types/projectTypes';
 
 interface ProjectGridProps {
     projects: Project[];
