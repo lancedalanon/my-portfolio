@@ -5,7 +5,7 @@ import { FaSheetPlastic } from "react-icons/fa6";
 import { useRouter, usePathname } from 'next/navigation';
 
 // Component for QuickLinks (Home, About Me, Skills, etc.)
-const QuickLinks: React.FC<{ handleSmoothScroll: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => void }> = ({ handleSmoothScroll }) => {
+const QuickLinks: React.FC<{ handleSmoothScroll: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => void, isMobile?: boolean }> = ({ handleSmoothScroll, isMobile }) => {
   const pathname = usePathname(); // Get the current path in Next.js App Router
   const router = useRouter();
 
@@ -22,7 +22,7 @@ const QuickLinks: React.FC<{ handleSmoothScroll: (e: React.MouseEvent<HTMLAnchor
   };
 
   return (
-    <ul className="space-x-8 md:flex hidden">
+    <ul className={`${isMobile ? "space-y-6" : "space-x-8"} ${isMobile ? "flex flex-col items-center justify-center" : "md:flex hidden"}`}>
       {["home", "about-me", "skills", "experience", "featured-projects"].map((section) => (
         <li key={section}>
           <a
@@ -39,8 +39,8 @@ const QuickLinks: React.FC<{ handleSmoothScroll: (e: React.MouseEvent<HTMLAnchor
 };
 
 // Component for SocialLinks (Resume, LinkedIn, GitHub, etc.)
-const SocialLinks: React.FC = () => (
-  <ul className="space-x-8 md:flex hidden">
+const SocialLinks: React.FC<{ isMobile?: boolean }> = ({ isMobile }) => (
+  <ul className={`${isMobile ? "space-y-6" : "space-x-8"} ${isMobile ? "flex flex-col items-center justify-center mt-6" : "md:flex hidden"}`}>
     <li>
       <a
         href="/documents/LanceOrvilleRDalanonResume.pdf"
@@ -148,54 +148,9 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-custom-900 py-4">
-          <ul className="space-y-8 text-center">
-            {["home", "about-me", "skills", "experience", "featured-projects"].map((section) => (
-              <li key={section}>
-                <a
-                  href={`/#${section}`}
-                  onClick={(e) => handleSmoothScroll(e, section)}
-                  className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-                >
-                  {section.replace("-", " ").toUpperCase()}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          {/* External Links (Mobile) */}
-          <ul className="space-y-8 text-center mt-8">
-            <li>
-              <a
-                href="/documents/LanceOrvilleRDalanonResume.pdf"
-                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-                download
-              >
-                RESUME
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-                aria-label="LinkedIn"
-              >
-                LINKEDIN
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/lancedalanon"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
-                aria-label="GitHub"
-              >
-                GITHUB
-              </a>
-            </li>
-          </ul>
+          {/* Mobile QuickLinks and SocialLinks */}
+          <QuickLinks handleSmoothScroll={handleSmoothScroll} isMobile />
+          <SocialLinks isMobile />
         </div>
       )}
     </nav>
