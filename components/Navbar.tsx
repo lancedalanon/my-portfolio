@@ -156,7 +156,7 @@ const Navbar: React.FC = () => {
             </li>
             <li>
                 <a href="/#about-me" className="text-custom-100 font-bold hover:text-custom-200 transition-colors">
-                    ABOUT Me
+                    ABOUT ME
                 </a>
             </li>
             <li>
