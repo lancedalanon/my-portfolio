@@ -146,7 +146,7 @@ const Project: NextPage = () => {
                                         <figcaption className="text-md md:text-lg text-white mt-4">
                                             <em>{project.short_description}</em>
                                         </figcaption>
-                                    </figure>`
+                                    </figure>
 
                                     {/* Contents */}
                                     <div className="text-xl text-white">
