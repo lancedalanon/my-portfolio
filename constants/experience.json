@@ -9,7 +9,50 @@
         "month_started": "June",
         "year_started": "2024",
         "month_ended": null,
-        "year_ended": null
+        "year_ended": null,
+        "experiences": [
+            { "id": 1, "experience": "Maintained and enhanced a legacy web app using Laravel and Vue.js, improving performance and user satisfaction." }, 
+            { "id": 2, "experience": "Conducted rigorous code reviews to ensure high-quality, maintainable code." },
+            { "id": 3, "experience": "Applied OWASP standards for security to safeguard confidential government data." },
+            { "id": 4, "experience": "Implemented Role-based Access Control (RBAC) framework to manage user permissions and enhance security." },
+            { "id": 5, "experience": "Developed a complex logistics application with Laravel for backend and Next.js/React.js for frontend, managing intricate logic." },
+            { "id": 6, "experience": "Utilized AWS services such as S3 for secure storage, CloudFront for content delivery, and EC2 for scalable computing resources, enhancing application security and performance." },
+            { "id": 7, "experience": "Collaborated in an Agile environment, contributing to sprint planning and retrospectives for improved delivery." },
+            { "id": 8, "experience": "Communicated effectively with Project Managers, Senior Developers, Quality Assurance teams, and fellow developers to align on project goals, gather requirements, and resolve issues throughout the development process." }
+        ],
+        "language_framework_libraries": [
+            { "id": 1, "name": "HTML5", "image": "/images/HTML5.png" },
+            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png" },
+            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png" },
+            { "id": 4, "name": "PHP", "image": "/images/PHP.png" },
+            { "id": 5, "name": "Laravel", "image": "/image/Laravel.png" },
+            { "id": 6, "name": "Vue.js", "image": "/images/Vue.js.png" },
+            { "id": 7, "name": "React.js", "image": "/images/React.js.png" },
+            { "id": 8, "name": "Next.js", "image": "/images/Next.js.png" },
+            { "id": 9, "name": "SQL", "image": "/images/SQL.png" },
+            { "id": 10, "name": "Tailwind CSS", "image": "/images/Tailwind-CSS.png" },
+            { "id": 10, "name": "TypeScript", "image": "/images/TypeScript.png" }
+        ],
+        "technologies": [
+            { "id": 1, "name": "Postman", "image": "/images/Postman.png" },
+            { "id": 2, "name": "GitHub", "image": "/images/GitHub.png" },
+            { "id": 3, "name": "AWS", "image": "/images/AWS.png" },
+            { "id": 4, "name": "Git", "image": "/images/Git.png" },
+            { "id": 5, "name": "AWS EC2", "image": "/image/AWS-EC2.png" },
+            { "id": 6, "name": "AWS S3 Buckets", "image": "/images/AWS-S3-Buckets.png" },
+            { "id": 7, "name": "AWS CloudFront", "image": "/images/AWS-CloudFront.png" }
+        ],
+        "skills": [
+            { "id": 1, "name": "Agile" },
+            { "id": 2, "name": "Scrum" },
+            { "id": 3, "name": "Sofware Development Life Cycle (SDLC)" },
+            { "id": 4, "name": "Code Review" },
+            { "id": 5, "name": "Role-Based Access Control (RBAC)" },
+            { "id": 6, "name": "REST APIs" },
+            { "id": 7, "name": "Responsive Web Design" },
+            { "id": 8, "name": "API Integration" },
+            { "id": 9, "name": "OWASP" }
+        ]
     },
     { 
         "id": 2, 
@@ -21,7 +64,41 @@
         "month_started": "May",
         "year_started": "2024",
         "month_ended": "June",
-        "year_ended": "2024"
+        "year_ended": "2024",
+        "experiences": [
+            { "id": 1, "experience": "Optimized web performance by implementing the TALL stack (Tailwind CSS, Alpine.js, Laravel, and Livewire), enhancing the user experience and responsiveness of web applications." },
+            { "id": 2, "experience": "Enhanced developer experience by leveraging the TALL stack, enabling rapid prototyping and streamlined workflows for front-end and back-end development." },
+            { "id": 3, "experience": "Accelerated development cycles through agile methodologies, fostering collaboration, continuous feedback, and iterative improvements within the development team." },
+            { "id": 4, "experience": "Implemented responsive design principles using Tailwind CSS, resulting in consistent and visually appealing user interfaces across various devices." },
+            { "id": 5, "experience": "Integrated Alpine.js for dynamic interactivity, improving the overall functionality and engagement of web applications without compromising performance." },
+            { "id": 6, "experience": "Utilized Laravel and Livewire to simplify complex data interactions, enabling real-time updates and seamless user experiences." }
+        ],
+        "language_framework_libraries": [
+            { "id": 1, "name": "HTML5", "image": "/images/HTML5.png" },
+            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png" },
+            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png" },
+            { "id": 4, "name": "PHP", "image": "/images/PHP.png" },
+            { "id": 5, "name": "Laravel", "image": "/image/Laravel.png" },
+            { "id": 6, "name": "Alpine.js", "image": "/images/Alpine.js.png" },
+            { "id": 7, "name": "Livewire", "image": "/images/Livewire.png" },
+            { "id": 8, "name": "SQL", "image": "/images/SQL.png" },
+            { "id": 9, "name": "Tailwind CSS", "image": "/images/Tailwind-CSS.png" }
+        ],
+        "technologies": [
+            { "id": 1, "name": "GitHub", "image": "/images/GitHub.png" },
+            { "id": 2, "name": "Git", "image": "/images/Git.png" },
+            { "id": 3, "name": "Jira", "image": "/images/Jira.png" }
+        ],
+        "skills": [
+            { "id": 1, "name": "Agile" },
+            { "id": 2, "name": "Scrum" },
+            { "id": 3, "name": "Sofware Development Life Cycle (SDLC)" },
+            { "id": 4, "name": "Code Review" },
+            { "id": 5, "name": "Role-Based Access Control (RBAC)" },
+            { "id": 6, "name": "REST APIs" },
+            { "id": 7, "name": "Responsive Web Design" },
+            { "id": 8, "name": "API Integration" }
+        ]
     },
     { 
         "id": 1, 
@@ -33,6 +110,42 @@
         "month_started": "March",
         "year_started": "2024",
         "month_ended": "May",
-        "year_ended": "2024"
+        "year_ended": "2024",
+        "experiences": [
+            { "id": 1, "experience": "Developed a dynamic and user-friendly Event and News Post Content Management System using a tech stack including HTML5, CSS3, JavaScript, jQuery, Bootstrap, PHP, and SQL." },
+            { "id": 2, "experience": "Coordinated with UI/UX designers, wireframe developers, and frontend developers to ensure a cohesive and visually appealing website design and error-free functionalities." },
+            { "id": 3, "experience": "Integrated Basic onsite SEO best practices to enhance search engine visibility and drive organic traffic to the website." },
+            { "id": 4, "experience": "Developed the frontend of a simple Web3 transactions application using Next.js, React.js, TailwindCSS, and Typescript, leveraging its features to build a responsive and interactive user interface." },
+            { "id": 5, "experience": "Programmed a simple Arduino Uno project and taught Arduino basics to a client." }
+        ],
+        "language_framework_libraries": [
+            { "id": 1, "name": "HTML5", "image": "/images/HTML5.png" },
+            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png" },
+            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png" },
+            { "id": 4, "name": "PHP", "image": "/images/PHP.png" },
+            { "id": 5, "name": "SQL", "image": "/images/SQL.png" },
+            { "id": 6, "name": "jQuery", "image": "/images/jQuery.png" },
+            { "id": 7, "name": "React.js", "image": "/images/React.js.png" },
+            { "id": 8, "name": "Next.js", "image": "/images/Next.js.png" },
+            { "id": 9, "name": "TypeScript", "image": "/images/TypeScript.png" },
+            { "id": 10, "name": "Arduino", "image": "/images/Arduino.png" }
+        ],
+        "technologies": [
+            { "id": 1, "name": "GitHub", "image": "/images/GitHub.png" },
+            { "id": 2, "name": "Git", "image": "/images/Git.png" },
+            { "id": 3, "name": "Blockchain", "image": "/images/Blockchain.png" },
+            { "id": 4, "name": "Web3", "image": "/images/Web3.png" }
+        ],
+        "skills": [
+            { "id": 1, "name": "Agile" },
+            { "id": 2, "name": "Scrum" },
+            { "id": 3, "name": "Sofware Development Life Cycle (SDLC)" },
+            { "id": 4, "name": "Code Review" },
+            { "id": 5, "name": "Role-Based Access Control (RBAC)" },
+            { "id": 6, "name": "REST APIs" },
+            { "id": 7, "name": "Responsive Web Design" },
+            { "id": 8, "name": "API Integration" },
+            { "id": 9, "name": "Search Engine Optimization (SEO)" }
+        ]
     }
 ]
