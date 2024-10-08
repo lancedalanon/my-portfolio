@@ -4,7 +4,7 @@ import { FaDownload } from 'react-icons/fa';
 
 const AboutMeSection: React.FC = () => {
   return (
-    <section id="about-me" className="flex flex-col items-center justify-center text-center  px-7 md:px-14 py-14 bg-custom-700">
+    <section id="about-me" className="flex flex-col items-center justify-center text-center px-7 md:px-14 py-14 bg-custom-700">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:ml-14">
         <div className="text-left px-2 flex flex-col justify-between">
           <div>
