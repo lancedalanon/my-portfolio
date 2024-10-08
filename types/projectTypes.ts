@@ -24,6 +24,7 @@ export interface Section {
 
 export interface Project {
     id: number;
+    slug: string;
     project_name: string;
     project_headline: string;
     project_image: string;
