@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaBars, FaTimes, FaLinkedin, FaGithub } from "react-icons/fa";
 import { FaSheetPlastic } from "react-icons/fa6";
 import { useRouter, usePathname } from 'next/navigation';
@@ -79,6 +79,7 @@ const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(true); // Navbar visibility on scroll
   const [lastScrollY, setLastScrollY] = useState(0); // Last scroll position
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false); // Mobile menu toggle state
+  const navbarRef = useRef<HTMLDivElement>(null); // Ref for the navbar container
 
   // Function to control Navbar visibility and close mobile menu on scroll down
   const controlNavbar = () => {
@@ -96,15 +97,24 @@ const Navbar: React.FC = () => {
     }
   };
 
+  // Close mobile menu when clicking outside of the navbar
+  const handleClickOutside = (event: MouseEvent) => {
+    if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
+      setMobileMenuOpen(false); // Close menu if clicked outside
+    }
+  };
+
   // Debounce the scroll event for better performance
   useEffect(() => {
     const handleScroll = () => {
       setTimeout(controlNavbar, 100); // Delay to debounce
     };
     window.addEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside); // Add listener for clicks outside navbar
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside); // Clean up on unmount
     };
   }, [lastScrollY]);
 
@@ -122,6 +132,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
+      ref={navbarRef}
       className={`bg-custom-900 fixed w-full z-50 shadow-lg transition-transform duration-300 ease-in-out px-8 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
