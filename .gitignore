@@ -36,4 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 # Ignore generated sitemaps
+sitemap-0.xml
 sitemap.xml
