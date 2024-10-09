@@ -13,9 +13,11 @@ const Projects: NextPage = () => {
         <main>
             <article>
                 <section id="projects" className="flex flex-col items-center justify-start overflow-hidden bg-custom-800">
-                    <h2 className="text-3xl md:text-5xl text-center font-bold text-custom-100 mt-32 mx-6">
-                        MASTERPIECES IN DIGITAL DEVELOPMENT
-                    </h2>
+                    <header>
+                        <h1 className="text-3xl md:text-5xl text-center font-bold text-custom-100 mt-32 mx-6">
+                            MASTERPIECES IN DIGITAL DEVELOPMENT
+                        </h1>
+                    </header>
                     <div className="grid grid-cols-1 md:grid-cols-2 my-16 mx-8 md:mx-16 gap-6">
                         {/* Iterate over the featured projects */}
                         {projects.map((project) => (
@@ -77,6 +79,7 @@ const Projects: NextPage = () => {
                                             href={`/projects/${project.slug}`} 
                                             passHref
                                             className="bg-accent text-white text-md md:text-xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-4 py-3 md:px-6 md:py-4 font-bold flex items-center"
+                                            aria-label="Explore this project"
                                         >
                                             <FaExternalLinkAlt className="mr-2" />
                                             Explore Project

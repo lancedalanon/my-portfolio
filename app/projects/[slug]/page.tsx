@@ -57,7 +57,12 @@ const Project: NextPage = () => {
                         <div className="grid grid-cols-1 md:grid-cols-[15%_auto_15%] my-28 mx-6">
                             <div></div>
                                 <div>
-                                    <Link href="/projects" passHref className="flex items-center my-8 text-xl md:text-2xl">
+                                    <Link 
+                                        href="/projects" 
+                                        passHref 
+                                        className="flex items-center my-8 text-xl md:text-2xl"
+                                        aria-label="Return to project main page"
+                                    >
                                         <FaArrowLeftLong className="mr-2 text-white" />
                                         <span className="text-white hover:underline">Back to Projects page</span>
                                     </Link>
@@ -185,9 +190,10 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, projectId }) => {
                             </span>
                             <span className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out mt-6 flex justify-end w-full">
                                 <Link 
-                                    href={`/projects/${project.slug}`}  // Use slug instead of id
+                                    href={`/projects/${project.slug}`}
                                     passHref
                                     className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold flex items-center"
+                                    aria-label="Explore this project"
                                 >
                                     <FaExternalLinkAlt className="mr-2" />
                                     Explore Project

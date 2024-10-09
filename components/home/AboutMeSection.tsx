@@ -8,9 +8,11 @@ const AboutMeSection: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:ml-14">
         <div className="text-left px-2 flex flex-col justify-between">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-custom-100 mb-4">  
-              MEET YOUR NEXT SOFTWARE ENGINEER: MY JOURNEY
-            </h2>
+            <header>
+              <h1 className="text-3xl md:text-4xl font-bold text-custom-100 mb-4">  
+                MEET YOUR NEXT SOFTWARE ENGINEER: MY JOURNEY
+              </h1>
+            </header>
             <p className="text-lg md:text-xl text-white mb-4">
               I’m a Full Stack Software Engineer who loves building and enhancing web and software applications. 
               I work with a range of technologies, including <strong className="text-accent">JavaScript</strong>, <strong className="text-accent">Python</strong>, <strong className="text-accent">Laravel</strong>, <strong className="text-accent">Vue.js</strong>, <strong className="text-accent">React.js</strong>, <strong className="text-accent">Next.js</strong>, 
@@ -33,6 +35,7 @@ const AboutMeSection: React.FC = () => {
               className="flex items-center text-md md:text-lg bg-white text-custom-800 border border-custom-800 font-semibold px-6 py-4 rounded-full shadow hover:bg-gray-200 transition-all duration-200"
               href="/documents/LanceOrvilleRDalanonResume.pdf"
               download 
+              aria-label="Download Lance Dalanon's CV"
             >
               <FaDownload className="mr-2" />
               Download CV
@@ -42,7 +45,7 @@ const AboutMeSection: React.FC = () => {
         <div className="flex items-center justify-center">
           <Image 
             src={`/images/lance_dalanon.JPG`} 
-            alt={`Lance Dalanon`} 
+            alt="Lance Dalanon, Full Stack Software Engineer" 
             width={480} 
             height={480} 
             className="rounded-xl shadow-2xl" 

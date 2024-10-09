@@ -131,40 +131,42 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav
-      ref={navbarRef}
-      className={`bg-custom-900 fixed w-full z-50 shadow-lg transition-transform duration-300 ease-in-out px-8 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto py-6 flex justify-between items-center">
-        {/* Desktop QuickLinks */}
-        <QuickLinks handleSmoothScroll={handleSmoothScroll} />
+    <header>
+      <nav
+        ref={navbarRef}
+        className={`bg-custom-900 fixed w-full z-50 shadow-lg transition-transform duration-300 ease-in-out px-8 ${
+          visible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto py-6 flex justify-between items-center">
+          {/* Desktop QuickLinks */}
+          <QuickLinks handleSmoothScroll={handleSmoothScroll} />
 
-        {/* Desktop SocialLinks */}
-        <SocialLinks />
+          {/* Desktop SocialLinks */}
+          <SocialLinks />
 
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-custom-100 focus:outline-none"
-            aria-label="Toggle Menu"
-          >
-            {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
+          {/* Mobile Menu Icon */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-custom-100 focus:outline-none"
+              aria-label="Toggle Menu"
+            >
+              {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-custom-900 py-4">
-          {/* Mobile QuickLinks and SocialLinks */}
-          <QuickLinks handleSmoothScroll={handleSmoothScroll} isMobile />
-          <SocialLinks isMobile />
-        </div>
-      )}
-    </nav>
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-custom-900 py-4">
+            {/* Mobile QuickLinks and SocialLinks */}
+            <QuickLinks handleSmoothScroll={handleSmoothScroll} isMobile />
+            <SocialLinks isMobile />
+          </div>
+        )}
+      </nav>
+    </header>
   );
 };
 

@@ -135,7 +135,7 @@ const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experienc
                     <div className="h-20 w-20">
                         <Image
                             src={item.image}
-                            alt={item.label}
+                            alt={`Profile image for ${item.label}`}
                             className="rounded-full border-2 border-custom-100"
                             height={100}
                             width={100}
@@ -150,6 +150,7 @@ const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experienc
                         <div
                             className="flex items-center mt-2 text-accent hover:underline cursor-pointer"
                             onClick={() => onExperienceClick(item.id)}
+                            aria-label={`View more details about ${item.role} at ${item.company_name}`}
                         >
                             <FaExternalLinkAlt className="mr-1" />
                             <span className="text-md md:text-lg">More Details</span>
@@ -196,6 +197,7 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
                                     <div 
                                         className="flex items-center mt-2 text-accent hover:underline cursor-pointer"
                                         onClick={() => onExperienceClick(item.id)}
+                                        aria-label={`View more details about ${item.role} at ${item.company_name}`}
                                     >
                                         <FaExternalLinkAlt className="mr-1" />
                                         <span className="text-md md:text-lg">More Details</span>
@@ -205,7 +207,7 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
                             <div className="relative h-32 w-32">
                                 <Image
                                     src={item.image}
-                                    alt={item.label}
+                                    alt={`Profile image for ${item.label}`}
                                     className="rounded-full border-2 border-custom-100"
                                     height={200}
                                     width={200}
@@ -219,7 +221,7 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
                             <div className="relative h-32 w-32">
                                 <Image
                                     src={item.image}
-                                    alt={item.label}
+                                    alt={`Profile image for ${item.label}`}
                                     className="rounded-full border-2 border-custom-100"
                                     height={200}
                                     width={200}
@@ -235,6 +237,7 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
                                     <div 
                                         className="flex items-center mt-2 text-accent hover:underline cursor-pointer"
                                         onClick={() => onExperienceClick(item.id)}
+                                        aria-label={`View more details about ${item.role} at ${item.company_name}`}
                                     >
                                         <FaExternalLinkAlt className="mr-1" />
                                         <span className="text-md md:text-lg">More Details</span>

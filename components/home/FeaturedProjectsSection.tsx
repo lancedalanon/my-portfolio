@@ -9,9 +9,11 @@ import projects from '@/constants/projects.json';
 const FeaturedProjectsSection: React.FC = () => {
     return (
         <section id="featured-projects" className="bg-custom-800 px-5 py-14">
-            <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
-                PROJECTS I’VE WORKED ON
-            </h2>
+            <header>
+                <h1 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
+                    PROJECTS I’VE WORKED ON
+                </h1>
+            </header>
             <div className="grid grid-cols-1 mx-2 mt-8 gap-y-8 md:grid-cols-2 md:gap-x-8">
                 {projects
                     .filter(project => project.is_featured === 1)
@@ -19,7 +21,7 @@ const FeaturedProjectsSection: React.FC = () => {
                     <React.Fragment key={project.id}>
                         <div className="relative group">
                             <Image
-                                alt={project.project_name}
+                                alt={`Screenshot of ${project.project_name}`}
                                 src={project.project_image}
                                 width={1000}
                                 height={1000}
@@ -31,9 +33,10 @@ const FeaturedProjectsSection: React.FC = () => {
                                 </span>
                                 <span className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out mt-6 flex justify-end w-full">
                                     <Link 
-                                        href={`/projects/${project.slug}`}  // Use slug instead of id
+                                        href={`/projects/${project.slug}`}
                                         passHref
                                         className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold flex items-center"
+                                        aria-label={`View details of ${project.project_name}`}
                                     >
                                         <FaMagnifyingGlass className="mr-2" />
                                         View Project
@@ -49,6 +52,7 @@ const FeaturedProjectsSection: React.FC = () => {
                  href="/projects" 
                  passHref
                  className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold mt-6 flex items-center"
+                 aria-label="View more projects"
                 >
                     <FaExternalLinkAlt className="mr-2" />
                     More Projects

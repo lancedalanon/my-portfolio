@@ -10,22 +10,25 @@ const SocialLinks: React.FC = () => (
             className="flex items-center space-x-2 hover:text-custom-200 transition-transform transform hover:scale-110 duration-300"
             href="/documents/LanceOrvilleRDalanonResume.pdf"
             download
+            aria-label="Download Resume"
         >
             <FaSheetPlastic size={24} />
             <span>Resume</span>
         </a>
-        <a href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
+        <a 
+            href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
             className="flex items-center space-x-2 hover:text-custom-200 transition-transform transform hover:scale-110 duration-300"
-            aria-label="LinkedIn"
+            aria-label="LinkedIn Profile"
             target="_blank"
             rel="noopener noreferrer"
         >
             <FaLinkedin size={24} />
             <span>LinkedIn</span>
         </a>
-        <a href="https://github.com/lancedalanon"
+        <a 
+            href="https://github.com/lancedalanon"
             className="flex items-center space-x-2 hover:text-custom-200 transition-transform transform hover:scale-110 duration-300"
-            aria-label="GitHub"
+            aria-label="GitHub Profile"
             target="_blank"
             rel="noopener noreferrer"
         >
@@ -40,34 +43,34 @@ const QuickLinks: React.FC = () => (
     <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-2">
         <div className="space-y-2">
             <li>
-                <a href="/#home" className="hover:text-custom-200 transition-colors duration-300">
+                <a href="/#home" className="hover:text-custom-200 transition-colors duration-300" aria-label="Go to Home">
                     Home
                 </a>
             </li>
             <li>
-                <a href="/#about-me" className="hover:text-custom-200 transition-colors duration-300">
+                <a href="/#about-me" className="hover:text-custom-200 transition-colors duration-300" aria-label="Learn About Me">
                     About Me
                 </a>
             </li>
             <li>
-                <a href="/#skills" className="hover:text-custom-200 transition-colors duration-300">
+                <a href="/#skills" className="hover:text-custom-200 transition-colors duration-300" aria-label="View My Skills">
                     Skills
                 </a>
             </li>
             <li>
-                <a href="/#experience" className="hover:text-custom-200 transition-colors duration-300">
+                <a href="/#experience" className="hover:text-custom-200 transition-colors duration-300" aria-label="See My Experience">
                     Experience
                 </a>
             </li>
             <li>
-                <a href="/#featured-projects" className="hover:text-custom-200 transition-colors duration-300">
+                <a href="/#featured-projects" className="hover:text-custom-200 transition-colors duration-300" aria-label="View Featured Projects">
                     Featured Projects
                 </a>
             </li>
         </div>
         <div className="space-y-2">
             <li>
-                <Link href="/projects" className="text-custom-100 hover:text-custom-200 transition-colors duration-300">
+                <Link href="/projects" className="text-custom-100 hover:text-custom-200 transition-colors duration-300" aria-label="Explore My Projects">
                     Projects
                 </Link>
             </li>
@@ -76,6 +79,8 @@ const QuickLinks: React.FC = () => (
 );
 
 const Footer: React.FC = () => {
+    const currentYear = new Date().getFullYear(); // Get the current year dynamically
+
     return (
         <footer className="bg-custom-900 text-custom-100 py-8 md:py-12">
             <div className="grid grid-cols-1 md:grid-cols-[50%_25%_25%] gap-8 mx-8 md:mx-20">
@@ -98,13 +103,15 @@ const Footer: React.FC = () => {
                 </div>
 
                 {/* Combined Contact Section */}
-                <div className="space-y-4">
+                <address className="space-y-4">
                     <h3 className="text-xl font-semibold">Contact</h3>
                     <div className="flex items-center space-x-2">
                         <FaEnvelope size={20} />
-                        <a href="mailto:lanceorville5@gmail.com"
-                           className="hover:text-custom-200 transition-colors duration-300"
-                           aria-label="Email">
+                        <a 
+                            href="mailto:lanceorville5@gmail.com"
+                            className="hover:text-custom-200 transition-colors duration-300"
+                            aria-label="Email Lance Dalanon"
+                        >
                             lanceorville5@gmail.com
                         </a>
                     </div>
@@ -112,13 +119,13 @@ const Footer: React.FC = () => {
                         <FaPhone size={20} />
                         <span>(+63) 921-273-7768</span>
                     </div>
-                </div>
+                </address>
             </div>
 
             {/* Copyright Section */}
             <div className="mt-8 text-center">
-                <p className="text-sm">© 2024 Lance Dalanon. All rights reserved.</p>
-                <a href="/privacy-policy" className="hover:text-custom-200 text-sm">Privacy Policy</a>
+                <time dateTime={`${currentYear}-01-01`}>© {currentYear}</time> Lance Dalanon. All rights reserved.
+                <Link href="/privacy-policy" className="hover:text-custom-200 text-sm">Privacy Policy</Link>
             </div>
         </footer>
     );
