@@ -65,8 +65,13 @@ export const metadata: Metadata = {
     "Lance Orville"
   ],
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { rel: "icon", type: "image/png", sizes: "32x32", url: "/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", url: "/favicon-16x16.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", url: "/apple-touch-icon.png" },
+    ],
   },
+  manifest: "/site.webmanifest",
   other: {
     "google-site-verification": "9JUS56I51coFXwz3ddxkj5RMK80MpE9kY4GM05b8j3Q",
     canonical: "https://lance-dalanon.netlify.app/",
