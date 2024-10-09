@@ -11,7 +11,7 @@ const AboutMeSection: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-custom-100 mb-4">  
               MEET YOUR NEXT SOFTWARE ENGINEER: MY JOURNEY
             </h2>
-            <p className="text-lg md:text-xl text-custom-200 mb-4">
+            <p className="text-lg md:text-xl text-white mb-4">
               I’m a Full Stack Software Engineer who loves building and enhancing web and software applications. 
               I work with a range of technologies, including <strong className="text-accent">JavaScript</strong>, <strong className="text-accent">Python</strong>, <strong className="text-accent">Laravel</strong>, <strong className="text-accent">Vue.js</strong>, <strong className="text-accent">React.js</strong>, <strong className="text-accent">Next.js</strong>, 
               and the <strong className="text-accent">TALL stack</strong> (<strong className="text-accent">Tailwind CSS</strong>, <strong className="text-accent">Alpine.js</strong>, <strong className="text-accent">Livewire</strong>). 
@@ -20,7 +20,7 @@ const AboutMeSection: React.FC = () => {
               I thrive in <strong className="text-accent">Agile</strong> environments, where <strong className="text-accent">teamwork</strong> and <strong className="text-accent">communication</strong> are key to reaching our goals. 
               With a solid foundation in both <strong className="text-accent">front-end and back-end development</strong>, I’m excited to take on challenges and come up with innovative solutions.
             </p>
-            <p className="text-lg md:text-xl text-custom-200 mb-4">
+            <p className="text-lg md:text-xl text-white mb-4">
               Beyond my technical skills, I’m genuinely passionate about using technology 
               to tackle real-world problems. I love learning new tools and methods that help me grow as a developer.
               Whether I’m mentoring junior developers or diving into new frameworks, I’m committed to continuous improvement.

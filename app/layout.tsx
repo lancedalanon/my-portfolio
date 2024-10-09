@@ -105,6 +105,11 @@ export const metadata: Metadata = {
       },
     ],
   },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+  },
 };
 
 export const viewport: Viewport = {

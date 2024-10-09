@@ -20,7 +20,7 @@ const HomeSection: React.FC = () => {
       <h1 className="text-5xl md:text-7xl font-bold text-custom-100 relative z-10 mx-4">
         Hi, I’m Lance Dalanon!
       </h1> 
-      <p className="text-lg md:text-xl text-custom-200 mt-4 max-w-2xl relative z-10 mx-4">
+      <p className="text-lg md:text-xl text-custom-100 mt-4 max-w-2xl relative z-10 mx-4">
         A dedicated and passionate full-stack software engineer committed 
         to delivering innovative technical solutions tailored to meet your business needs.
       </p>
