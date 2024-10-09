@@ -78,7 +78,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lance Orville Dalanon - Full Stack Developer",
     description:
-      "Full Stack Software Engineer with expertise in JavaScript, Python, Laravel, Vue.js, React.js, and more. Passionate about clean code, best practices, and solving real-world problems with technology.",
+      "Full Stack Developer specializing in JavaScript, Python, and modern frameworks like React.js, Vue.js, and Laravel. Passionate about building clean, scalable applications.",
     url: "https://lance-dalanon.netlify.app/",
     siteName: "Lance Orville Dalanon",
     images: [
