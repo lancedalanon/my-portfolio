@@ -19,9 +19,9 @@ const geistMono = localFont({
 
 // Define metadata using Next.js Metadata API
 export const metadata: Metadata = {
-  title: "Lance Orville Dalanon",
+  title: "Lance Dalanon",
   description:
-    "Hi there! I’m a Full Stack Software Engineer who loves building and enhancing web and software applications. I work with a range of technologies, including JavaScript, Python, Laravel, Vue.js, React.js, Next.js, and the TALL stack (Tailwind CSS, Alpine.js, Livewire). I’m all about writing clean, secure code, and I make it a point to follow best practices, like thorough code reviews and OWASP standards. I thrive in Agile environments, where teamwork and communication are key to reaching our goals. With a solid foundation in both front-end and back-end development, I’m excited to take on challenges and come up with innovative solutions. Beyond my technical skills, I’m genuinely passionate about using technology to tackle real-world problems. I love learning new tools and methods that help me grow as a developer. Whether I’m mentoring junior developers or diving into new frameworks, I’m committed to continuous improvement. I’m eager to be part of projects that not only challenge me but also make a meaningful difference in people’s lives.",
+    "Hi I'm Lance Orville Rosario Dalanon! I’m a Full Stack Software Engineer who loves building and enhancing web and software applications. I work with a range of technologies, including JavaScript, Python, Laravel, Vue.js, React.js, Next.js, and the TALL stack (Tailwind CSS, Alpine.js, Livewire). I’m all about writing clean, secure code, and I make it a point to follow best practices, like thorough code reviews and OWASP standards. I thrive in Agile environments, where teamwork and communication are key to reaching our goals. With a solid foundation in both front-end and back-end development, I’m excited to take on challenges and come up with innovative solutions. Beyond my technical skills, I’m genuinely passionate about using technology to tackle real-world problems. I love learning new tools and methods that help me grow as a developer. Whether I’m mentoring junior developers or diving into new frameworks, I’m committed to continuous improvement. I’m eager to be part of projects that not only challenge me but also make a meaningful difference in people’s lives.",
   keywords: [
     "Full Stack Developer",
     "JavaScript",
@@ -58,7 +58,16 @@ export const metadata: Metadata = {
     "Software Development Life Cycle",
     "Database Administration",
     "Code Review",
+    "Lance Orville Rosario Dalanon",
+    "Lance Dalanon",
+    "Lance Orville Dalanon",
+    "Lance Orville R. Dalanon",
+    "Lance Orville"
   ],
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
   icons: {
     icon: "/favicon.ico",
   },
