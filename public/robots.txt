@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://lance-dalanon.netlify.app/sitemap.xml
