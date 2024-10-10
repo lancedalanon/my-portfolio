@@ -31,7 +31,7 @@ const HomeSection: React.FC = () => {
         href="#about-me"
         aria-label="Learn more about Lance Dalanon and his skills as a full-stack software engineer"
       >
-        Discover My Work
+        Learn More
       </a>
     </section>
   );
