@@ -74,6 +74,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   other: {
     "google-site-verification": "9JUS56I51coFXwz3ddxkj5RMK80MpE9kY4GM05b8j3Q",
+    "msvalidate.01": "276A335FFF4C78A15F04760EF8F5F207",
     canonical: "https://lance-dalanon.netlify.app/",
   },
   openGraph: {
@@ -109,6 +110,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
     nocache: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
   },
 };
 
