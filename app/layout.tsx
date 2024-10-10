@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     siteName: "Lance Orville Dalanon",
     images: [
       {
-        url: "https://lance-dalanon.netlify.app/lance-dalanon.jpg",
+        url: "https://lance-dalanon.netlify.app/images/lance-dalanon.jpg",
         width: 1200,
         height: 630,
         alt: "Lance Orville Dalanon",
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
       "Full Stack Software Engineer with expertise in JavaScript, Python, Laravel, Vue.js, React.js, and more.",
     images: [
       {
-        url: "https://lance-dalanon.netlify.app/lance-dalanon.jpg",
+        url: "https://lance-dalanon.netlify.app/images/lance-dalanon.jpg",
         alt: "Lance Orville Dalanon",
       },
     ],
