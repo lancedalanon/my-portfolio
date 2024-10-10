@@ -44,7 +44,7 @@ const AboutMeSection: React.FC = () => {
         </div>
         <div className="flex items-center justify-center">
           <Image 
-            src={`/images/lance_dalanon.JPG`} 
+            src={`/images/lance-dalanon.jpg`} 
             alt="Lance Dalanon, Full Stack Software Engineer" 
             width={480} 
             height={480} 

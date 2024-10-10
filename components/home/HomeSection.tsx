@@ -12,6 +12,7 @@ const HomeSection: React.FC = () => {
           layout="fill"
           objectFit="cover" 
           className="z-0" 
+          priority
         />
         {/* Transparent Overlay */}
         <div className="absolute inset-0 bg-black opacity-90"></div> {/* Adjust opacity as needed */}

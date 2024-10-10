@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     siteName: "Lance Orville Dalanon",
     images: [
       {
-        url: "https://lance-dalanon.netlify.app/lance_dalanon.jpg",
+        url: "https://lance-dalanon.netlify.app/lance-dalanon.jpg",
         width: 1200,
         height: 630,
         alt: "Lance Orville Dalanon",
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
       "Full Stack Software Engineer with expertise in JavaScript, Python, Laravel, Vue.js, React.js, and more.",
     images: [
       {
-        url: "https://lance-dalanon.netlify.app/lance_dalanon.jpg",
+        url: "https://lance-dalanon.netlify.app/lance-dalanon.jpg",
         alt: "Lance Orville Dalanon",
       },
     ],
@@ -144,7 +144,7 @@ export default function RootLayout({
               "description":
                 "I’m a Full Stack Software Engineer who loves building and enhancing web and software applications. I work with a range of technologies, including JavaScript, Python, Laravel, Vue.js, React.js, Next.js, and the TALL stack (Tailwind CSS, Alpine.js, Livewire).",
               "url": "https://lance-dalanon.netlify.app",
-              "image": "https://lance-dalanon.netlify.app/images/lance_dalanon.jpg",
+              "image": "https://lance-dalanon.netlify.app/images/lance-dalanon.jpg",
               "sameAs": [
                 "https://www.linkedin.com/in/lance-orville-dalanon-453109166/",
                 "https://github.com/lancedalanon",

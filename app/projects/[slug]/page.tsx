@@ -125,6 +125,7 @@ const Project: NextPage = () => {
                                             alt={project.project_name}
                                             width={800}
                                             height={800}
+                                            priority
                                             className="rounded-xl w-full"
                                         />
                                         <figcaption className="text-md md:text-lg text-white mt-4">
