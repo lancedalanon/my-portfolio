@@ -67,9 +67,11 @@ const Project: NextPage = () => {
                                         <span className="text-white hover:underline">Back to Projects page</span>
                                     </Link>
 
-                                    <h2 className="text-3xl md:text-6xl my-8 font-bold text-custom-100">
-                                        {project.project_headline}
-                                    </h2>
+                                    <header>
+                                        <h1 className="text-3xl md:text-6xl my-8 font-bold text-custom-100">
+                                            {project.project_headline}
+                                        </h1>
+                                    </header>
 
                                     <em className="text-white text-lg md:text-xl">
                                         Started {project.month_start} {project.year_start}
@@ -133,7 +135,11 @@ const Project: NextPage = () => {
                                     <div className="text-white">
                                         {project.sections && project.sections.map((section) => (
                                             <div key={section.id}> 
-                                                <div className="font-bold text-3xl md:text-4xl mt-8 mb-4 md:mt-14 md:mb-6">{section.subheading}</div>
+                                                <h2 
+                                                    className="font-bold text-3xl md:text-4xl mt-8 mb-4 md:mt-14 md:mb-6"
+                                                >
+                                                    {section.subheading}
+                                                </h2>
                                                 <div 
                                                     className="text-lg md:text-xl my-4 md:my-8 leading-loose md:leading-relaxed"
                                                     dangerouslySetInnerHTML={{
@@ -145,9 +151,9 @@ const Project: NextPage = () => {
                                     </div>
 
                                     <div className="border-t-2 border-custom-600 text-white">
-                                        <div className="text-3xl md:text-4xl mt-8 mb-4 md:mt-14 md:mb-6">
+                                        <h2 className="text-3xl md:text-4xl mt-8 mb-4 md:mt-14 md:mb-6">
                                             <strong>More Projects</strong>
-                                        </div>
+                                        </h2>
                                         <ProjectGrid projects={projects} projectId={project.id} />
                                     </div>
                                 </div>

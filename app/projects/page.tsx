@@ -35,11 +35,11 @@ const Projects: NextPage = () => {
                                     
                                     {/* CardBody should grow to fill available space */}
                                     <CardBody className="px-4 text-white my-4 flex-grow">
-                                        <div>
+                                        <h2>
                                             <strong className="text-2xl md:text-3xl">
                                                 {project.project_name}
                                             </strong>
-                                        </div>
+                                        </h2>
                                         <div className="flex flex-wrap gap-4 my-4">
                                             {project.language_framework_libraries
                                                 .filter((item) => item.is_featured === 1) 
