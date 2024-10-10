@@ -140,7 +140,7 @@ const Project: NextPage = () => {
                                                 >
                                                     {section.subheading}
                                                 </h2>
-                                                <div 
+                                                <p 
                                                     className="text-lg md:text-xl my-4 md:my-8 leading-loose md:leading-relaxed"
                                                     dangerouslySetInnerHTML={{
                                                         __html: DOMPurify.sanitize(section.content),
