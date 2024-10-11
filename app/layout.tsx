@@ -1,10 +1,13 @@
 // RootLayout.tsx
+"use client"
 import type { Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingActionButton from "@/components/FloatingActionButton";
+import { useEffect } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 // Load local fonts using next/font
 const geistSans = localFont({
@@ -25,6 +28,14 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    // Scroll to top whenever the pathname or search parameters change
+    window.scrollTo(0, 0);
+  }, [pathname, searchParams]);
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
