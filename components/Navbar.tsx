@@ -55,7 +55,7 @@ const SocialLinks: React.FC<{ isMobile?: boolean, closeMobileMenu: () => void }>
     </li>
     <li>
       <Link
-        href="/projects"
+        href="/awards"
         onClick={closeMobileMenu} // Close mobile menu on link click
         className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
       >
@@ -153,7 +153,7 @@ const Navbar: React.FC = () => {
     <header>
       <nav
         ref={navbarRef}
-        className={`bg-custom-900 fixed w-full z-50 shadow-lg transition-transform duration-300 ease-in-out px-8 ${
+        className={`bg-custom-900 fixed w-full z-20 shadow-lg transition-transform duration-300 ease-in-out px-8 ${
           visible ? "translate-y-0" : "-translate-y-full"
         }`}
       >

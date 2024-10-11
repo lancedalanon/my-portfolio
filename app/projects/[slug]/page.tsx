@@ -191,7 +191,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, projectId }) => {
         setShuffledProjects(shuffled);
     }, [projects, projectId]);
 
-    return (
+    return (<>
         <div className="grid grid-cols-1 mx-2 mt-8 gap-y-8 md:grid-cols-2 md:gap-x-8">
             {shuffledProjects.map((project) => (
                 <React.Fragment key={project.id}>
@@ -223,7 +223,19 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, projectId }) => {
                 </React.Fragment>
             ))}
         </div>
-    );
+
+        <div className="flex justify-center items-center mt-5">
+            <Link 
+            href="/projects" 
+            passHref
+            className="bg-accent text-white text-lg md:text-2xl rounded-3xl hover:bg-accent-light active:bg-accent-dark px-5 py-3 md:px-10 md:py-5 font-bold mt-6 flex items-center"
+            aria-label="View more projects"
+            >
+                <FaExternalLinkAlt className="mr-2" />
+                View More
+            </Link>
+        </div>
+    </>);
 };
 
 export default Project;

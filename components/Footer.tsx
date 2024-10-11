@@ -125,12 +125,12 @@ const Footer: React.FC = () => {
                         <span>(+63) 921-273-7768</span>
                     </div>
                 </address>
+            </div>
 
-                {/* Copyright Section */}
-                <div className="mt-8 text-center">
-                    <time dateTime={`${currentYear}-01-01`}>© {currentYear}</time> Lance Orville Rosario Dalanon. All rights reserved.
-                    <Link href="/privacy-policy" className="hover:text-custom-200 text-sm">Privacy Policy</Link>
-                </div>
+            {/* Copyright Section */}
+            <div className="text-center mt-16">
+                <time dateTime={`${currentYear}-01-01`}>© {currentYear}</time> Lance Orville Dalanon. All rights reserved.
+                <Link href="/privacy-policy" className="hover:text-custom-200"> Privacy Policy</Link>
             </div>
         </footer>
     );
