@@ -1,59 +1,5 @@
 [
     { 
-        "id": 2, 
-        "image": "/images/Codeyani.jpg", 
-        "label": "Codeyani", 
-        "role": "Junior Full Stack Software Engineer",
-        "company_name": "Codeyani IT Solutions Inc.",
-        "month_started": "June",
-        "year_started": "2024",
-        "month_ended": null,
-        "year_ended": null,
-        "experiences": [
-            { "id": 1, "experience": "Maintained and enhanced a legacy web app using Laravel and Vue.js, improving performance and user satisfaction." }, 
-            { "id": 2, "experience": "Conducted rigorous code reviews to ensure high-quality, maintainable code." },
-            { "id": 3, "experience": "Applied OWASP standards for security to safeguard confidential government data." },
-            { "id": 4, "experience": "Implemented Role-based Access Control (RBAC) framework to manage user permissions and enhance security." },
-            { "id": 5, "experience": "Developed a complex logistics application with Laravel for backend and Next.js/React.js for frontend, managing intricate logic." },
-            { "id": 6, "experience": "Utilized AWS services such as S3 for secure storage, CloudFront for content delivery, and EC2 for scalable computing resources, enhancing application security and performance." },
-            { "id": 7, "experience": "Collaborated in an Agile environment, contributing to sprint planning and retrospectives for improved delivery." },
-            { "id": 8, "experience": "Communicated effectively with Project Managers, Senior Developers, Quality Assurance teams, and fellow developers to align on project goals, gather requirements, and resolve issues throughout the development process." }
-        ],
-        "language_framework_libraries": [
-            { "id": 1, "name": "HTML5", "image": "/images/HTML5.png", "is_featured": 0 },
-            { "id": 2, "name": "CSS3", "image": "/images/CSS3.png", "is_featured": 0 },
-            { "id": 3, "name": "JavaScript", "image": "/images/JavaScript.png", "is_featured": 0 },
-            { "id": 4, "name": "PHP", "image": "/images/PHP.png", "is_featured": 0 },
-            { "id": 5, "name": "Laravel", "image": "/image/Laravel.png", "is_featured": 0 },
-            { "id": 6, "name": "Vue.js", "image": "/images/Vue.js.png", "is_featured": 0 },
-            { "id": 7, "name": "React.js", "image": "/images/React.js.png", "is_featured": 0 },
-            { "id": 8, "name": "Next.js", "image": "/images/Next.js.png", "is_featured" :0 },
-            { "id": 9, "name": "SQL", "image": "/images/SQL.png", "is_featured": 0 },
-            { "id": 10, "name": "Tailwind CSS", "image": "/images/Tailwind-CSS.png", "is_featured": 0 },
-            { "id": 10, "name": "TypeScript", "image": "/images/TypeScript.png", "is_featured": 0 }
-        ],
-        "technologies": [
-            { "id": 1, "name": "Postman", "image": "/images/Postman.png", "is_featured": 0 },
-            { "id": 2, "name": "GitHub", "image": "/images/GitHub.png", "is_featured": 0 },
-            { "id": 3, "name": "AWS", "image": "/images/AWS.png", "is_featured": 0 },
-            { "id": 4, "name": "Git", "image": "/images/Git.png", "is_featured": 0 },
-            { "id": 5, "name": "AWS EC2", "image": "/image/AWS-EC2.png", "is_featured": 0 },
-            { "id": 6, "name": "AWS S3 Buckets", "image": "/images/AWS-S3-Buckets.png", "is_featured": 0 },
-            { "id": 7, "name": "AWS CloudFront", "image": "/images/AWS-CloudFront.png", "is_featured": 0 }
-        ],
-        "skills": [
-            { "id": 1, "name": "Agile" },
-            { "id": 2, "name": "Scrum" },
-            { "id": 3, "name": "Sofware Development Life Cycle (SDLC)" },
-            { "id": 4, "name": "Code Review" },
-            { "id": 5, "name": "Role-Based Access Control (RBAC)" },
-            { "id": 6, "name": "REST APIs" },
-            { "id": 7, "name": "Responsive Web Design" },
-            { "id": 8, "name": "API Integration" },
-            { "id": 9, "name": "OWASP" }
-        ]
-    },
-    { 
         "id": 1, 
         "image": "/images/Erovoutika.jfif", 
         "label": "Erovoutika", 
