@@ -43,7 +43,6 @@ const Metadata: React.FC<MetadataProps> = ({ description }) => {
       <title>{capitalizedTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content="Full Stack Developer, JavaScript, Python, Laravel, Vue.js, React.js, Next.js, TALL stack, Tailwind CSS, CSS3, HTML5, Bootstrap, jQuery, PHP, SQL, MySQL, Git, GitHub, Gitflow, XAMPP, Hostinger, MySQL Workbench, Visual Studio Code, Jira, Full Stack Web Developer, Software Developer, Agile, Scrum, Role-Based Access Control, Database Normalization, REST APIs, Responsive Web Design, Software Development Life Cycle, Database Administration, Code Review, Lance Orville Rosario Dalanon, Lance Dalanon, Lance Orville Dalanon, Lance Orville, Full-Stack Software Engineer" />
-      <meta name="robots" content="index, follow, nocache" />
       <meta name="max-snippet" content="-1" />
       <meta name="max-image-preview" content="large" />
       <meta name="max-video-preview" content="-1" />

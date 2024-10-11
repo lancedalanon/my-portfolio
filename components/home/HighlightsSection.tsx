@@ -10,9 +10,9 @@ const HighlightsSection: React.FC = () => {
     return (
         <section id="highlights" className="bg-custom-800 px-5 py-14">
             <header>
-                <h1 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
+                <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
                     PROJECTS I’VE WORKED ON
-                </h1>
+                </h2>
             </header>
             <div className="grid grid-cols-1 mx-2 mt-8 gap-y-8 md:grid-cols-2 md:gap-x-8">
                 {projects

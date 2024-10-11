@@ -9,9 +9,9 @@ const AboutMeSection: React.FC = () => {
         <div className="text-left px-2 flex flex-col justify-between">
           <div>
             <header>
-              <h1 className="text-3xl md:text-4xl font-bold text-custom-100 mb-4">  
+              <h2 className="text-3xl md:text-4xl font-bold text-custom-100 mb-4">  
                 MEET YOUR NEXT SOFTWARE ENGINEER: MY JOURNEY
-              </h1>
+              </h2>
             </header>
             <p className="text-lg md:text-xl text-white mb-4">
               I’m a Full Stack Software Engineer who loves building and enhancing web and software applications. 
