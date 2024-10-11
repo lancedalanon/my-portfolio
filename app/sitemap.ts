@@ -7,7 +7,6 @@ const baseUrl = 'https://lance-dalanon.netlify.app';
 // Define the specific type for changeFrequency
 type ChangeFrequency = 'yearly' | 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'never';
 
-// Create an array of project slugs with the correct type for changeFrequency
 const projectPaths: {
     url: string;
     lastModified: Date;
@@ -34,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/projects`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/awards`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
