@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingActionButton from "@/components/FloatingActionButton";
 import { useEffect } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 // Load local fonts using next/font
 const geistSans = localFont({
@@ -29,12 +29,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    // Scroll to top whenever the pathname or search parameters change
+    // Scroll to top whenever the pathname change
     window.scrollTo(0, 0);
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return (
     <html lang="en">
