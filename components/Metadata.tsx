@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 interface MetadataProps {
@@ -16,6 +16,16 @@ const capitalizeFirstLetterOfEachWord = (string: string) => {
 
 const Metadata: React.FC<MetadataProps> = ({ description }) => {
   const pathname = usePathname(); // Get the current pathname
+  const [canonicalUrl, setCanonicalUrl] = useState(""); // State to hold the full canonical URL
+
+  // Generate the canonical URL once the component is mounted
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Construct the full URL using window.location
+      const fullUrl = `${window.location.protocol}//${window.location.host}${pathname}`;
+      setCanonicalUrl(fullUrl);
+    }
+  }, [pathname]);
 
   // Split the pathname into segments and filter out empty segments
   const pathSegments = pathname.split("/").filter((segment) => segment);
@@ -43,11 +53,12 @@ const Metadata: React.FC<MetadataProps> = ({ description }) => {
       <link rel="manifest" href="/site.webmanifest" />
       <meta name="google-site-verification" content="9JUS56I51coFXwz3ddxkj5RMK80MpE9kY4GM05b8j3Q" />
       <meta name="msvalidate.01" content="276A335FFF4C78A15F04760EF8F5F207" />
-      <link rel="canonical" href="https://lance-dalanon.netlify.app/" />
+      {/* Set the canonical link dynamically */}
+      <link rel="canonical" href={canonicalUrl} />
       {/* Open Graph tags */}
       <meta property="og:title" content={capitalizedTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content="https://lance-dalanon.netlify.app/" />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:image" content="https://lance-dalanon.netlify.app/images/lance-dalanon.jpg" />
