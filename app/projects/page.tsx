@@ -7,15 +7,19 @@ import { Card, CardFooter, CardBody, CardHeader } from "@/components/Card";
 import Link from 'next/link';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import Badge from '@/components/Badge';
+import Metadata from "@/components/Metadata";
 
 const Projects: NextPage = () => {
+    const description = "Welcome to the portfolio of Lance Orville Dalanon, a dedicated Full-Stack Software Engineer with a passion for crafting robust and scalable web applications. Explore my diverse projects that showcase my skills in front-end and back-end development, including innovative solutions built with the latest technologies. Whether you're looking for inspiration or interested in collaborating, this portfolio highlights my commitment to excellence in web development and user experience.";
+
     return (<>
+        <Metadata description={description} />
         <main>
             <article>
                 <section id="projects" className="flex flex-col items-center justify-start overflow-hidden bg-custom-800">
                     <header>
-                        <h1 className="text-3xl md:text-5xl text-center font-bold text-custom-100 mt-32 mx-6">
-                            MASTERPIECES IN DIGITAL DEVELOPMENT
+                        <h1 className="text-3xl md:text-5xl text-center font-bold text-custom-100 mt-32 mx-6 uppercase">
+                            Masterpieces in Digital Development
                         </h1>
                     </header>
                     <div className="grid grid-cols-1 md:grid-cols-2 my-16 mx-8 md:mx-16 gap-6">

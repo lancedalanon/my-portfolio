@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import skills from '@/constants/skills.json';
 import { Card, CardHeader, CardBody } from '@/components/Card';

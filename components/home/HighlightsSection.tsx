@@ -6,9 +6,9 @@ import { FaMagnifyingGlass } from 'react-icons/fa6';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import projects from '@/constants/projects.json';
 
-const FeaturedProjectsSection: React.FC = () => {
+const HighlightsSection: React.FC = () => {
     return (
-        <section id="featured-projects" className="bg-custom-800 px-5 py-14">
+        <section id="highlights" className="bg-custom-800 px-5 py-14">
             <header>
                 <h1 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
                     PROJECTS I’VE WORKED ON
@@ -62,4 +62,4 @@ const FeaturedProjectsSection: React.FC = () => {
     );
 };
 
-export default FeaturedProjectsSection;
+export default HighlightsSection;

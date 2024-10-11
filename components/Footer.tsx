@@ -63,8 +63,8 @@ const QuickLinks: React.FC = () => (
                 </a>
             </li>
             <li>
-                <a href="/#featured-projects" className="hover:text-custom-200 transition-colors duration-300" aria-label="View Featured Projects">
-                    Featured Projects
+                <a href="/#highlights" className="hover:text-custom-200 transition-colors duration-300" aria-label="View Featured Projects">
+                    Highlights
                 </a>
             </li>
         </div>
@@ -72,6 +72,11 @@ const QuickLinks: React.FC = () => (
             <li>
                 <Link href="/projects" className="text-custom-100 hover:text-custom-200 transition-colors duration-300" aria-label="Explore My Projects">
                     Projects
+                </Link>
+            </li>
+            <li>
+                <Link href="/awards" className="text-custom-100 hover:text-custom-200 transition-colors duration-300" aria-label="Explore My Projects">
+                    Awards
                 </Link>
             </li>
         </div>
@@ -120,12 +125,12 @@ const Footer: React.FC = () => {
                         <span>(+63) 921-273-7768</span>
                     </div>
                 </address>
-            </div>
 
-            {/* Copyright Section */}
-            <div className="mt-8 text-center">
-                <time dateTime={`${currentYear}-01-01`}>© {currentYear}</time> Lance Dalanon. All rights reserved.
-                <Link href="/privacy-policy" className="hover:text-custom-200 text-sm">Privacy Policy</Link>
+                {/* Copyright Section */}
+                <div className="mt-8 text-center">
+                    <time dateTime={`${currentYear}-01-01`}>© {currentYear}</time> Lance Orville Rosario Dalanon. All rights reserved.
+                    <Link href="/privacy-policy" className="hover:text-custom-200 text-sm">Privacy Policy</Link>
+                </div>
             </div>
         </footer>
     );

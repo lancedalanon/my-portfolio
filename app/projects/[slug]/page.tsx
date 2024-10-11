@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
+
+import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import type { NextPage } from "next";
 import projects from "@/constants/projects.json";
@@ -10,6 +11,7 @@ import Badge from '@/components/Badge';
 import DOMPurify from 'isomorphic-dompurify';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import type { Project } from '@/types/projectTypes';
+import Metadata from "@/components/Metadata";
 
 interface ProjectGridProps {
     projects: Project[];
@@ -17,147 +19,157 @@ interface ProjectGridProps {
 }
 
 const Project: NextPage = () => {
-    // Get the params from the URL, including the 'slug'
-    const params = useParams();
-    const slug = params?.slug; // Get 'slug' from params
+    // Get the slug parameter from the URL
+    const { slug } = useParams() as { slug: string };
 
     // Find the project in the projects.json array by the slug
     const project = projects.find((project) => project.slug === slug);
 
-    // If the project isn't found, we can return a fallback UI (e.g., "Not Found")
+    // Metadata description
+    const description = project
+        ? project.month_end && project.year_end
+            ? `Check out my project: ${project.project_name}. It started in ${project.month_start}, ${project.year_start} and ended in ${project.month_end}, ${project.year_end}.`
+            : `Check out my project: ${project.project_name}. It started in ${project.month_start}, ${project.year_start} and is ongoing.`
+        : `Project not found`;
+
+    // If the project isn't found, render a 404 fallback UI
     if (!project) {
         return (
-            <main>
-                <article>
-                    <section className="h-full min-h-screen flex flex-col items-center justify-center bg-custom-800">
-                        <div className="text-center">
-                            <h2 className="text-7xl font-bold text-custom-100 mb-6">404</h2>
-                            <h2 className="text-4xl md:text-7xl font-bold text-custom-100">Project Not Found</h2>
-                        </div>
-                        <div className="mt-8">
-                            <Link href="/projects" passHref className="flex justify-center">
-                                <div className="flex items-center">
-                                    <FaArrowLeftLong className="mr-2 text-white text-lg" />
-                                    <span className="text-white text-lg hover:underline">Back to Projects page</span>
-                                </div>
-                            </Link>
-                        </div>
-                    </section>
-                </article>
-            </main>
+            <>
+                <Metadata description={description} />
+                <main>
+                    <article>
+                        <section className="h-full min-h-screen flex flex-col items-center justify-center bg-custom-800">
+                            <div className="text-center">
+                                <header>
+                                    <h1 className="text-7xl font-bold text-custom-100 mb-6">404</h1>
+                                </header>
+                                <h2 className="text-4xl md:text-7xl font-bold text-custom-100">Project Not Found</h2>
+                            </div>
+                            <div className="mt-8">
+                                <Link href="/projects" passHref className="flex justify-center">
+                                    <div className="flex items-center">
+                                        <FaArrowLeftLong className="mr-2 text-white text-lg" />
+                                        <span className="text-white text-lg hover:underline">Back to Projects page</span>
+                                    </div>
+                                </Link>
+                            </div>
+                        </section>
+                    </article>
+                </main>
+            </>
         );
     }
 
     // Render the project that matches the slug
     return (
         <>
+            <Metadata description={description} />
             <main>
                 <article>
                     <section className="h-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-custom-800">
                         <div className="grid grid-cols-1 md:grid-cols-[15%_auto_15%] my-28 mx-6">
                             <div></div>
-                                <div>
-                                    <Link 
-                                        href="/projects" 
-                                        passHref 
-                                        className="flex items-center my-8 text-xl md:text-2xl"
-                                        aria-label="Return to project main page"
-                                    >
-                                        <FaArrowLeftLong className="mr-2 text-white" />
-                                        <span className="text-white hover:underline">Back to Projects page</span>
-                                    </Link>
+                            <div>
+                                <Link 
+                                    href="/projects" 
+                                    passHref 
+                                    className="flex items-center my-8 text-xl md:text-2xl"
+                                    aria-label="Return to project main page"
+                                >
+                                    <FaArrowLeftLong className="mr-2 text-white" />
+                                    <span className="text-white hover:underline">Back to Projects page</span>
+                                </Link>
 
-                                    <header>
-                                        <h1 className="text-3xl md:text-6xl my-8 font-bold text-custom-100">
-                                            {project.project_headline}
-                                        </h1>
-                                    </header>
+                                <header>
+                                    <h1 className="text-3xl md:text-6xl my-8 font-bold text-custom-100">
+                                        {project.project_headline}
+                                    </h1>
+                                </header>
 
-                                    <em className="text-white text-lg md:text-xl">
-                                        Started {project.month_start} {project.year_start}
-                                        {project.month_end && project.year_end ? (
-                                            <> - Ended {project.month_end} {project.year_end}</>
-                                        ) : null}
-                                    </em>
+                                <em className="text-white text-lg md:text-xl">
+                                    Started {project.month_start} {project.year_start}
+                                    {project.month_end && project.year_end && (
+                                        <> - Ended {project.month_end} {project.year_end}</>
+                                    )}
+                                </em>
 
-                                    <div className="flex flex-wrap my-8 gap-2 text-white">
-                                        {project.language_framework_libraries && project.language_framework_libraries.map((item) => (
-                                            <Badge
-                                                className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-700 rounded-full"
-                                                key={item.id}
-                                                title={item.name}
-                                            >
-                                                <div className="bg-white rounded-full p-1 mr-2">
-                                                    <Image
-                                                        src={item.image || '/path/to/default/icon.png'}
-                                                        alt={item.name}
-                                                        width={20}
-                                                        height={20}
-                                                        className="rounded-lg"
-                                                    />
-                                                </div>
-                                                <span className="text-sm md:text-lg">{item.name}</span>
-                                            </Badge>
-                                        ))}
-                                        {project.technologies && project.technologies.map((item) => (
-                                            <Badge
-                                                className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-700 rounded-full"
-                                                key={item.id}
-                                                title={item.name}
-                                            >
-                                                <div className="bg-white rounded-full p-1 mr-2">
-                                                    <Image
-                                                        src={item.image || '/path/to/default/icon.png'}
-                                                        alt={item.name}
-                                                        width={20}
-                                                        height={20}
-                                                        className="rounded-lg"
-                                                    />
-                                                </div>
-                                                <span className="text-sm md:text-lg">{item.name}</span>
-                                            </Badge>
-                                        ))}
-                                    </div>
-
-                                    <figure className="text-center">
-                                        <Image 
-                                            src={project.project_image}
-                                            alt={project.project_name}
-                                            width={800}
-                                            height={800}
-                                            priority
-                                            className="rounded-xl w-full"
-                                        />
-                                        <figcaption className="text-md md:text-lg text-white mt-4">
-                                            <em>{project.short_description}</em>
-                                        </figcaption>
-                                    </figure>
-
-                                    <div className="text-white">
-                                        {project.sections && project.sections.map((section) => (
-                                            <div key={section.id}> 
-                                                <h2 
-                                                    className="font-bold text-3xl md:text-4xl mt-8 mb-4 md:mt-14 md:mb-6"
-                                                >
-                                                    {section.subheading}
-                                                </h2>
-                                                <p 
-                                                    className="text-lg md:text-xl my-4 md:my-8 leading-loose md:leading-relaxed"
-                                                    dangerouslySetInnerHTML={{
-                                                        __html: DOMPurify.sanitize(section.content),
-                                                    }}
+                                <div className="flex flex-wrap my-8 gap-2 text-white">
+                                    {project.language_framework_libraries?.map((item) => (
+                                        <Badge
+                                            key={item.id}
+                                            className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-700 rounded-full"
+                                            title={item.name}
+                                        >
+                                            <div className="bg-white rounded-full p-1 mr-2">
+                                                <Image
+                                                    src={item.image || '/path/to/default/icon.png'}
+                                                    alt={item.name}
+                                                    width={20}
+                                                    height={20}
+                                                    className="rounded-lg"
                                                 />
                                             </div>
-                                        ))}
-                                    </div>
-
-                                    <div className="border-t-2 border-custom-600 text-white">
-                                        <h2 className="text-3xl md:text-4xl mt-8 mb-4 md:mt-14 md:mb-6">
-                                            <strong>More Projects</strong>
-                                        </h2>
-                                        <ProjectGrid projects={projects} projectId={project.id} />
-                                    </div>
+                                            <span className="text-sm md:text-lg">{item.name}</span>
+                                        </Badge>
+                                    ))}
+                                    {project.technologies?.map((item) => (
+                                        <Badge
+                                            key={item.id}
+                                            className="flex py-1 px-2 md:py-2 md:px-3 bg-custom-700 rounded-full"
+                                            title={item.name}
+                                        >
+                                            <div className="bg-white rounded-full p-1 mr-2">
+                                                <Image
+                                                    src={item.image || '/path/to/default/icon.png'}
+                                                    alt={item.name}
+                                                    width={20}
+                                                    height={20}
+                                                    className="rounded-lg"
+                                                />
+                                            </div>
+                                            <span className="text-sm md:text-lg">{item.name}</span>
+                                        </Badge>
+                                    ))}
                                 </div>
+
+                                <figure className="text-center">
+                                    <Image 
+                                        src={project.project_image}
+                                        alt={project.project_name}
+                                        width={800}
+                                        height={800}
+                                        priority
+                                        className="rounded-xl w-full"
+                                    />
+                                    <figcaption className="text-md md:text-lg text-white mt-4">
+                                        <em>{project.short_description}</em>
+                                    </figcaption>
+                                </figure>
+
+                                <div className="text-white">
+                                    {project.sections?.map((section) => (
+                                        <div key={section.id}> 
+                                            <h2 className="font-bold text-3xl md:text-4xl mt-8 mb-4 md:mt-14 md:mb-6">
+                                                {section.subheading}
+                                            </h2>
+                                            <p 
+                                                className="text-lg md:text-xl my-4 md:my-8 leading-loose md:leading-relaxed"
+                                                dangerouslySetInnerHTML={{
+                                                    __html: DOMPurify.sanitize(section.content),
+                                                }}
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="border-t-2 border-custom-600 text-white">
+                                    <h2 className="text-3xl md:text-4xl mt-8 mb-4 md:mt-14 md:mb-6">
+                                        <strong>More Projects</strong>
+                                    </h2>
+                                    <ProjectGrid projects={projects} projectId={project.id} />
+                                </div>
+                            </div>
                             <div></div>
                         </div>
                     </section>

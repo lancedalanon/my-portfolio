@@ -1,11 +1,12 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { FaBars, FaTimes, FaLinkedin, FaGithub } from "react-icons/fa";
-import { FaSheetPlastic } from "react-icons/fa6";
+import { FaBars, FaTimes, FaLinkedin, FaGithub, FaLaptopCode } from "react-icons/fa";
 import { useRouter, usePathname } from 'next/navigation';
+import { GiAchievement } from "react-icons/gi";
+import Link from "next/link";
 
 // Component for QuickLinks (Home, About Me, Skills, etc.)
-const QuickLinks: React.FC<{ handleSmoothScroll: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => void, isMobile?: boolean }> = ({ handleSmoothScroll, isMobile }) => {
+const QuickLinks: React.FC<{ handleSmoothScroll: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => void, isMobile?: boolean, closeMobileMenu: () => void }> = ({ handleSmoothScroll, isMobile, closeMobileMenu }) => {
   const pathname = usePathname(); // Get the current path in Next.js App Router
   const router = useRouter();
 
@@ -19,11 +20,13 @@ const QuickLinks: React.FC<{ handleSmoothScroll: (e: React.MouseEvent<HTMLAnchor
       e.preventDefault();
       router.push(`/#${section}`);
     }
+    // Close mobile menu after link click
+    closeMobileMenu();
   };
 
   return (
     <ul className={`${isMobile ? "space-y-6" : "space-x-8"} ${isMobile ? "flex flex-col items-center justify-center" : "md:flex hidden"}`}>
-      {["home", "about-me", "skills", "experience", "featured-projects"].map((section) => (
+      {["home", "about-me", "skills", "experience", "highlights"].map((section) => (
         <li key={section}>
           <a
             href={`/#${section}`}
@@ -39,16 +42,25 @@ const QuickLinks: React.FC<{ handleSmoothScroll: (e: React.MouseEvent<HTMLAnchor
 };
 
 // Component for SocialLinks (Resume, LinkedIn, GitHub, etc.)
-const SocialLinks: React.FC<{ isMobile?: boolean }> = ({ isMobile }) => (
+const SocialLinks: React.FC<{ isMobile?: boolean, closeMobileMenu: () => void }> = ({ isMobile, closeMobileMenu }) => (
   <ul className={`${isMobile ? "space-y-6" : "space-x-8"} ${isMobile ? "flex flex-col items-center justify-center mt-6" : "md:flex hidden"}`}>
     <li>
-      <a
-        href="/documents/LanceOrvilleRDalanonResume.pdf"
+      <Link
+        href="/projects"
+        onClick={closeMobileMenu} // Close mobile menu on link click
         className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
-        download
       >
-        <FaSheetPlastic className="mr-1" /> RESUME
-      </a>
+        <FaLaptopCode className="mr-1" /> PROJECTS
+      </Link>
+    </li>
+    <li>
+      <Link
+        href="/projects"
+        onClick={closeMobileMenu} // Close mobile menu on link click
+        className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
+      >
+        <GiAchievement className="mr-1" /> AWARDS
+      </Link>
     </li>
     <li>
       <a
@@ -57,6 +69,7 @@ const SocialLinks: React.FC<{ isMobile?: boolean }> = ({ isMobile }) => (
         rel="noopener noreferrer"
         className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
         aria-label="LinkedIn"
+        onClick={closeMobileMenu} // Close mobile menu on link click
       >
         <FaLinkedin className="mr-1" /> LINKEDIN
       </a>
@@ -68,6 +81,7 @@ const SocialLinks: React.FC<{ isMobile?: boolean }> = ({ isMobile }) => (
         rel="noopener noreferrer"
         className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
         aria-label="GitHub"
+        onClick={closeMobileMenu} // Close mobile menu on link click
       >
         <FaGithub className="mr-1" /> GITHUB
       </a>
@@ -130,6 +144,11 @@ const Navbar: React.FC = () => {
     }
   };
 
+  // Function to close the mobile menu
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header>
       <nav
@@ -140,10 +159,10 @@ const Navbar: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto py-6 flex justify-between items-center">
           {/* Desktop QuickLinks */}
-          <QuickLinks handleSmoothScroll={handleSmoothScroll} />
+          <QuickLinks handleSmoothScroll={handleSmoothScroll} closeMobileMenu={closeMobileMenu} />
 
           {/* Desktop SocialLinks */}
-          <SocialLinks />
+          <SocialLinks closeMobileMenu={closeMobileMenu} />
 
           {/* Mobile Menu Icon */}
           <div className="md:hidden flex items-center">
@@ -161,8 +180,8 @@ const Navbar: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-custom-900 py-4">
             {/* Mobile QuickLinks and SocialLinks */}
-            <QuickLinks handleSmoothScroll={handleSmoothScroll} isMobile />
-            <SocialLinks isMobile />
+            <QuickLinks handleSmoothScroll={handleSmoothScroll} isMobile closeMobileMenu={closeMobileMenu} />
+            <SocialLinks isMobile closeMobileMenu={closeMobileMenu} />
           </div>
         )}
       </nav>
