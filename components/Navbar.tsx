@@ -47,7 +47,8 @@ const SocialLinks: React.FC<{ isMobile?: boolean, closeMobileMenu: () => void }>
     <li>
       <Link
         href="/projects"
-        onClick={closeMobileMenu} // Close mobile menu on link click
+        onClick={closeMobileMenu}
+        aria-label="Projects"
         className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
       >
         <FaLaptopCode className="mr-1" /> PROJECTS
@@ -56,7 +57,8 @@ const SocialLinks: React.FC<{ isMobile?: boolean, closeMobileMenu: () => void }>
     <li>
       <Link
         href="/awards"
-        onClick={closeMobileMenu} // Close mobile menu on link click
+        onClick={closeMobileMenu}
+        aria-label="Awards"
         className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
       >
         <GiAchievement className="mr-1" /> AWARDS
@@ -69,7 +71,7 @@ const SocialLinks: React.FC<{ isMobile?: boolean, closeMobileMenu: () => void }>
         rel="noopener noreferrer"
         className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
         aria-label="LinkedIn"
-        onClick={closeMobileMenu} // Close mobile menu on link click
+        onClick={closeMobileMenu}
       >
         <FaLinkedin className="mr-1" /> LINKEDIN
       </a>
@@ -81,7 +83,7 @@ const SocialLinks: React.FC<{ isMobile?: boolean, closeMobileMenu: () => void }>
         rel="noopener noreferrer"
         className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
         aria-label="GitHub"
-        onClick={closeMobileMenu} // Close mobile menu on link click
+        onClick={closeMobileMenu}
       >
         <FaGithub className="mr-1" /> GITHUB
       </a>
