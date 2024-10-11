@@ -38,3 +38,6 @@ next-env.d.ts
 # Ignore generated sitemaps
 sitemap-0.xml
 sitemap.xml
+
+#Ignore robots
+robots.txt
