@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   content: [
@@ -9,79 +10,77 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Greyish black palette for dark theme
         custom: {
-          100: "#f7f7f7",  // Lightest shade
-          200: "#e1e1e1",  // Light grey
-          300: "#cfcfcf",  // Mid-tone grey
-          400: "#a8a8a8",  // Darker grey
-          500: "#7f7f7f",  // Neutral grey
-          600: "#5e5e5e",  // Dark grey
-          700: "#3f3f3f",  // Very dark grey
-          800: "#2a2a2a",  // Near black
-          900: "#000000",  // Pure black
+          100: "#f7f7f7",
+          200: "#e1e1e1",
+          300: "#cfcfcf",
+          400: "#a8a8a8",
+          500: "#7f7f7f",
+          600: "#5e5e5e",
+          700: "#3f3f3f",
+          800: "#2a2a2a",
+          900: "#000000",
         },
-        // Defining key colors for the design system
         primary: {
-          DEFAULT: "#2d2f36",  // A greyish-black tone for primary elements
+          DEFAULT: "#2d2f36",
           light: "#45484f",
           dark: "#1b1d22",
         },
         secondary: {
-          DEFAULT: "#52575d",  // A soft greyish tone for secondary elements
+          DEFAULT: "#52575d",
           light: "#6b7075",
           dark: "#3a3f45",
         },
         accent: {
-          DEFAULT: "#D4AF37",  // Muted gold for accent
-          light: "#e1c16e",    // Lighter gold
-          dark: "#b38b2a",     // Darker gold
+          DEFAULT: "#D4AF37",
+          light: "#e1c16e",
+          dark: "#b38b2a",
         },
         warning: {
-          DEFAULT: "#F59E0B",  // Bright yellow for warning
+          DEFAULT: "#F59E0B",
           light: "#FBBF24",
           dark: "#D97706",
         },
         error: {
-          DEFAULT: "#EF4444",  // Strong red for errors
+          DEFAULT: "#EF4444",
           light: "#F87171",
           dark: "#B91C1C",
         },
         success: {
-          DEFAULT: "#10B981",  // Green for success states
+          DEFAULT: "#10B981",
           light: "#34D399",
           dark: "#059669",
         },
-        background: "var(--background)",  // Background from CSS variable
-        foreground: "var(--foreground)",  // Foreground from CSS variable
+        background: "var(--background)",
+        foreground: "var(--foreground)",
       },
       scrollbar: {
         hide: {
-            '&::-webkit-scrollbar': {
-                display: 'none', 
-            },
-            '&': {
-                scrollbarWidth: 'none',
-            },
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+          '&': {
+            scrollbarWidth: 'none',
             '-ms-overflow-style': 'none',
+          },
         },
       },
     },
   },
   plugins: [
-    function({ addUtilities }) {
-        addUtilities({
-            '.scrollbar-hide': {
-                '&::-webkit-scrollbar': {
-                    display: 'none',
-                },
-                '&': {
-                    scrollbarWidth: 'none',
-                    '-ms-overflow-style': 'none',
-                },
-            },
-        });
-    },
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+          '&': {
+            scrollbarWidth: 'none',
+            '-ms-overflow-style': 'none',
+          },
+        },
+      });
+    }),
   ],
 };
 
