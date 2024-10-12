@@ -28,9 +28,9 @@ const HomeSection: React.FC = () => {
         to delivering innovative technical solutions tailored to meet your business needs.
       </p>
       <a 
-        className="mt-6 text-lg bg-white text-custom-800 font-bold px-8 py-4 rounded-full shadow hover:bg-gray-200 transition-all duration-200 relative z-10" 
+        className="mt-6 text-lg bg-white text-custom-800 font-bold px-8 py-4 rounded-full shadow hover:bg-gray-200 transition-all duration-200 relative z-10 scroll-smooth" 
         href="#about-me"
-        aria-label="Learn more about Lance Dalanon and his skills as a full-stack software engineer"
+        aria-label="Learn more about Lance Orville Dalanon and his skills as a full-stack software engineer"
       >
         Learn More
       </a>

@@ -12,6 +12,7 @@ import DOMPurify from 'isomorphic-dompurify';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import type { Project } from '@/types/projectTypes';
 import Metadata from "@/components/Metadata";
+import { usePathname } from 'next/navigation';
 
 interface ProjectGridProps {
     projects: Project[];
@@ -31,6 +32,13 @@ const Project: NextPage = () => {
             ? `Check out my project: ${project.project_name}. It started in ${project.month_start}, ${project.year_start} and ended in ${project.month_end}, ${project.year_end}.`
             : `Check out my project: ${project.project_name}. It started in ${project.month_start}, ${project.year_start} and is ongoing.`
         : `Project not found`;
+
+    const pathname = usePathname();
+
+    useEffect(() => {
+        // Scroll to top whenever the pathname change
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     // If the project isn't found, render a 404 fallback UI
     if (!project) {

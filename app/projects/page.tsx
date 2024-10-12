@@ -11,7 +11,7 @@ import Metadata from "@/components/Metadata";
 
 const Projects: NextPage = () => {
     const description = "Welcome to the portfolio of Lance Orville Dalanon, a dedicated Full-Stack Software Engineer with a passion for crafting robust and scalable web applications. Explore my diverse projects that showcase my skills in front-end and back-end development, including innovative solutions built with the latest technologies. Whether you're looking for inspiration or interested in collaborating, this portfolio highlights my commitment to excellence in web development and user experience.";
-
+    
     return (<>
         <Metadata description={description} />
         <main>

@@ -3,7 +3,8 @@ import { LanguageFrameworkLibrary, Technology, Skill } from "@/types/projectType
 export default interface Experience {
     id: number;                     
     image: string;                   
-    label: string;                   
+    label: string;   
+    slug: string;                
     role: string;                    
     company_name: string;           
     month_started: string;           

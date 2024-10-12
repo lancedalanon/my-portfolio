@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import projects from '@/constants/projects.json';
+import experiences from '@/constants/experience.json';
 
 // Base URL for the sitemap
 const baseUrl = 'https://lance-dalanon.netlify.app';
@@ -19,6 +20,20 @@ const projectPaths: {
         changeFrequency: 'weekly',
         priority: 0.5,
     }
+});
+
+const experiencePaths: {
+  url: string;
+  lastModified: Date;
+  changeFrequency: ChangeFrequency;
+  priority: number;
+}[] = experiences.map((experience) => {
+  return {
+      url: `${baseUrl}/experiences/${experience.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.5,
+  }
 });
 
 // Function to generate the sitemap
@@ -44,6 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     ...projectPaths,
+    ...experiencePaths,
   ];
 
   return sitemapEntries;

@@ -42,7 +42,7 @@ const Awards: React.FC = () => {
         <Metadata description={description} />
         <main>
             <article>
-                <div className={`flex flex-col items-center justify-start overflow-hidden bg-custom-800 ${selectedImage ? 'pointer-events-none' : ''}`}>
+                <section className={`flex flex-col items-center justify-start overflow-hidden bg-custom-800 ${selectedImage ? 'pointer-events-none' : ''}`}>
                     <header>
                         <h1 className="text-3xl md:text-5xl text-center font-bold text-custom-100 mt-32 mx-6 uppercase">
                             My Awards Showcase
@@ -101,7 +101,7 @@ const Awards: React.FC = () => {
                             </div>
                         </div>
                     )}
-                </div>
+                </section>
             </article>
         </main>
     </>

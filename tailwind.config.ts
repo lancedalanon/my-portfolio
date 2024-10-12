@@ -8,7 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // Custom greyish black shades and theme colors
       colors: {
         // Greyish black palette for dark theme
         custom: {
@@ -56,9 +55,34 @@ const config: Config = {
         background: "var(--background)",  // Background from CSS variable
         foreground: "var(--foreground)",  // Foreground from CSS variable
       },
+      scrollbar: {
+        hide: {
+            '&::-webkit-scrollbar': {
+                display: 'none', 
+            },
+            '&': {
+                scrollbarWidth: 'none',
+            },
+            '-ms-overflow-style': 'none',
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+        addUtilities({
+            '.scrollbar-hide': {
+                '&::-webkit-scrollbar': {
+                    display: 'none',
+                },
+                '&': {
+                    scrollbarWidth: 'none',
+                    '-ms-overflow-style': 'none',
+                },
+            },
+        });
+    },
+  ],
 };
 
 export default config;

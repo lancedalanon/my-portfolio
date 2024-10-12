@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import experienceData from '@/constants/experience.json';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import Modal from '@/components/Modal';
 import Experience from '@/types/experienceTypes';
+import Link from 'next/link';
 
 // Custom hook to determine if the screen size is small
 const useIsSmallScreen = () => {
@@ -58,27 +58,6 @@ const calculateExperience = (startMonth: string, startYear: string, endMonth: st
 // Main component for Experience section
 const ExperienceSection: React.FC = () => {
     const isSmallScreen = useIsSmallScreen();
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedExperienceId, setSelectedExperienceId] = useState<number | null>(null);
-    const [filteredExperience, setFilteredExperience] = useState<Experience | null>(null);
-
-    const handleExperienceClick = (id: number) => {
-        setSelectedExperienceId(id);
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-        setSelectedExperienceId(null); // Reset selectedExperienceId when closing the modal
-    };
-
-    // Update filteredExperience when the modal is opened
-    useEffect(() => {
-        if (selectedExperienceId !== null) {
-            const experience = experienceData.find(exp => exp.id === selectedExperienceId);
-            setFilteredExperience(experience || null);
-        }
-    }, [selectedExperienceId]);
 
     return (
         <section id="experience" className="px-5 py-14 bg-custom-700">
@@ -88,40 +67,20 @@ const ExperienceSection: React.FC = () => {
             {isSmallScreen ? 
                 <SmallScreenExperience 
                     experience={experienceData} 
-                    onExperienceClick={handleExperienceClick} 
                 /> : 
                 <LargeScreenExperience 
                     experience={experienceData} 
-                    onExperienceClick={handleExperienceClick} 
                 />
             }
-
-            <Modal 
-                isOpen={isModalOpen} 
-                onClose={closeModal} 
-                className="w-3/4 h-5/6 text-white bg-custom-700"
-            >
-                {filteredExperience && (<>
-                    <div>
-                        
-                    </div>
-
-                    <div>
-                        <h3 className="text-lg font-bold">{filteredExperience.role}</h3>
-                        <p>{filteredExperience.company_name}</p>
-                    </div>
-                </>)}
-            </Modal>
         </section>
     );
 };
 
 interface SmallScreenExperienceProps {
     experience: Experience[];
-    onExperienceClick: (id: number) => void;
 }
 
-const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experience, onExperienceClick }) => {
+const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experience }) => {
     return (
         <div className="grid grid-cols-[1.5%_99.5%] place-items-center ml-10">
             <div className="h-8 w-8 rounded-full bg-custom-300"></div>
@@ -147,14 +106,19 @@ const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experienc
                         <p className="text-sm">
                             {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} • {calculateExperience(item.month_started, item.year_started, item.month_ended, item.year_ended)}
                         </p>
-                        <div
-                            className="flex items-center mt-2 text-accent hover:underline cursor-pointer"
-                            onClick={() => onExperienceClick(item.id)}
-                            aria-label={`View more details about ${item.role} at ${item.company_name}`}
+                        <Link 
+                            href={`/experiences/${item.slug}`} 
+                            passHref
+                            target="_blank"
                         >
-                            <FaExternalLinkAlt className="mr-1" />
-                            <span className="text-md md:text-lg">More Details</span>
-                        </div>
+                            <div
+                                className="flex items-center mt-2 text-accent hover:underline cursor-pointer"
+                                aria-label={`View more details about ${item.role} at ${item.company_name}`}
+                            >
+                                <FaExternalLinkAlt className="mr-1" />
+                                <span className="text-md md:text-lg">More Details</span>
+                            </div>
+                        </Link>
                     </div>
 
                     <div className="h-32 w-2 bg-custom-300"></div>
@@ -170,10 +134,9 @@ const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experienc
 
 interface LargeScreenExperienceProps {
     experience: Experience[];
-    onExperienceClick: (id: number) => void;
 }
 
-const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experience, onExperienceClick }) => {
+const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experience }) => {
     return (
         <div className="grid grid-cols-[48.5%_1%_48.5%] place-items-center">
             <div></div>
@@ -193,15 +156,19 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
                                 <p className="text-md md:text-lg">
                                     {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} • {calculateExperience(item.month_started, item.year_started, item.month_ended, item.year_ended)}
                                 </p>
-                                <div className="flex items-end justify-end">
-                                    <div 
-                                        className="flex items-center mt-2 text-accent hover:underline cursor-pointer"
-                                        onClick={() => onExperienceClick(item.id)}
-                                        aria-label={`View more details about ${item.role} at ${item.company_name}`}
-                                    >
-                                        <FaExternalLinkAlt className="mr-1" />
-                                        <span className="text-md md:text-lg">More Details</span>
-                                    </div>
+                                    <div className="flex items-end justify-end">
+                                        <Link 
+                                            href={`/experiences/${item.slug}`} 
+                                            passHref
+                                        >
+                                            <div 
+                                                className="flex items-center mt-2 text-accent hover:underline cursor-pointer"
+                                                aria-label={`View more details about ${item.role} at ${item.company_name}`}
+                                            >
+                                                <FaExternalLinkAlt className="mr-1" />
+                                                <span className="text-md md:text-lg">More Details</span>
+                                            </div>
+                                        </Link>
                                 </div>
                             </div>
                             <div className="relative h-32 w-32">
@@ -234,14 +201,19 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
                                     {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} • {calculateExperience(item.month_started, item.year_started, item.month_ended, item.year_ended)}
                                 </p>
                                 <div className="flex items-start justify-start">
-                                    <div 
-                                        className="flex items-center mt-2 text-accent hover:underline cursor-pointer"
-                                        onClick={() => onExperienceClick(item.id)}
-                                        aria-label={`View more details about ${item.role} at ${item.company_name}`}
+                                    <Link 
+                                        href={`/experiences/${item.slug}`} 
+                                        passHref
+                                        target="_blank"
                                     >
-                                        <FaExternalLinkAlt className="mr-1" />
-                                        <span className="text-md md:text-lg">More Details</span>
-                                    </div>
+                                        <div 
+                                            className="flex items-center mt-2 text-accent hover:underline cursor-pointer"
+                                            aria-label={`View more details about ${item.role} at ${item.company_name}`}
+                                        >
+                                            <FaExternalLinkAlt className="mr-1" />
+                                            <span className="text-md md:text-lg">More Details</span>
+                                        </div>
+                                    </Link>
                                 </div>
                             </div>
                         </>
