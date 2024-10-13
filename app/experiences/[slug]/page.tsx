@@ -87,7 +87,7 @@ const ExperiencePage: React.FC = () => {
             <Metadata description={description} />
             <main>
                 <article>
-                    <section className="grid grid-cols-1 md:grid-cols-[30%_auto] bg-custom-800 min-h-screen text-white pt-20 pb-10 px-10 md:px-20">
+                    <section className="grid grid-cols-1 md:grid-cols-[30%_auto] bg-custom-800 min-h-screen text-white pt-20 pb-10 md:px-20">
                         {/* Left Column (Mobile: becomes full-width, Center aligned) */}
                         <div className="flex flex-col justify-center items-center text-center p-4">
                             <Image 
