@@ -8,7 +8,7 @@ const SocialLinks: React.FC = () => (
     <div className="flex space-x-4">
         <a
             className="flex items-center space-x-2 hover:text-custom-200 transition-transform transform hover:scale-110 duration-300"
-            href="/documents/LanceOrvilleRDalanonResume.pdf"
+            href="/documents/Lance-Orville-Rosario-Dalanon-Resume.pdf"
             download
             aria-label="Download Resume"
         >

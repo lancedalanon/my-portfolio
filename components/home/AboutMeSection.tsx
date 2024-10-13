@@ -33,7 +33,7 @@ const AboutMeSection: React.FC = () => {
           <div className="flex justify-center md:justify-start">
             <a 
               className="flex items-center text-md md:text-lg bg-white text-custom-800 border border-custom-800 font-semibold px-6 py-4 rounded-full shadow hover:bg-gray-200 transition-all duration-200"
-              href="/documents/LanceOrvilleRDalanonResume.pdf"
+              href="/documents/Lance-Orville-Rosario-Dalanon-Resume.pdf"
               download 
               aria-label="Download Lance Dalanon's CV"
             >
