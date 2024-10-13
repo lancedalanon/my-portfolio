@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
-import projects from '@/constants/projects.json';
-import experiences from '@/constants/experience.json';
+import projects from '@/public/projects.json';
+import experiences from '@/public/experiences.json';
 
 // Base URL for the sitemap
 const baseUrl = 'https://lance-dalanon.netlify.app';
