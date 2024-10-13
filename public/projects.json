@@ -178,11 +178,9 @@
             { "id": 7, "name": "SQL", "image": "/images/MySQL.png", "is_featured": 1 }
         ],
         "technologies": [ 
-            { "id": 1, "name": "Jira", "image": "/images/Jira.png" },
-            { "id": 2, "name": "XAMPP", "image": "/images/XAMPP.png" },
-            { "id": 3, "name": "Git", "image": "/images/Git.png" },
-            { "id": 4, "name": "Hostinger", "image": "/images/Hostinger.png" },
-            { "id": 6, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png" }
+            { "id": 1, "name": "XAMPP", "image": "/images/XAMPP.png" },
+            { "id": 2, "name": "Hostinger", "image": "/images/Hostinger.png" },
+            { "id": 3, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png" }
         ],
         "skills": [
             { "id": 1, "name": "Role-Based Access Control" },

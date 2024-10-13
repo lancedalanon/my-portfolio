@@ -31,7 +31,9 @@
             { "id": 8, "name": "Next.js", "image": "/images/Next.js.png", "is_featured" :0 },
             { "id": 9, "name": "SQL", "image": "/images/MySQL.png", "is_featured": 0 },
             { "id": 10, "name": "Tailwind CSS", "image": "/images/Tailwind-CSS.png", "is_featured": 0 },
-            { "id": 10, "name": "TypeScript", "image": "/images/TypeScript.png", "is_featured": 0 }
+            { "id": 11, "name": "TypeScript", "image": "/images/TypeScript.png", "is_featured": 0 },
+            { "id": 12, "name": "Redux", "image": "/images/Redux.png", "is_featured": 0 },
+            { "id": 13, "name": "Material UI", "image": "/images/Material-UI.png", "is_featured": 0 }
         ],
         "technologies": [
             { "id": 1, "name": "Postman", "image": "/images/Postman.png", "is_featured": 0 },
@@ -40,7 +42,9 @@
             { "id": 4, "name": "Git", "image": "/images/Git.png", "is_featured": 0 },
             { "id": 5, "name": "AWS EC2", "image": "/images/AWS-EC2.png", "is_featured": 0 },
             { "id": 6, "name": "AWS S3 Buckets", "image": "/images/AWS-S3-Buckets.png", "is_featured": 0 },
-            { "id": 7, "name": "AWS CloudFront", "image": "/images/AWS-CloudFront.png", "is_featured": 0 }
+            { "id": 7, "name": "AWS CloudFront", "image": "/images/AWS-CloudFront.png", "is_featured": 0 },
+            { "id": 8, "name": "Node.js", "image": "/images/Node.js.png", "is_featured": 0 },
+            { "id": 9, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png", "is_featured": 0 }
         ],
         "skills": [
             { "id": 1, "name": "Agile" },
@@ -88,7 +92,9 @@
             { "id": 1, "name": "GitHub", "image": "/images/GitHub.png", "is_featured": 0 },
             { "id": 2, "name": "Git", "image": "/images/Git.png", "is_featured": 0 },
             { "id": 3, "name": "Blockchain", "image": "/images/Blockchain.png", "is_featured": 0 },
-            { "id": 4, "name": "Web3", "image": "/images/Web3.png", "is_featured": 0 }
+            { "id": 4, "name": "Web3", "image": "/images/Web3.png", "is_featured": 0 },
+            { "id": 5, "name": "Node.js", "image": "/images/Node.js.png", "is_featured": 0 },
+            { "id": 6, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png", "is_featured": 0 }
         ],
         "skills": [
             { "id": 1, "name": "Agile" },

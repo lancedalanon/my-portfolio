@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import experienceData from '@/constants/experience.json';
+import experienceData from '@/public/experiences.json';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import Experience from '@/types/experienceTypes';
 import Link from 'next/link';
@@ -109,7 +109,6 @@ const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experienc
                         <Link 
                             href={`/experiences/${item.slug}`} 
                             passHref
-                            target="_blank"
                         >
                             <div
                                 className="flex items-center mt-2 text-accent hover:underline cursor-pointer"
@@ -204,7 +203,6 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
                                     <Link 
                                         href={`/experiences/${item.slug}`} 
                                         passHref
-                                        target="_blank"
                                     >
                                         <div 
                                             className="flex items-center mt-2 text-accent hover:underline cursor-pointer"

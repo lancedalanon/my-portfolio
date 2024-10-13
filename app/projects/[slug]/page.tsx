@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useParams } from "next/navigation";
 import type { NextPage } from "next";
-import projects from "@/constants/projects.json";
+import projects from "@/public/projects.json";
 import Image from "next/image";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Link from "next/link";
@@ -13,6 +13,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import type { Project } from '@/types/projectTypes';
 import Metadata from "@/components/Metadata";
 import { usePathname } from 'next/navigation';
+import Spinner from "@/components/Spinner";
 
 interface ProjectGridProps {
     projects: Project[];
@@ -22,16 +23,8 @@ interface ProjectGridProps {
 const Project: NextPage = () => {
     // Get the slug parameter from the URL
     const { slug } = useParams() as { slug: string };
-
-    // Find the project in the projects.json array by the slug
-    const project = projects.find((project) => project.slug === slug);
-
-    // Metadata description
-    const description = project
-        ? project.month_end && project.year_end
-            ? `Check out my project: ${project.project_name}. It started in ${project.month_start}, ${project.year_start} and ended in ${project.month_end}, ${project.year_end}.`
-            : `Check out my project: ${project.project_name}. It started in ${project.month_start}, ${project.year_start} and is ongoing.`
-        : `Project not found`;
+    const [projectsData, setProjectsData] = useState<Project[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
 
     const pathname = usePathname();
 
@@ -39,6 +32,45 @@ const Project: NextPage = () => {
         // Scroll to top whenever the pathname change
         window.scrollTo(0, 0);
     }, [pathname]);
+
+    // Fetch project data once
+    useEffect(() => {
+        const fetchProjectsData = async () => {
+            const response = await fetch('/projects.json');
+            const data = await response.json();
+            setProjectsData(data);
+            setLoading(false);
+        };
+
+        fetchProjectsData();
+    }, []);
+
+    // Use useMemo to find project based on slug
+    const project = useMemo(() => {
+        return projectsData.find((project: Project) => project.slug === slug);
+    }, [projectsData, slug]);
+
+    // Metadata description
+    const description = project
+    ? project.month_end && project.year_end
+        ? `Check out my project: ${project.project_name}. It started in ${project.month_start}, ${project.year_start} and ended in ${project.month_end}, ${project.year_end}.`
+        : `Check out my project: ${project.project_name}. It started in ${project.month_start}, ${project.year_start} and is ongoing.`
+    : `Project not found`;
+
+    // Handle loading state and projects not found
+    if (loading) {
+        return (<>
+            <Metadata description={description} />
+            <main>
+                <article>
+                    <section className="h-full min-h-screen flex flex-col items-center justify-center bg-custom-800">
+                        <Spinner />
+                    </section>
+                </article>
+            </main>
+        </>
+        );
+    }    
 
     // If the project isn't found, render a 404 fallback UI
     if (!project) {

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import projects from '@/constants/projects.json';
+import projects from '@/public/projects.json';
 
 const HighlightsSection: React.FC = () => {
     return (

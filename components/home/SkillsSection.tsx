@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import skills from '@/constants/skills.json';
+import skills from '@/public/skills.json';
 import { Card, CardHeader, CardBody } from '@/components/Card';
 import { DiCode, DiGit, DiDatabase, DiHtml5, DiPython, DiPhp } from "react-icons/di";
 import { Skill, SkillIconKey } from '@/types/skillTypes';
