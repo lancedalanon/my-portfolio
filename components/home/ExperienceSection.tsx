@@ -60,7 +60,7 @@ const ExperienceSection: React.FC = () => {
     const isSmallScreen = useIsSmallScreen();
 
     return (
-        <section id="experience" className="px-5 py-14 bg-custom-700">
+        <section id="experience" className="min-h-screen flex flex-col items-center justify-center px-8 py-14 bg-custom-700">
             <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
                 MY CAREER HIGHLIGHTS
             </h2>

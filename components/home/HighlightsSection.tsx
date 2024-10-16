@@ -8,7 +8,7 @@ import projects from '@/public/projects.json';
 
 const HighlightsSection: React.FC = () => {
     return (
-        <section id="highlights" className="bg-custom-800 px-5 py-14">
+        <section id="highlights" className="min-h-screen flex flex-col items-center justify-center bg-custom-800 px-8 py-14">
             <header>
                 <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
                     PROJECTS I’VE WORKED ON

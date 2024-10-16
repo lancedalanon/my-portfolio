@@ -40,8 +40,8 @@ const SocialLinks: React.FC = () => (
 
 // QuickLinks component for reusable quick access links
 const QuickLinks: React.FC = () => (
-    <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-2">
-        <div className="space-y-2">
+    <ul className="grid grid-cols-1 md:grid-cols-2">
+        <div className="space-y-4 mb-4">
             <li>
                 <a href="/#home" className="hover:text-custom-200 transition-colors duration-300" aria-label="Go to Home">
                     Home
@@ -68,14 +68,14 @@ const QuickLinks: React.FC = () => (
                 </a>
             </li>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-4">
             <li>
                 <Link href="/projects" className="text-custom-100 hover:text-custom-200 transition-colors duration-300" aria-label="Explore My Projects">
                     Projects
                 </Link>
             </li>
             <li>
-                <Link href="/awards" className="text-custom-100 hover:text-custom-200 transition-colors duration-300" aria-label="Explore My Projects">
+                <Link href="/awards" className="text-custom-100 hover:text-custom-200 transition-colors duration-300" aria-label="Explore My Awards">
                     Awards
                 </Link>
             </li>
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear(); // Get the current year dynamically
 
     return (
-        <footer className="bg-custom-900 text-custom-100 py-8 md:py-12">
+        <footer className="bg-custom-900 text-custom-100 py-8 md:px-8 md:py-12">
             <div className="grid grid-cols-1 md:grid-cols-[50%_25%_25%] gap-8 mx-8 md:mx-20">
                 
                 {/* Let’s Connect Section */}
@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Copyright Section */}
-            <div className="text-center mt-16">
+            <div className="text-center mt-16 mx-4">
                 <time dateTime={`${currentYear}-01-01`}>© {currentYear}</time> Lance Orville Dalanon. All rights reserved.
                 <Link href="/privacy-policy" className="hover:text-custom-200"> Privacy Policy</Link>
             </div>

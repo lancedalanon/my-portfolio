@@ -22,36 +22,43 @@ const config: Config = {
           900: "#000000",
         },
         primary: {
-          DEFAULT: "#2d2f36",
-          light: "#45484f",
-          dark: "#1b1d22",
+          DEFAULT: "#2d2f36", // Neutral dark gray
+          light: "#45484f",   // Lighter gray
+          dark: "#1b1d22",    // Darker gray
         },
         secondary: {
-          DEFAULT: "#52575d",
-          light: "#6b7075",
-          dark: "#3a3f45",
+          DEFAULT: "#52575d",  // Lighter neutral gray
+          light: "#6b7075",    // Light gray
+          dark: "#3a3f45",     // Darker gray
         },
+        // Gold accents for calls to action
         accent: {
-          DEFAULT: "#D4AF37",
-          light: "#e1c16e",
-          dark: "#b38b2a",
+          DEFAULT: "#D4AF37",  // Gold (warm)
+          light: "#e1c16e",    // Light gold
+          dark: "#b38b2a",     // Darker gold
+        },
+        // Introduce teal for cool contrast
+        tertiary: {
+          DEFAULT: "#2CA5A5",  // Teal (cool contrast)
+          light: "#38cfd3",    // Light teal
+          dark: "#207070",     // Dark teal
         },
         warning: {
-          DEFAULT: "#F59E0B",
+          DEFAULT: "#F59E0B",  // Orange (warm warning)
           light: "#FBBF24",
           dark: "#D97706",
         },
         error: {
-          DEFAULT: "#EF4444",
+          DEFAULT: "#EF4444",  // Red for errors
           light: "#F87171",
           dark: "#B91C1C",
         },
         success: {
-          DEFAULT: "#10B981",
+          DEFAULT: "#10B981",  // Green for success
           light: "#34D399",
           dark: "#059669",
         },
-        background: "var(--background)",
+        background: "var(--background)",   // Using custom CSS variables
         foreground: "var(--foreground)",
       },
       scrollbar: {

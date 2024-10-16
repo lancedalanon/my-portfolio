@@ -11,14 +11,14 @@
         "month_ended": null,
         "year_ended": null,
         "experiences": [
-            { "id": 1, "experience": "Maintained and enhanced a legacy web app using Laravel and Vue.js, improving performance and user satisfaction." }, 
-            { "id": 2, "experience": "Conducted rigorous code reviews to ensure high-quality, maintainable code." },
-            { "id": 3, "experience": "Applied OWASP standards for security to safeguard confidential government data." },
-            { "id": 4, "experience": "Implemented Role-based Access Control (RBAC) framework to manage user permissions and enhance security." },
-            { "id": 5, "experience": "Developed a complex logistics application with Laravel for backend and Next.js/React.js for frontend, managing intricate logic." },
-            { "id": 6, "experience": "Utilized AWS services such as S3 for secure storage, CloudFront for content delivery, and EC2 for scalable computing resources, enhancing application security and performance." },
-            { "id": 7, "experience": "Collaborated in an Agile environment, contributing to sprint planning and retrospectives for improved delivery." },
-            { "id": 8, "experience": "Communicated effectively with Project Managers, Senior Developers, Quality Assurance teams, and fellow developers to align on project goals, gather requirements, and resolve issues throughout the development process." }
+            { "id": 1, "experience": "<strong class='text-accent'>Maintained and enhanced a legacy web app using Laravel and Vue.js</strong>, improving performance and user satisfaction." }, 
+            { "id": 2, "experience": "<strong class='text-accent'>Conducted rigorous code reviews</strong> to ensure high-quality, maintainable code." },
+            { "id": 3, "experience": "<strong class='text-accent'>Applied OWASP standards</strong> for security to safeguard confidential government data." },
+            { "id": 4, "experience": "<strong class='text-accent'>Implemented Role-based Access Control (RBAC)</strong> framework to manage user permissions and enhance security." },
+            { "id": 5, "experience": "<strong class='text-accent'>Developed a complex logistics application</strong> with Laravel for backend and Next.js/React.js for frontend, managing intricate logic." },
+            { "id": 6, "experience": "<strong class='text-accent'>Utilized AWS services</strong> such as S3 for secure storage, CloudFront for content delivery, and EC2 for scalable computing resources, enhancing application security and performance." },
+            { "id": 7, "experience": "<strong class='text-accent'>Collaborated in an Agile environment</strong>, contributing to sprint planning and retrospectives for improved delivery." },
+            { "id": 8, "experience": "<strong class='text-accent'>Communicated</strong> effectively with Project Managers, Senior Developers, Quality Assurance teams, and fellow developers to align on project goals, gather requirements, and resolve issues throughout the development process." }
         ],
         "language_framework_libraries": [
             { "id": 1, "name": "HTML5", "image": "/images/HTML5.png", "is_featured": 0 },
@@ -70,11 +70,11 @@
         "month_ended": "May",
         "year_ended": "2024",
         "experiences": [
-            { "id": 1, "experience": "Developed a dynamic and user-friendly Event and News Post Content Management System using a tech stack including HTML5, CSS3, JavaScript, jQuery, Bootstrap, PHP, and SQL." },
-            { "id": 2, "experience": "Coordinated with UI/UX designers, wireframe developers, and frontend developers to ensure a cohesive and visually appealing website design and error-free functionalities." },
-            { "id": 3, "experience": "Integrated Basic onsite SEO best practices to enhance search engine visibility and drive organic traffic to the website." },
-            { "id": 4, "experience": "Developed the frontend of a simple Web3 transactions application using Next.js, React.js, TailwindCSS, and Typescript, leveraging its features to build a responsive and interactive user interface." },
-            { "id": 5, "experience": "Programmed a simple Arduino Uno project and taught Arduino basics to a client." }
+            { "id": 1, "experience": "<strong class='text-accent'>Developed a dynamic and user-friendly Event and News Post Content Management System</strong> using a tech stack including HTML5, CSS3, JavaScript, jQuery, Bootstrap, PHP, and SQL." },
+            { "id": 2, "experience": "<strong class='text-accent'>Coordinated with UI/UX designers, wireframe developers, and frontend developers</strong> to ensure a cohesive and visually appealing website design and error-free functionalities." },
+            { "id": 3, "experience": "<strong class='text-accent'>Integrated Basic onsite SEO best practices</strong> to enhance search engine visibility and drive organic traffic to the website." },
+            { "id": 4, "experience": "<strong class='text-accent'>Developed the frontend of a simple Web3 transactions application</strong> using Next.js, React.js, TailwindCSS, and Typescript, leveraging its features to build a responsive and interactive user interface." },
+            { "id": 5, "experience": "<strong class='text-accent'>Programmed a simple Arduino Uno project</strong> and taught Arduino basics to a client." }
         ],
         "language_framework_libraries": [
             { "id": 1, "name": "HTML5", "image": "/images/HTML5.png", "is_featured": 0 },

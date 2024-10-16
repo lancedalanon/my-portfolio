@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const HomeSection: React.FC = () => {
   return (
-    <section id="home" className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden px-8">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image 

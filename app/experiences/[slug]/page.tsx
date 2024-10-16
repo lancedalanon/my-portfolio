@@ -9,6 +9,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import Spinner from "@/components/Spinner";
+import DOMPurify from 'isomorphic-dompurify';
 
 // Utility function to calculate experience in years and months
 const calculateExperience = (startMonth: string, startYear: string, endMonth: string | null, endYear: string | null) => {
@@ -160,7 +161,13 @@ const ExperiencePage: React.FC = () => {
                             <h3 className="text-3xl font-semibold my-4">Experiences</h3>
                             <ul className="text-md md:text-lg list-disc pl-5 mb-4 break-words leading-loose">
                                 {experience.experiences.map((exp) => (
-                                    <li key={exp.id}>{exp.experience}</li>
+                                    <li 
+                                        key={exp.id}
+                                        dangerouslySetInnerHTML={{
+                                            __html: DOMPurify.sanitize(exp.experience),
+                                        }}
+                                    >
+                                    </li>
                                 ))}
                             </ul>
 

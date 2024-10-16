@@ -84,7 +84,7 @@ const Awards: React.FC = () => {
             <Metadata description={description} />
             <main>
                 <article>
-                    <section className={`min-h-screen flex flex-col items-center justify-start overflow-hidden bg-custom-800 ${selectedImage ? 'pointer-events-none' : ''}`}>
+                    <section className={`min-h-screen flex flex-col items-center justify-start overflow-hidden bg-custom-800 md:px-20 ${selectedImage ? 'pointer-events-none' : ''}`}>
                         <header>
                             <h1 className="text-3xl md:text-5xl text-center font-bold text-custom-100 mt-32 mx-6 uppercase">
                                 My Awards Showcase
@@ -94,7 +94,7 @@ const Awards: React.FC = () => {
                         {loading ? (
                             <Spinner /> // Show spinner while loading
                         ) : (
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 m-10 md:grid-flow-row-dense">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 m-10 md:grid-flow-row-dense">
                                 {awardCards} {/* Render memoized award cards */}
                             </div>
                         )}
