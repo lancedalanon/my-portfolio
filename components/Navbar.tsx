@@ -155,7 +155,7 @@ const Navbar: React.FC = () => {
     <header>
       <nav
         ref={navbarRef}
-        className={`bg-custom-900 fixed w-full z-20 shadow-lg transition-transform duration-300 ease-in-out px-8 pb-8 md:pb-0 ${
+        className={`bg-custom-900 fixed w-full z-20 shadow-lg transition-transform duration-300 ease-in-out px-8 ${
           visible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
