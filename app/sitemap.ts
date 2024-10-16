@@ -3,7 +3,7 @@ import projects from '@/public/projects.json';
 import experiences from '@/public/experiences.json';
 
 // Base URL for the sitemap
-const baseUrl = 'https://lance-dalanon.netlify.app';
+const baseUrl = 'https://lancedalanon.netlify.app';
 
 // Define the specific type for changeFrequency
 type ChangeFrequency = 'yearly' | 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'never';

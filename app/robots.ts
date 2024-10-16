@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
  
 // Base URL for the sitemap
-const baseUrl = 'https://lance-dalanon.netlify.app';
+const baseUrl = 'https://lancedalanon.netlify.app';
 
 export default function robots(): MetadataRoute.Robots {
   return {
