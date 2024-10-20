@@ -4,7 +4,7 @@ import HomeSection from '@/components/home/HomeSection';
 import AboutMeSection from '@/components/home/AboutMeSection';
 import SkillsSection from '@/components/home/SkillsSection';
 import ExperienceSection from '@/components/home/ExperienceSection';
-import HighlightsSection from '@/components/home/HighlightsSection';
+import MilestonesSection from '@/components/home/MilestonesSection';
 import Metadata from "@/components/Metadata";
 
 const Home: NextPage = () => {
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
           <AboutMeSection />
           <SkillsSection />
           <ExperienceSection />
-          <HighlightsSection />
+          <MilestonesSection />
         </article>
       </main>
   </>);

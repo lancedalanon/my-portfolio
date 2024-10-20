@@ -4,90 +4,103 @@
         "award_name": "1st Place in Hackathon Cyber Constellations - Mapping the Future of Technology",
         "award_image": "/images/1st-Place-in-Hackathon-Cyber-Constellations-Mapping-the-Future-of-Technology-Dalanon.jpg",
         "award_issued_month": "July",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 1
     },
     {
         "id": 2,
         "award_name": "2nd Campus DEVCON Roadshow - The Fusion of AI and Blockchain Unleashing Newfrontiers in Technology",
         "award_image": "/images/2nd-Campus-DEVCON-Roadshow-The-Fusion-of-AI-and-Blockchain-Unleashing-Newfrontiers-in-Technology-Dalanon.jpg",
         "award_issued_month": "June",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 0
     },
     {
         "id": 3,
         "award_name": "3D Design and 3D Printing",
         "award_image": "/images/3D-Design-and-3D-Printing-Dalanon.png",
         "award_issued_month": "April",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 0
     },
     {
         "id": 4,
         "award_name": "2024 Career Development Talk (Preparing for an Interview, Being Positive at Work, and Collaboration, Teamwork, and Leadership))",
         "award_image": "/images/2024-Career-Development-Talk-Preparing-for-an-Interview,-Being-Positive-at-Work-Collaboration-Teamwork-and-Leadership-Dalanon.jpg",
         "award_issued_month": "April",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 0
     },
     {
         "id": 5,
         "award_name": "Best in Capstone Project",
         "award_image": "/images/Best-in-Capstone-Project-Dalanon.jpg",
         "award_issued_month": "September",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 1
     },
     {
         "id": 6,
         "award_name": "Certificate of Completion",
         "award_image": "/images/Certificate-of-Completion-Dalanon.jpg",
         "award_issued_month": "June",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 0
     },
     {
         "id": 7,
         "award_name": "Electronics Designing",
         "award_image": "/images/Electronics-Designing-Dalanon.png",
         "award_issued_month": "April",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 0
     },
     {
         "id": 8,
         "award_name": "Hackaton Participant at IT Week 2024 - Cyber Constellations Mapping the Future of Technology",
         "award_image": "/images/Hackathon-Participant-at-IT-Week-2024-Cyber-Constellations-Mapping-the-Future-of-Technology-Dalanon.jpg",
         "award_issued_month": "July",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 1
     },
     {
         "id": 9,
         "award_name": "IT Week 2024 Expo Participants - Cyber Constellations Mapping the Future of Technology",
         "award_image": "/images/IT-Week-2024-Expo-Participants-Cyber-Constellations-Mapping-the-Future-of-Technology-Dalanon.jpg",
         "award_issued_month": "July",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 1
     },
     {
         "id": 10,
         "award_name": "Robotics and Automation Basics and Fundamentals of Robotics",
         "award_image": "/images/Robotics-and-Automation-Basics-and-Fundamentals-of-Robotics-Dalanon.png",
         "award_issued_month": "April",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 0
     },
     {
         "id": 11,
         "award_name": "Robotics Training Introduction to ZMRobo",
         "award_image": "/images/Robotics-Training-Introduction-to-ZMRobo-Dalanon.png",
         "award_issued_month": "April",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 0
     },
     {
         "id": 12,
         "award_name": "Web and Mobile Designing UIUX",
         "award_image": "/images/Web-and-Mobile-Designing-UIUX-Dalanon.png",
         "award_issued_month": "April",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 1
     },
     {
         "id": 13,
         "award_name": "Web Development Level 1 Basic HTML5 and CSS3",
         "award_image": "/images/Web-Development-Level-1-Basic-HTML5-and-CSS3-Dalanon.jpg",
         "award_issued_month": "April",
-        "award_issued_year": "2024"
+        "award_issued_year": "2024",
+        "is_featured": 1
     }
 ]

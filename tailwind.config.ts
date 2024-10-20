@@ -9,6 +9,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'fluid-xs': 'clamp(0.75rem, 1vw + 0.5rem, 1rem)', // Extra small text
+        'fluid-sm': 'clamp(0.875rem, 1.2vw + 0.5rem, 1.125rem)', // Small text
+        'fluid-base': 'clamp(1rem, 1.5vw + 0.5rem, 1.25rem)', // Base text (normal)
+        'fluid-lg': 'clamp(1.125rem, 2vw + 0.5rem, 1.5rem)', // Large text
+        'fluid-xl': 'clamp(1.25rem, 2.5vw + 0.5rem, 1.75rem)', // Extra large text
+        'fluid-2xl': 'clamp(1.5rem, 3vw + 0.5rem, 2rem)', // 2xl text
+        'fluid-3xl': 'clamp(1.875rem, 4vw + 0.5rem, 2.5rem)', // 3xl text
+        'fluid-4xl': 'clamp(2.25rem, 5vw + 0.5rem, 3rem)', // 4xl text
+        'fluid-5xl': 'clamp(3rem, 6vw + 0.5rem, 4rem)', // 5xl text
+        'fluid-6xl': 'clamp(3.75rem, 7vw + 0.5rem, 5rem)', // 6xl text
+        'fluid-7xl': 'clamp(4.5rem, 8vw + 0.5rem, 6rem)', // 7xl text
+        'fluid-8xl': 'clamp(6rem, 9vw + 0.5rem, 8rem)', // 8xl text
+        'fluid-9xl': 'clamp(8rem, 10vw + 0.5rem, 10rem)', // 9xl text
+      },
       colors: {
         custom: {
           100: "#f7f7f7",
@@ -69,6 +84,17 @@ const config: Config = {
           '&': {
             scrollbarWidth: 'none',
             '-ms-overflow-style': 'none',
+          },
+        },
+      },
+      extend: {
+        animation: {
+          blink: 'blink 0.8s infinite',
+        },
+        keyframes: {
+          blink: {
+            '0%, 100%': { opacity: 1 },
+            '50%': { opacity: 0 },
           },
         },
       },

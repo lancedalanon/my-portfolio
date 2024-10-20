@@ -5,6 +5,8 @@ import experienceData from '@/public/experiences.json';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import Experience from '@/types/experienceTypes';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 // Custom hook to determine if the screen size is small
 const useIsSmallScreen = () => {
@@ -58,18 +60,21 @@ const calculateExperience = (startMonth: string, startYear: string, endMonth: st
 // Main component for Experience section
 const ExperienceSection: React.FC = () => {
     const isSmallScreen = useIsSmallScreen();
+    const { ref, inView } = useInView({ threshold: 0.2 });
 
     return (
-        <section id="experience" className="min-h-screen flex flex-col items-center justify-center px-8 py-14 bg-custom-700">
+        <section ref={ref} id="experience" className="min-h-screen flex flex-col items-center justify-center px-8 py-14 bg-custom-700">
             <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
                 MY CAREER HIGHLIGHTS
             </h2>
             {isSmallScreen ? 
                 <SmallScreenExperience 
                     experience={experienceData} 
+                    inView={inView}
                 /> : 
                 <LargeScreenExperience 
                     experience={experienceData} 
+                    inView={inView}
                 />
             }
         </section>
@@ -78,9 +83,10 @@ const ExperienceSection: React.FC = () => {
 
 interface SmallScreenExperienceProps {
     experience: Experience[];
+    inView: boolean;
 }
 
-const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experience }) => {
+const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experience, inView }) => {
     return (
         <div className="grid grid-cols-[1.5%_99.5%] place-items-center ml-10">
             <div className="h-8 w-8 rounded-full bg-custom-300"></div>
@@ -91,7 +97,11 @@ const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experienc
                     <div className="h-32 w-2 bg-custom-300"></div>
                     <div></div>
 
-                    <div className="h-20 w-20">
+                    <motion.div 
+                        initial={{ opacity: 0, x: -20, rotate: -180 }} 
+                        animate={inView && { opacity: 1, x: 0, rotate: 0 }}
+                        transition={{ duration: 0.5, delay: 1 }}
+                        className="h-20 w-20">
                         <Image
                             src={item.image}
                             alt={`Profile image for ${item.label}`}
@@ -99,8 +109,13 @@ const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experienc
                             height={100}
                             width={100}
                         />
-                    </div>
-                    <div className="text-white text-start ml-14">
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={inView && { opacity: 1, x: 0 }} 
+                        transition={{ duration: 0.5, delay: 1.5 }}
+                        className="text-white text-start ml-14"
+                    >
                         <strong className="text-md">{item.role}</strong>
                         <p className="text-sm">{item.company_name}</p>
                         <p className="text-sm">
@@ -118,7 +133,7 @@ const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experienc
                                 <span className="text-md md:text-lg">More Details</span>
                             </div>
                         </Link>
-                    </div>
+                    </motion.div>
 
                     <div className="h-32 w-2 bg-custom-300"></div>
                     <div></div>
@@ -133,9 +148,10 @@ const SmallScreenExperience: React.FC<SmallScreenExperienceProps> = ({ experienc
 
 interface LargeScreenExperienceProps {
     experience: Experience[];
+    inView: boolean;
 }
 
-const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experience }) => {
+const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experience, inView }) => {
     return (
         <div className="grid grid-cols-[48.5%_1%_48.5%] place-items-center">
             <div></div>
@@ -149,13 +165,19 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
 
                     {index % 2 === 0 ? (
                         <>
-                            <div className="text-white text-end mr-20">
+                            <motion.div 
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={inView && { opacity: 1, x: 0 }} 
+                                transition={{ duration: 0.5, delay: 0.5 }}
+                                className="text-white text-end mr-20"
+                            >
                                 <strong className="text-lg md:text-2xl">{item.role}</strong>
                                 <p className="text-md md:text-lg">{item.company_name}</p>
                                 <p className="text-md md:text-lg">
                                     {item.month_started} {item.year_started} - {item.month_ended ? `${item.month_ended} ${item.year_ended}` : 'Present'} • {calculateExperience(item.month_started, item.year_started, item.month_ended, item.year_ended)}
                                 </p>
-                                    <div className="flex items-end justify-end">
+                                <div
+                                    className="flex items-end justify-end">
                                         <Link 
                                             href={`/experiences/${item.slug}`} 
                                             passHref
@@ -169,8 +191,13 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
                                             </div>
                                         </Link>
                                 </div>
-                            </div>
-                            <div className="relative h-32 w-32">
+                            </motion.div>
+                            <motion.div 
+                                initial={{ opacity: 0, x: 20, rotate: 180 }} 
+                                animate={inView && { opacity: 1, x: 0, rotate: 0 }}
+                                transition={{ duration: 0.5 }}
+                                className="relative h-32 w-32"
+                            >
                                 <Image
                                     src={item.image}
                                     alt={`Profile image for ${item.label}`}
@@ -178,13 +205,18 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
                                     height={200}
                                     width={200}
                                 />
-                            </div>
+                            </motion.div>
                             <div></div>
                         </>
                     ) : (
                         <>
                             <div></div>
-                            <div className="relative h-32 w-32">
+                            <motion.div
+                                initial={{ opacity: 0, x: -20, rotate: -180 }} 
+                                animate={inView && { opacity: 1, x: 0, rotate: 0 }}
+                                transition={{ duration: 0.5 }} 
+                                className="relative h-32 w-32"
+                            >
                                 <Image
                                     src={item.image}
                                     alt={`Profile image for ${item.label}`}
@@ -192,8 +224,13 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
                                     height={200}
                                     width={200}
                                 />
-                            </div>
-                            <div className="text-white text-start ml-20">
+                            </motion.div>
+                            <motion.div 
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={inView && { opacity: 1, x: 0 }} 
+                                transition={{ duration: 0.5, delay: 0.5 }}
+                                className="text-white text-start ml-20"
+                            >
                                 <strong className="text-lg md:text-2xl">{item.role}</strong>
                                 <p className="text-md md:text-lg">{item.company_name}</p>
                                 <p className="text-md md:text-lg">
@@ -213,7 +250,7 @@ const LargeScreenExperience: React.FC<LargeScreenExperienceProps> = ({ experienc
                                         </div>
                                     </Link>
                                 </div>
-                            </div>
+                            </motion.div>
                         </>
                     )}
                     <div></div>

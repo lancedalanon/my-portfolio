@@ -26,12 +26,12 @@ const QuickLinks: React.FC<{ handleSmoothScroll: (e: React.MouseEvent<HTMLAnchor
 
   return (
     <ul className={`${isMobile ? "space-y-6" : "space-x-8"} ${isMobile ? "flex flex-col items-center justify-center" : "md:flex hidden"}`}>
-      {["home", "about-me", "skills", "experience", "highlights"].map((section) => (
+      {["home", "about-me", "skills", "experience", "milestones"].map((section) => (
         <li key={section}>
           <a
             href={`/#${section}`}
             onClick={(e) => handleClick(e, section)}
-            className="text-custom-100 font-bold hover:text-custom-200 transition-colors"
+            className="text-custom-100 font-bold transition-colors decoration-transparent hover:decoration-white hover:underline"
           >
             {section.replace("-", " ").toUpperCase()}
           </a>
@@ -49,7 +49,7 @@ const SocialLinks: React.FC<{ isMobile?: boolean, closeMobileMenu: () => void }>
         href="/projects"
         onClick={closeMobileMenu}
         aria-label="Projects"
-        className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
+        className="flex items-center text-custom-100 font-bold transition-colors decoration-transparent hover:decoration-white hover:underline"
       >
         <FaLaptopCode className="mr-1" /> PROJECTS
       </Link>
@@ -59,7 +59,7 @@ const SocialLinks: React.FC<{ isMobile?: boolean, closeMobileMenu: () => void }>
         href="/awards"
         onClick={closeMobileMenu}
         aria-label="Awards"
-        className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
+        className="flex items-center text-custom-100 font-bold transition-colors decoration-transparent hover:decoration-white hover:underline"
       >
         <GiAchievement className="mr-1" /> AWARDS
       </Link>
@@ -69,7 +69,7 @@ const SocialLinks: React.FC<{ isMobile?: boolean, closeMobileMenu: () => void }>
         href="https://www.linkedin.com/in/lance-orville-dalanon-453109166/"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
+        className="flex items-center text-custom-100 font-bold transition-colors decoration-transparent hover:decoration-white hover:underline"
         aria-label="LinkedIn"
         onClick={closeMobileMenu}
       >
@@ -81,7 +81,7 @@ const SocialLinks: React.FC<{ isMobile?: boolean, closeMobileMenu: () => void }>
         href="https://github.com/lancedalanon"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center text-custom-100 font-bold hover:text-custom-200 transition-colors"
+        className="flex items-center text-custom-100 font-bold transition-colors decoration-transparent hover:decoration-white hover:underline"
         aria-label="GitHub"
         onClick={closeMobileMenu}
       >
