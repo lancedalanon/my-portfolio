@@ -42,8 +42,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "jobTitle": "Full-Stack Software Engineer",
               "description":
                 "I’m a Full Stack Software Engineer who loves building and enhancing web and software applications. I work with a range of technologies, including JavaScript, Python, Laravel, Vue.js, React.js, Next.js, and the TALL stack (Tailwind CSS, Alpine.js, Livewire).",
-              "url": "https://lance-dalanon.netlify.app",
-              "image": "https://lance-dalanon.netlify.app/images/lance-dalanon.jpg",
+              "url": "https://lancedalanon.netlify.app",
+              "image": "https://lancedalanon.netlify.app/images/lance-dalanon.jpg",
               "sameAs": [
                 "https://www.linkedin.com/in/lance-orville-dalanon-453109166/",
                 "https://github.com/lancedalanon",
