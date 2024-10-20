@@ -14,6 +14,9 @@ import Spinner from '@/components/Spinner';
 const MilestonesSection: React.FC = () => {
     const [selectedImage, setSelectedImage] = useState<Award | null>(null);
     const [loading, setLoading] = useState<boolean>(false);
+    const [featuredProjectsCount, setFeaturedProjectsCount] = useState(0);
+    const [totalAwardsCount, setTotalAwardsCount] = useState(0);
+    const [featuredAwardsCount, setFeaturedAwardsCount] = useState(0);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -41,11 +44,31 @@ const MilestonesSection: React.FC = () => {
         };
     }, [selectedImage]);
 
+    useEffect(() => {
+        // Count entries with is_featured = 1
+        const featuredCount = projects.filter(project => project.is_featured === 1).length;
+
+        // Update the state
+        setFeaturedProjectsCount(featuredCount);
+    }, []);
+
+    useEffect(() => {
+        // Count total entries
+        const totalCount = awards.length;
+
+        // Count entries with is_featured = 1
+        const featuredCount = awards.filter(award => award.is_featured === 1).length;
+
+        // Update the state
+        setTotalAwardsCount(totalCount);
+        setFeaturedAwardsCount(featuredCount);
+    }, []);
+
     return (
         <section id="milestones" className="min-h-screen flex flex-col items-center justify-center bg-custom-800 px-8 py-14">
             {/* Projects */}
             <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
-                PROJECTS I’VE WORKED ON
+                NOTABLE {featuredProjectsCount} PROJECTS I’VE WORKED ON
             </h2>
             <div className="grid grid-cols-1 mx-2 mt-8 gap-y-8 md:grid-cols-2 md:gap-x-8">
                 {projects
@@ -96,7 +119,7 @@ const MilestonesSection: React.FC = () => {
 
             {/* Awards */}
             <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mt-14 mb-10">
-                ACHIEVEMENTS I’VE EARNED
+                TOP {featuredAwardsCount} OF {totalAwardsCount} ACHIEVEMENTS I’VE EARNED
             </h2>
             <div className="grid grid-cols-1 mx-2 mt-8 gap-y-8 md:grid-cols-3 md:gap-x-8">
                 {awards
@@ -138,7 +161,7 @@ const MilestonesSection: React.FC = () => {
                  aria-label="View more awards"
                 >
                     <FaExternalLinkAlt className="mr-2" />
-                    More Achievements
+                    More Awards
                 </Link>
             </div>
 

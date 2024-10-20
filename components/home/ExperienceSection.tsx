@@ -57,15 +57,60 @@ const calculateExperience = (startMonth: string, startYear: string, endMonth: st
     }
 };
 
-// Main component for Experience section
+// Function to calculate total experience in years and months
+const calculateOverallExperience = () => {
+    let totalYears = 0;
+    let totalMonths = 0;
+
+    experienceData.forEach(exp => {
+        const startDate = new Date(`${exp.month_started} 1, ${exp.year_started}`);
+        
+        // Determine endDate
+        let endDate;
+        if (exp.month_ended && exp.year_ended) {
+            // Set endDate to the last day of the end month
+            endDate = new Date(Number(exp.year_ended), Number(new Date(`${exp.month_ended} 1, ${exp.year_ended}`).getMonth()) + 1, 0);
+        } else {
+            // If end date is null, use the last day of the current month
+            const today = new Date();
+            endDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+        }
+        
+        // Calculate the difference in total months
+        const totalMonthsForExp = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth() + 1);
+        const years = Math.floor(totalMonthsForExp / 12);
+        const months = totalMonthsForExp % 12;
+
+        totalYears += years;
+        totalMonths += months;
+    });
+
+    // Convert total months to years if greater than 12
+    totalYears += Math.floor(totalMonths / 12);
+    totalMonths = totalMonths % 12;
+
+    return { totalYears, totalMonths };
+};
+
 const ExperienceSection: React.FC = () => {
     const isSmallScreen = useIsSmallScreen();
     const { ref, inView } = useInView({ threshold: 0.2 });
+    const [totalMonths, setTotalMonths] = useState(0);
+    const [totalYears, setTotalYears] = useState(0);
+
+    // Calculate experience when the component mounts
+    useEffect(() => {
+        const { totalYears, totalMonths } = calculateOverallExperience();
+        setTotalYears(totalYears); 
+        setTotalMonths(totalMonths);
+    }, []);
 
     return (
         <section ref={ref} id="experience" className="min-h-screen flex flex-col items-center justify-center px-8 py-14 bg-custom-700">
             <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
-                MY CAREER HIGHLIGHTS
+                {totalYears > 0 ? `${totalYears} YEAR${totalYears > 1 ? 'S ' : ' '} AND ` : ''}
+                {totalMonths > 0 ? `${totalMonths} MONTH${totalMonths > 1 ? 'S ' : ' '}` : ''}
+                CAREER HIGHLIGHTS
             </h2>
             {isSmallScreen ? 
                 <SmallScreenExperience 
