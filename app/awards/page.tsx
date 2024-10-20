@@ -12,6 +12,7 @@ const Awards: React.FC = () => {
     const [selectedImage, setSelectedImage] = useState<Award | null>(null);
     const [awardsData, setAwardsData] = useState<Award[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
+    const [loadingImage, setLoadingImage] = useState<boolean>(true);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -103,12 +104,15 @@ const Awards: React.FC = () => {
                         {selectedImage && (
                             <div className="fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-75 pointer-events-auto">
                                 <div className="relative" onClick={closeModal}>
+                                    {loadingImage && <Spinner className="max-h-screen w-full p-10 select-none" />}
+
                                     <Image
                                         src={selectedImage.award_image || '/images/certificate-template.jpg'}
                                         alt={`${selectedImage.award_name} - Issued in ${selectedImage.award_issued_month} ${selectedImage.award_issued_year}`}
                                         height={5000}
                                         width={5000}
                                         className="max-h-screen w-full p-10 select-none"
+                                        onLoad={() => setLoadingImage(false)} 
                                     />
                                     <Button
                                         className="fixed top-4 right-4 text-6xl text-white font-bold hover:text-gray-300 z-25 select-none"

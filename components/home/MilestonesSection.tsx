@@ -9,9 +9,11 @@ import awards from '@/public/awards.json';
 import Button from '@/components/Button';
 import { usePathname } from 'next/navigation';
 import { Award } from "@/types/awardTypes";
+import Spinner from '@/components/Spinner';
 
 const MilestonesSection: React.FC = () => {
     const [selectedImage, setSelectedImage] = useState<Award | null>(null);
+    const [loading, setLoading] = useState<boolean>(false);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -144,12 +146,15 @@ const MilestonesSection: React.FC = () => {
             {selectedImage && (
                 <div className="fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-75 pointer-events-auto">
                     <div className="relative" onClick={closeModal}>
+                        {loading && <Spinner className="max-h-screen w-full p-10 select-none" />}
+
                         <Image
                             src={selectedImage.award_image || '/images/certificate-template.jpg'}
                             alt={`${selectedImage.award_name} - Issued in ${selectedImage.award_issued_month} ${selectedImage.award_issued_year}`}
                             height={5000}
                             width={5000}
                             className="max-h-screen w-full p-10 select-none"
+                            onLoad={() => setLoading(false)} 
                         />
                         <Button
                             className="fixed top-4 right-4 text-6xl text-white font-bold hover:text-gray-300 z-25 select-none"
