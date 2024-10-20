@@ -110,7 +110,7 @@ const ExperienceSection: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
                 {totalYears > 0 ? `${totalYears} YEAR${totalYears > 1 ? 'S ' : ' '} AND ` : ''}
                 {totalMonths > 0 ? `${totalMonths} MONTH${totalMonths > 1 ? 'S ' : ' '}` : ''}
-                CAREER HIGHLIGHTS
+                OF EXPERTISE & IMPACT
             </h2>
             {isSmallScreen ? 
                 <SmallScreenExperience 
