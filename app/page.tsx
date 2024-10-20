@@ -12,7 +12,7 @@ const Home: NextPage = () => {
 
   return (<>
       <Metadata description={description} />
-      <main>
+      <main className="overflow-x-hidden">
         <article>
           <HomeSection />
           <AboutMeSection />
