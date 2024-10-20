@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion'; // For smoother animations
+import { motion } from 'framer-motion';
 
 const typingSpeed = 100; // Speed of typing in milliseconds
 const fullHeaderText = "Hi, I’m Lance Dalanon!";
@@ -64,14 +63,19 @@ const HomeSection: React.FC = () => {
           animate={{ scale: 1 }} 
           transition={{ duration: 1 }} 
         >
-          <Image 
-            src={`/images/programming-background.gif`} 
-            alt="A programming background with code snippets" 
-            layout="fill"
-            objectFit="cover" 
-            className="z-0" 
-            priority
-          />
+        <video
+          src={`/videos/programming-background.webm`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          role="presentation"
+          style={{ objectFit: 'cover', width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: -1 }}
+        >
+          <source src={`/videos/programming-background.webm`} type="video/webm" />
+          <source src={`/videos/programming-background.mp4`} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         </motion.div>
         {/* Transparent Overlay with animation */}
         <motion.div
