@@ -21,8 +21,8 @@ This portfolio project showcases my skills, experiences, and accomplishments as 
 To get started with this project, first, clone the repository and navigate to the project directory:
 
 ```bash
-git clone <repository-url>
-cd <your-portfolio-directory>
+git clone https://github.com/lancedalanon/my-portfolio.git
+cd my-portfolio
 ```
 
 ### Prerequisites
