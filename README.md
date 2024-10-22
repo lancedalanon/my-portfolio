@@ -91,4 +91,9 @@ This portfolio project makes use of:
 - [Tailwind CSS](https://tailwindcss.com) for styling.
 - [Framer Motion](https://www.framer.com/motion/) for animations.
 
-Feel free to explore and reach out if you have any questions!
+## Contact
+
+For any questions or feedback, feel free to reach out:
+
+- Email: lanceorville5@gmail.com
+- GitHub: [lancedalanon](https://github.com/lancedalanon)
