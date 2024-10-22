@@ -1,7 +1,7 @@
 # My Portfolio
 
-![Next.js](https://img.shields.io/badge/Next.js-11.0.1-blue)
-![Node.js](https://img.shields.io/badge/Node.js-14.0.0-green)
+![Next.js](https://img.shields.io/badge/Next.js-13.0.1-blue)
+![Node.js](https://img.shields.io/badge/Node.js-18.20.4-green)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 This portfolio project showcases my skills, experiences, and accomplishments as a developer. It includes sections for my work experience, personal projects, and awards, all designed with a responsive and modern user interface.
