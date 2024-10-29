@@ -61,6 +61,7 @@ const Metadata: React.FC<MetadataProps> = ({ description }) => {
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:image" content="https://lancedalanon.netlify.app/images/lance-dalanon-portfolio.png" />
+      <meta property="og:logo" content="https://lancedalanon.netlify.app/images/lance-dalanon-portfolio.png" />
       {/* Twitter tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={capitalizedTitle} />

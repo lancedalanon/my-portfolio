@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "postalCode": "4026",
                 "addressCountry": "Philippines",
               },
-              "telephone": "(+63) 921-273-7768",
+              "telephone": "(+63) 954-492-1406",
             }),
           }}
         />
