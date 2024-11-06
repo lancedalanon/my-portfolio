@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const typingSpeed = 100; // Speed of typing in milliseconds
+const typingSpeed = 50; // Speed of typing in milliseconds
 const fullHeaderText = "Hi, I’m Lance Dalanon!";
 
 const HomeSection: React.FC = () => {

@@ -4,7 +4,7 @@ import { FaDownload } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const typingSpeed = 100; // Speed of typing in milliseconds
+const typingSpeed = 50; // Speed of typing in milliseconds
 const fullHeaderText = "MEET YOUR NEXT SOFTWARE ENGINEER";
 
 const AboutMeSection: React.FC = () => {
