@@ -106,7 +106,7 @@ const ExperienceSection: React.FC = () => {
     }, []);
 
     return (
-        <section ref={ref} id="experience" className="min-h-screen flex flex-col items-center justify-center px-8 py-14 bg-custom-700">
+        <section ref={ref} id="experience" className="min-h-screen flex flex-col items-center justify-center px-8 py-14 bg-custom-800">
             <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mb-10">
                 {totalYears > 0 ? `${totalYears} YEAR${totalYears > 1 ? 'S ' : ' '} AND ` : ''}
                 {totalMonths > 0 ? `${totalMonths} MONTH${totalMonths > 1 ? 'S ' : ' '}` : ''}

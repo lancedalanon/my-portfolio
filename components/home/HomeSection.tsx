@@ -54,7 +54,7 @@ const HomeSection: React.FC = () => {
   }, [isTypingComplete]);
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden px-8">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden px-8 bg-custom-800">
       {/* Background Image */}
       <div className="absolute inset-0">
         <motion.div
