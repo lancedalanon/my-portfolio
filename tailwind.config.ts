@@ -26,14 +26,14 @@ const config: Config = {
       },
       colors: {
         custom: {
-          100: "#f7f7f7",
+          100: "#FFFFFF",
           200: "#e1e1e1",
           300: "#cfcfcf",
           400: "#a8a8a8",
           500: "#7f7f7f",
           600: "#5e5e5e",
           700: "#3f3f3f",
-          800: "#2a2a2a",
+          800: "#0C0C0C",
           900: "#000000",
         },
         primary: {
