@@ -83,7 +83,7 @@ const MilestonesSection: React.FC = () => {
                                 height={1000}
                                 className="rounded-3xl h-64 w-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-custom-600 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
+                            <div className="absolute inset-0 bg-custom-700 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
                                 <span className="text-white text-3xl md:text-4xl font-bold opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out md:mt-6">
                                     <p>{project.project_name}</p>
                                 </span>
@@ -134,7 +134,7 @@ const MilestonesSection: React.FC = () => {
                                 height={1000}
                                 className="rounded-3xl h-64 w-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-custom-600 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
+                            <div className="absolute inset-0 bg-custom-700 bg-opacity-0 group-hover:bg-opacity-90 rounded-3xl flex flex-col justify-between items-start transition-all duration-500 ease-in-out p-6">
                                 <span className="text-fluid-lg md:text-fluid-md text-white font-bold opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
                                     <p>{award.award_name}</p>
                                 </span>

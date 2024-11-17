@@ -73,7 +73,7 @@ const SkillCard: React.FC<{ skill: Skill; index: number; inView: boolean }> = ({
       transition={{ duration: 0.5, delay: index * 0.1 }} // Delay based on index for staggered animation
     >
       <Card
-        className="p-4 rounded-lg max-w-sm w-full h-full bg-custom-600 transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer"
+        className="p-4 rounded-lg max-w-sm w-full h-full bg-custom-700 transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer"
         onClick={handleSkillCardClick}
       >
         <CardHeader className="p-2">
