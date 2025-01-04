@@ -130,7 +130,6 @@ const Footer: React.FC = () => {
             {/* Copyright Section */}
             <div className="text-center mt-16 mx-4">
                 <time dateTime={`${currentYear}-01-01`}>© {currentYear}</time> Lance Orville Dalanon. All rights reserved.
-                <Link href="/privacy-policy" className="hover:text-custom-200"> Privacy Policy</Link>
             </div>
         </footer>
     );
