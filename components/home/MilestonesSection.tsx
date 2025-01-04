@@ -115,8 +115,6 @@ const MilestonesSection: React.FC = () => {
                 </Link>
             </div>
             
-            <div className="border-b-8 border-accent w-1/2 md:w-1/4 h-4 mt-14"></div>
-
             {/* Awards */}
             <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mt-14 mb-10">
                 TOP {featuredAwardsCount} OF {totalAwardsCount} ACHIEVEMENTS I’VE EARNED
