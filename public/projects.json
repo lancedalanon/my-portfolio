@@ -351,5 +351,78 @@
                 "content": "The <strong class='text-accent'>Events Management System</strong> was a resounding success. Our client was thrilled with the software we delivered, which significantly enhanced their <strong class='text-accent'>scoring process</strong>. It enabled them to conduct the event with greater efficiency, speed, and accuracy, allowing everyone involved to focus on what truly matters: celebrating the participants."
             }
         ]
-    }    
+    },
+    {
+        "id": 6,
+        "slug": "ocr-medicine-app",
+        "project_name": "OCR Medicine Mobile App",
+        "project_headline": "Building a Smarter Way to Recognize Medicines with OCR and React Native",
+        "project_image": "/images/Medicine-OCR-React-Native-Flask-Backend.png",
+        "short_description": "A mobile app that identifies medicines using OCR, built with React Native and a Flask backend, designed to make medicine recognition more efficient and accurate.",
+        "month_start": "October",
+        "year_start": "2024",
+        "month_end": "October",
+        "year_end": "2024",
+        "is_featured": 0,
+        "language_framework_libraries": [
+            { "id": 1, "name": "React Native", "image": "/images/React-Native.png", "is_featured": 1 },
+            { "id": 2, "name": "Expo", "image": "/images/Expo.png", "is_featured": 1 },
+            { "id": 3, "name": "Flask", "image": "/images/Flask.png", "is_featured": 1 },
+            { "id": 4, "name": "Python", "image": "/images/Python.png", "is_featured": 1 },
+            { "id": 5, "name": "TypeScript", "image": "/images/TypeScript.png", "is_featured": 1 },
+            { "id": 6, "name": "JavaScript", "image": "/images/JavaScript.png", "is_featured": 0 },
+            { "id": 7, "name": "React", "image": "/images/React.png", "is_featured": 0 }
+        ],
+        "technologies": [
+            { "id": 1, "name": "Gradle", "image": "/images/Gradle.png" },
+            { "id": 2, "name": "EasyOCR", "image": "/images/EasyOCR.svg" },
+            { "id": 3, "name": "GitHub", "image": "/images/GitHub.png" },
+            { "id": 4, "name": "Git", "image": "/images/Git.png" },
+            { "id": 5, "name": "Visual Studio Code", "image": "/images/Visual-Studio-Code.png" }
+        ],
+        "skills": [
+            { "id": 1, "name": "Mobile Development" },
+            { "id": 2, "name": "REST APIs" },
+            { "id": 3, "name": "Optical Character Recognition (OCR)" },
+            { "id": 4, "name": "Backend Development" },
+            { "id": 5, "name": "Software Development Life Cycle" }
+        ],
+        "sections": [
+            {
+                "id": 1,
+                "subheading": "Introduction",
+                "content": "This project began as a curiosity-driven endeavor to create a mobile app that uses <strong class='text-accent'>Optical Character Recognition (OCR)</strong> to identify medicines. Combining <strong class='text-accent'>React Native</strong> for the frontend and <strong class='text-accent'>Flask</strong> for the backend, it was the perfect opportunity to delve into mobile and backend development while addressing real-world challenges."
+            },
+            {
+                "id": 2,
+                "subheading": "Objectives",
+                "content": "The primary objective was to develop an app capable of recognizing medicine labels with high accuracy using <strong class='text-accent'>OCR</strong>. Secondary goals included exploring <strong class='text-accent'>React Native</strong>, <strong class='text-accent'>Flask</strong>, and <strong class='text-accent'>EasyOCR</strong>, and implementing secure API communication for a seamless user experience."
+            },
+            {
+                "id": 3,
+                "subheading": "Challenges",
+                "content": "One of the major challenges was integrating <strong class='text-accent'>EasyOCR</strong> with the app to ensure accurate text recognition from medicine labels. Additionally, tackling API security and working around SSL requirements during development posed significant hurdles."
+            },
+            {
+                "id": 4,
+                "subheading": "Overcoming Challenges",
+                "content": "I resolved the API security issue by using unsecured APIs with AJAX XML for development while ensuring SSL certification in production. For <strong class='text-accent'>OCR</strong> integration, I refined the <strong class='text-accent'>EasyOCR</strong> implementation through trial and error, eventually achieving reliable text extraction."
+            },
+            {
+                "id": 5,
+                "subheading": "Technology Used",
+                "content": "The project utilized <strong class='text-accent'>React Native</strong> with <strong class='text-accent'>Expo</strong> for mobile development, <strong class='text-accent'>Flask</strong> for the backend, and <strong class='text-accent'>EasyOCR</strong> for text recognition. Supporting tools included <strong class='text-accent'>Gradle</strong>, <strong class='text-accent'>GitHub</strong>, and <strong class='text-accent'>Visual Studio Code</strong> to streamline development and deployment."
+            },
+            {
+                "id": 6,
+                "subheading": "Skills Learned and Demonstrated",
+                "content": "This project enhanced my skills in <strong class='text-accent'>Mobile Development</strong>, <strong class='text-accent'>REST API</strong> design, and <strong class='text-accent'>Backend Development</strong>. I gained a deep understanding of <strong class='text-accent'>OCR</strong> technology, secure API communication, and the <strong class='text-accent'>Software Development Life Cycle</strong>, demonstrating my ability to manage complex, multifaceted projects."
+            },
+            {
+                "id": 7,
+                "subheading": "Conclusion",
+                "content": "The <strong class='text-accent'>OCR Medicine Mobile App</strong> is now a working prototype capable of recognizing and displaying medicine details in a user-friendly interface. This project was an invaluable learning experience that deepened my expertise in mobile and backend development, with plans for future improvements and feature additions."
+            }
+        ]
+    }          
 ]
