@@ -108,7 +108,7 @@ const Project: NextPage = () => {
             <main>
                 <article>
                     <section className="h-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-custom-800">
-                        <div className="grid grid-cols-1 md:grid-cols-[15%_auto_15%] my-28 mx-6">
+                        <div className="grid grid-cols-1 md:grid-cols-[20%_auto_20%] my-28 mx-6">
                             <div></div>
                             <div>
                                 <Link 
