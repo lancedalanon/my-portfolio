@@ -122,7 +122,7 @@ const Project: NextPage = () => {
                                 </Link>
 
                                 <header>
-                                    <h1 className="text-3xl md:text-6xl my-8 font-bold text-custom-100">
+                                    <h1 className="text-5xl md:text-6xl my-8 font-bold text-custom-100">
                                         {project.project_headline}
                                     </h1>
                                 </header>

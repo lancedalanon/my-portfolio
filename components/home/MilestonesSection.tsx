@@ -116,7 +116,7 @@ const MilestonesSection: React.FC = () => {
             </div>
             
             {/* Awards */}
-            <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mt-14 mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold text-custom-100 text-center mt-24 mb-10">
                 TOP {featuredAwardsCount} OF {totalAwardsCount} ACHIEVEMENTS I’VE EARNED
             </h2>
             <div className="grid grid-cols-1 mx-2 mt-8 gap-y-8 md:grid-cols-3 md:gap-x-8">

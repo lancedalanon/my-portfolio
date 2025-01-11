@@ -88,7 +88,7 @@ const HomeSection: React.FC = () => {
 
       {/* Header with typing effect */}
       <header className="relative z-10 mx-4">
-        <h1 className="text-5xl md:text-7xl font-bold text-custom-100">
+        <h1 className="text-6xl md:text-7xl font-bold text-custom-100">
           {headerText}
           {/* Conditionally render the blinking cursor while typing */}
           {showCursor && !isTypingComplete && (

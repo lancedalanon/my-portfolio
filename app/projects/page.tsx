@@ -111,7 +111,7 @@ const Projects: NextPage = () => {
             <article>
                 <section id="projects" className="min-h-screen flex flex-col items-center justify-start overflow-hidden bg-custom-800 md:px-14">
                     <header>
-                        <h1 className="text-3xl md:text-5xl text-center font-bold text-custom-100 mt-32 mx-6 uppercase">
+                        <h1 className="text-5xl text-center font-bold text-custom-100 mt-32 mx-6 uppercase">
                             Masterpieces in Digital Development
                         </h1>
                     </header>

@@ -35,7 +35,7 @@ const AboutMeSection: React.FC = () => {
           transition={{ duration: 1.5 }}
         >
           <header>
-            <h2 className="text-3xl md:text-4xl font-bold text-custom-100 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-custom-100 mb-4">
               MEET YOUR NEXT SOFTWARE ENGINEER: MY JOURNEY
             </h2>
           </header>
